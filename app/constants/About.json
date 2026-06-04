@@ -1,0 +1,63 @@
+{
+  "education": [
+    {
+      "institution": "SDN Sumberjaya 02",
+      "period": "2014 - 2020",
+      "description": "Completed my elementary education while building curiosity about technology and digital tools."
+    },
+    {
+      "institution": "SMP IT Ulil Albab",
+      "period": "2020 - 2023",
+      "description": "Developed discipline, problem-solving abilities, and a strong interest in technology."
+    },
+    {
+      "institution": "SMK Telekomunikasi Telesandi Bekasi",
+      "period": "2023 - 2026",
+      "description": "Focused on software development, web technologies, and application architecture while building real-world projects."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Fullstack Developer",
+      "company": "School Projects",
+      "period": "2023 - 2026",
+      "description": "Designed and developed two complete web applications during vocational school, covering both frontend and backend development."
+    },
+    {
+      "title": "Internship Programmer",
+      "company": "PT Aplikanusa Lintasarta",
+      "period": "2025 - 2026",
+      "description": "Successfully developed an internal application during the internship program and contributed to improving existing web systems by fixing issues and implementing enhancements."
+    }
+  ],
+  "softSkills": [
+    {
+      "name": "Communication",
+      "description": "Able to communicate ideas effectively and collaborate with teams during project development."
+    },
+    {
+      "name": "Problem Solving",
+      "description": "Comfortable analyzing technical challenges and finding practical solutions."
+    },
+    {
+      "name": "Team Work",
+      "description": "Comfortable analyzing technical challenges and finding practical solutions."
+    },
+    {
+      "name": "Adaptability",
+      "description": "Quickly adapts to new technologies, frameworks, and project requirements."
+    },
+    {
+      "name": "Emotional Intelligence",
+      "description": "Able to communicate ideas effectively and collaborate with teams during project development."
+    },
+    {
+      "name": "Critical Thinking",
+      "description": "Comfortable analyzing technical challenges and finding practical solutions."
+    },
+    {
+      "name": "Time Management",
+      "description": "Manage time effectively to meet project deadlines and prioritize tasks."
+    }
+  ]
+}
