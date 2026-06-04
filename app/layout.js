@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Rifqi Ibrahim | Portfolio",
+  title: "Katirstecy | Portfolio",
   description:
     "A premium portfolio showcasing design and development expertise.",
 };

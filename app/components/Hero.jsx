@@ -175,8 +175,17 @@ const Hero = () => {
   return (
     <section
       ref={containerRef}
-      className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden bg-[#F8F8F6]"
+      className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden bg-white"
     >
+      {/* 1. Paper Grain Texture */}
+      <div className="absolute inset-0 bg-paper-grain opacity-[0.025] mix-blend-multiply pointer-events-none" />
+
+      {/* 2. Top Center Soft Lighting */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[800px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
+
+      {/* 3. Subtle Vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.015)_100%)] pointer-events-none" />
+
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-[16%] top-0 h-full w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_12px,transparent_12px,transparent_24px)]" />
 
@@ -208,7 +217,7 @@ const Hero = () => {
         </div>
 
         <div ref={badgeRef}>
-          <div className="font-serif inline-flex items-center rounded-full bg-linear-to-r from-green-100/70 via-green-100/30 to-transparent px-5 py-2 text-md tracking-widest text-[#3C763D] border border-green-500">
+          <div className="font-serif inline-flex items-center rounded-full bg-linear-to-r from-green-100/70 via-green-100/30 to-transparent px-5 py-2 text-sm lg:text-md tracking-widest text-[#3C763D] border border-green-500">
             Let the world know Who am i
           </div>
         </div>
@@ -218,7 +227,7 @@ const Hero = () => {
       <div ref={mainContentRef} className="max-w-5xl mx-auto z-10">
         <h1
           ref={headingRef}
-          className="font-serif text-8xl leading-[1.05] tracking-[-0.03em] text-[#111111] mb-10 mt-4"
+          className="font-serif text-6xl lg:text-8xl leading-[1.05] tracking-[-0.03em] text-[#111111] mb-10 mt-4"
         >
           Hello My Friend
         </h1>
@@ -233,7 +242,7 @@ const Hero = () => {
           ].map((text, i) => (
             <p
               key={i}
-              className="reading-line text-xl md:text-xl text-gray-600 font-sans font-light leading-snug tracking-tight will-change-transform opacity-60 scale-[0.98]"
+              className="reading-line text-md md:text-xl text-gray-600 font-sans font-light leading-snug tracking-tight will-change-transform opacity-60 scale-[0.98]"
             >
               {text}
             </p>

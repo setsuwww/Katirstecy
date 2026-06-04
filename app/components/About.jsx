@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutData from "../constants/About.json";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, FolderClosed, Quote } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,16 +102,22 @@ const About = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#F8F8F6] py-32 lg:py-48 px-6 md:px-12 lg:px-24 overflow-hidden"
+      className="relative bg-[#F2F2EB] py-16 lg:py-48 px-6 md:px-12 lg:px-24 overflow-hidden"
     >
-      {/* Decorative Grid and Lighting */}
-      <div className="absolute inset-0 bg-grid opacity-[0.03] bg-grid-overlay pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1000px] bg-[radial-gradient(circle_at_center,rgba(212,204,194,0.15)_0%,transparent_70%)] pointer-events-none" />
+      {/* 2. Top Center Soft Lighting */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[800px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
+      {/* 3. Subtle Vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.015)_100%)] pointer-events-none" />
+      {/* Existing Decorative Grid */}
+      <div className="absolute inset-0 bg-grid opacity-[0.02] bg-grid-overlay pointer-events-none" />
 
-      <div className="relative max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-8">
+      <div className="relative max-w-350 mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
           {/* 1. EDUCATION (Column 1-3) */}
-          <div ref={educationRef} className="lg:col-span-3 space-y-16">
+          <div
+            ref={educationRef}
+            className="lg:col-span-3 space-y-10 lg:space-y-16"
+          >
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
                 Chronicle
@@ -121,22 +127,21 @@ const About = () => {
               </h2>
             </header>
 
-            <div className="relative space-y-20 pl-4">
-              <div className="absolute left-[18px] top-4 bottom-4 w-[0.5px] bg-neutral-200" />
+            <div className="relative space-y-10 lg:space-y-12 pl-4">
+              <div className="absolute left-[18px] top-0 h-[34rem] lg:h-[38rem] w-[0.5px] bg-neutral-400" />
 
               {aboutData.education.map((item, idx) => (
-                <div key={idx} className="relative group pl-10">
-                  {/* Luxury Dot */}
-                  <div className="absolute left-[-2px] top-1.5 w-[10px] h-[10px] rounded-full bg-white border border-neutral-300 shadow-sm z-10 transition-all duration-500 group-hover:scale-150 group-hover:bg-neutral-900 group-hover:border-neutral-900" />
+                <div key={idx} className="relative group pl-6">
+                  <div className="absolute left-[-4px] top-[24px] w-[14px] h-[14px] rounded-full bg-white border border-neutral-400 shadow-sm z-10 transition-all duration-500 group-hover:scale-150 group-hover:bg-neutral-900 group-hover:border-neutral-900" />
 
-                  <div className="space-y-4">
+                  <div className="space-y-4 bg-white p-4">
                     <span className="text-[10px] font-sans tracking-widest text-neutral-400 font-semibold">
                       {item.period}
                     </span>
-                    <h3 className="font-serif text-2xl text-neutral-800 leading-tight tracking-tight group-hover:translate-x-1 transition-transform duration-500">
+                    <h3 className="font-serif text-xl text-neutral-800 group-hover:text-yellow-800 leading-tight tracking-tight group-hover:translate-x-1 transition-transform duration-500">
                       {item.institution}
                     </h3>
-                    <p className="text-sm text-neutral-500 font-light leading-relaxed max-w-[200px]">
+                    <p className="text-sm text-neutral-500 font-light leading-relaxed max-w-[400px]">
                       {item.description}
                     </p>
                   </div>
@@ -148,7 +153,7 @@ const About = () => {
           {/* 2. EXPERIENCE (Column 4-8) */}
           <div
             ref={experienceRef}
-            className="lg:col-span-5 lg:px-12 border-x border-neutral-200/50 space-y-16"
+            className="lg:col-span-5 lg:px-12 space-y-10 lg:space-y-16"
           >
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
@@ -159,96 +164,106 @@ const About = () => {
               </h2>
             </header>
 
-            <div className="space-y-24">
+            <div className="space-y-12 lg:space-y-10 ml-4 lg:ml-0">
               {aboutData.experience.map((item, idx) => (
-                <div key={idx} className="group space-y-8">
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-baseline">
-                      <h3 className="font-serif text-4xl text-neutral-900 tracking-tighter group-hover:opacity-70 transition-opacity">
+                <div
+                  key={idx}
+                  className="group space-y-6 bg-white p-5 rounded-sm"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="p-2.5 bg-yellow-50 rounded-xl border border-yellow-100 shrink-0">
+                      <FolderClosed className="w-5 h-5 text-yellow-700" />
+                    </div>
+
+                    <div className="flex flex-col">
+                      <h3 className="font-serif text-2xl text-neutral-800 tracking-tight transition-all duration-300 group-hover:text-yellow-800">
                         {item.company}
                       </h3>
-                      <span className="text-[10px] font-mono text-neutral-400">
-                        {item.period}
-                      </span>
+
+                      <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-medium mt-1">
+                        {item.title}
+                      </p>
                     </div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-medium">
-                      {item.title}
-                    </p>
                   </div>
 
-                  <p className="text-lg text-neutral-600 font-light leading-relaxed text-balance">
+                  <p className="text-md text-neutral-500 font-light leading-relaxed text-balance max-w-[300px] lg:max-w-[400px]">
                     {item.description}
                   </p>
-
-                  {idx !== aboutData.experience.length - 1 && (
-                    <div className="w-12 h-[0.5px] bg-neutral-300 group-hover:w-full transition-all duration-700" />
-                  )}
                 </div>
               ))}
             </div>
           </div>
 
           {/* 3. SOFT SKILLS (Column 9-12) */}
-          <div ref={skillsRef} className="lg:col-span-4 space-y-16">
+          <div
+            ref={skillsRef}
+            className="lg:col-span-4 space-y-10 lg:space-y-16"
+          >
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
-                Inner Mastery
+                Internal
               </span>
               <h2 className="font-serif text-5xl text-neutral-900 font-light italic">
-                Soft Skills
+                Soft-skills
               </h2>
             </header>
 
             <div
-              className="relative h-[550px] perspective-2000 flex items-center justify-center cursor-ns-resize"
+              className="group relative h-[480px] flex items-center justify-center"
               onWheel={handleWheel}
             >
-              {/* Stacked Paper Effect - More layers for depth */}
-              <div className="absolute inset-0 translate-x-6 translate-y-6 bg-white hairline-border opacity-10 rounded-[2px]" />
-              <div className="absolute inset-0 translate-x-4 translate-y-4 bg-white hairline-border opacity-20 rounded-[2px]" />
-              <div className="absolute inset-0 translate-x-2 translate-y-2 bg-white hairline-border opacity-40 rounded-[2px]" />
+              {/* Stacked Paper Effect - Background Layers */}
+              <div className="absolute w-full h-[480px] bg-neutral-200 shadow-[0_4px_12px_rgba(0,0,0,0.03)] rounded-[1px] border-l border-neutral-100 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] translate-x-8 translate-y-4 rotate-[2.5deg] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0">
+                <div className="absolute inset-0 bg-paper-grain opacity-[0.03] mix-blend-multiply" />
+              </div>
+              <div className="absolute w-full h-[480px] bg-neutral-100 shadow-[0_8px_20px_rgba(0,0,0,0.03)] rounded-[1px] border-l border-neutral-100 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] translate-x-3 translate-y-1 rotate-[2.5deg] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0">
+                <div className="absolute inset-0 bg-paper-grain opacity-[0.03] mix-blend-multiply" />
+              </div>
 
-              <div
-                ref={bookRef}
-                className="relative w-full h-[480px] bg-[#FFF] hairline-border shadow-[0_30px_60px_rgba(0,0,0,0.02)] p-12 lg:p-16 flex flex-col justify-between items-start text-left overflow-hidden rounded-[2px]"
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                {/* Paper Texture Overlay */}
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/paper.png')]" />
+              {/* Main Content Page Wrapper */}
+              <div className="relative w-full h-[480px] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:rotate-0">
+                <div
+                  ref={bookRef}
+                  className="relative w-full h-full bg-[#FFF] shadow-[0_20px_50px_rgba(0,0,0,0.04)] p-8 lg:p-16 flex flex-col justify-between items-start text-left overflow-hidden rounded-[1px] border-l border-neutral-200/30"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  {/* Internal Page Paper Texture */}
+                  <div className="absolute inset-0 bg-paper-grain opacity-[0.04] mix-blend-multiply pointer-events-none" />
 
-                <div className="w-full">
-                  <Quote
-                    className="w-12 h-12 text-neutral-100 mb-8"
-                    strokeWidth={0.5}
-                  />
-                  <div className="space-y-8">
-                    <h3 className="font-serif text-5xl text-neutral-900 tracking-tighter leading-[0.9] text-balance">
-                      {currentSkill?.name}
-                    </h3>
-                    <div className="w-8 h-[1px] bg-neutral-200" />
-                    <p className="text-lg text-neutral-500 font-light leading-relaxed max-w-[280px]">
-                      {currentSkill?.description}
-                    </p>
+                  <div className="w-full relative z-10">
+                    <Quote
+                      className="w-12 h-12 text-neutral-400 mb-8"
+                      strokeWidth={0.5}
+                    />
+                    <div className="space-y-8">
+                      <h3 className="font-serif text-4xl text-neutral-900 tracking-tighter leading-[0.9] text-balance">
+                        {currentSkill?.name}
+                      </h3>
+                      <div className="w-8 h-[1px] bg-neutral-200" />
+                      <p className="text-lg text-neutral-500 font-light leading-relaxed max-w-[280px]">
+                        {currentSkill?.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="w-full flex justify-between items-end pt-8">
-                  <div className="text-[9px] font-mono tracking-[0.3em] text-neutral-300 uppercase">
-                    Folio № {(currentPage + 1).toString().padStart(2, "0")}
-                  </div>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => flipPage("prev")}
-                      className="group/btn p-3 hover:bg-neutral-50 transition-all rounded-full border border-neutral-100"
-                    >
-                      <ChevronLeft className="w-3 h-3 text-neutral-400 group-hover/btn:text-neutral-900 transition-colors" />
-                    </button>
-                    <button
-                      onClick={() => flipPage("next")}
-                      className="group/btn p-3 hover:bg-neutral-50 transition-all rounded-full border border-neutral-100"
-                    >
-                      <ChevronRight className="w-3 h-3 text-neutral-400 group-hover/btn:text-neutral-900 transition-colors" />
-                    </button>
+                  <div className="w-full flex justify-between items-center pt-8 relative z-10">
+                    <div className="text-[10px] font-mono tracking-[0.3em] text-neutral-500 uppercase">
+                      Folio {(currentPage + 1).toString().padStart(2, "0")}
+                    </div>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => flipPage("prev")}
+                        className="group/btn p-3 bg-neutral-200/50 hover:bg-neutral-200 transition-all rounded-full border border-neutral-100"
+                      >
+                        <ChevronLeft className="w-3 h-3 text-neutral-400 group-hover/btn:text-neutral-900 transition-colors" />
+                      </button>
+                      <button
+                        onClick={() => flipPage("next")}
+                        className="group/btn p-3 bg-neutral-200/50 hover:bg-neutral-200 transition-all rounded-full border border-neutral-100"
+                      >
+                        <ChevronRight className="w-3 h-3 text-neutral-400 group-hover/btn:text-neutral-900 transition-colors" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

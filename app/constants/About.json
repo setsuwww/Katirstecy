@@ -8,12 +8,12 @@
     {
       "institution": "SMP IT Ulil Albab",
       "period": "2020 - 2023",
-      "description": "Developed discipline, problem-solving abilities, and a strong interest in technology."
+      "description": "Developed discipline, problem-solving abilities, designing fundamentals in technology."
     },
     {
-      "institution": "SMK Telekomunikasi Telesandi Bekasi",
+      "institution": "SMK Telesandi",
       "period": "2023 - 2026",
-      "description": "Focused on software development, web technologies, and application architecture while building real-world projects."
+      "description": "Focused on software development, web technologies, while building real-world projects."
     }
   ],
   "experience": [
@@ -21,7 +21,7 @@
       "title": "Fullstack Developer",
       "company": "School Projects",
       "period": "2023 - 2026",
-      "description": "Designed and developed two complete web applications during vocational school, covering both frontend and backend development."
+      "description": "Designed and developed two complete web applications during vocational school use Cutting edge Technologies like Laravel & Nextjs, covering both frontend and backend development."
     },
     {
       "title": "Internship Programmer",
@@ -33,7 +33,7 @@
   "softSkills": [
     {
       "name": "Communication",
-      "description": "Able to communicate ideas effectively and collaborate with teams during project development."
+      "description": "Able to communicate ideas effectively and collaborate with teams during development."
     },
     {
       "name": "Problem Solving",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Emotional Intelligence",
-      "description": "Able to communicate ideas effectively and collaborate with teams during project development."
+      "description": "Emotional control and understanding of others."
     },
     {
       "name": "Critical Thinking",

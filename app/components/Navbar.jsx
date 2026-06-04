@@ -17,7 +17,7 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="top-0 fixed w-full h-25 bg-white border-b border-black/30 border-dashed flex items-center justify-center px-6 md:px-12 z-50">
+    <nav className="top-0 fixed w-full h-25 bg-white border-b-2 border-black/20 border-dashed flex items-center justify-center px-6 md:px-12 z-50">
       <div className="w-full max-w-350 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-2.5 h-2.5 bg-[#E6D500] rotate-45 transition-transform duration-500 group-hover:rotate-135" />
