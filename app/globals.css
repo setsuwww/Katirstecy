@@ -26,6 +26,11 @@ body {
     font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
 @layer utilities {
     .perspective-1000 {
         perspective: 1000px;

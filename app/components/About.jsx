@@ -111,7 +111,7 @@ const About = () => {
       {/* Existing Decorative Grid */}
       <div className="absolute inset-0 bg-grid opacity-[0.02] bg-grid-overlay pointer-events-none" />
 
-      <div className="relative max-w-350 mx-auto">
+      <div className="relative max-w-350 mx-auto p-2">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
           {/* 1. EDUCATION (Column 1-3) */}
           <div
@@ -128,11 +128,11 @@ const About = () => {
             </header>
 
             <div className="relative space-y-10 lg:space-y-12 pl-4">
-              <div className="absolute left-[18px] top-0 h-[34rem] lg:h-[38rem] w-[0.5px] bg-neutral-400" />
+              <div className="absolute left-[10px] lg:left-[18px] top-0 h-[32rem] lg:h-[38rem] w-[2px] bg-neutral-300" />
 
               {aboutData.education.map((item, idx) => (
                 <div key={idx} className="relative group pl-6">
-                  <div className="absolute left-[-4px] top-[24px] w-[14px] h-[14px] rounded-full bg-white border border-neutral-400 shadow-sm z-10 transition-all duration-500 group-hover:scale-150 group-hover:bg-neutral-900 group-hover:border-neutral-900" />
+                  <div className="absolute left-[-12px] lg:left-[-4px] top-[22px] lg:top-[24px] w-[14px] h-[14px] rounded-full bg-white border border-neutral-400 shadow-sm z-10 transition-all duration-500 group-hover:scale-150 group-hover:bg-neutral-900 group-hover:border-neutral-900" />
 
                   <div className="space-y-4 bg-white p-4">
                     <span className="text-[10px] font-sans tracking-widest text-neutral-400 font-semibold">
@@ -209,11 +209,11 @@ const About = () => {
             </header>
 
             <div
-              className="group relative h-[480px] flex items-center justify-center"
+              className="group relative h-[480px] flex items-center justify-center p-10 lg:p-0"
               onWheel={handleWheel}
             >
               {/* Stacked Paper Effect - Background Layers */}
-              <div className="absolute w-full h-[480px] bg-neutral-200 shadow-[0_4px_12px_rgba(0,0,0,0.03)] rounded-[1px] border-l border-neutral-100 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] translate-x-8 translate-y-4 rotate-[2.5deg] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0">
+              <div className="hidden lg:flex absolute w-full h-[480px] bg-neutral-200 shadow-[0_4px_12px_rgba(0,0,0,0.03)] rounded-[1px] border-l border-neutral-100 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] translate-x-8 translate-y-4 rotate-[2.5deg] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0">
                 <div className="absolute inset-0 bg-paper-grain opacity-[0.03] mix-blend-multiply" />
               </div>
               <div className="absolute w-full h-[480px] bg-neutral-100 shadow-[0_8px_20px_rgba(0,0,0,0.03)] rounded-[1px] border-l border-neutral-100 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] translate-x-3 translate-y-1 rotate-[2.5deg] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0">
@@ -237,7 +237,7 @@ const About = () => {
                     />
                     <div className="space-y-8">
                       <h3 className="font-serif text-4xl text-neutral-900 tracking-tighter leading-[0.9] text-balance">
-                        {currentSkill?.name}
+                        {currentSkill?.name} .
                       </h3>
                       <div className="w-8 h-[1px] bg-neutral-200" />
                       <p className="text-lg text-neutral-500 font-light leading-relaxed max-w-[280px]">
