@@ -1,0 +1,23 @@
+{
+  "section": {
+    "label": "Chronicle",
+    "title": "Education"
+  },
+  "items": [
+    {
+      "institution": "SDN Sumberjaya 02",
+      "period": "2014 - 2020",
+      "description": "Completed my elementary education while building curiosity about technology and digital tools."
+    },
+    {
+      "institution": "SMP IT Ulil Albab",
+      "period": "2020 - 2023",
+      "description": "Developed discipline, problem-solving abilities, designing fundamentals in technology."
+    },
+    {
+      "institution": "SMK Telesandi",
+      "period": "2023 - 2026",
+      "description": "Focused on software development, web technologies, while building real-world projects."
+    }
+  ]
+}

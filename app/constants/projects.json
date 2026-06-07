@@ -1,0 +1,64 @@
+{
+  "section": {
+    "label": "PROJECTS",
+    "title": "Selected Work",
+    "subtitle": "A collection of projects, experiments and achievements."
+  },
+  "modal": {
+    "detailsLabel": "Project Details",
+    "description": "This project demonstrates a commitment to clean architecture and user-centric design, utilizing modern web standards to deliver a seamless experience.",
+    "techStackLabel": "Tech Stack",
+    "sourceCodeLabel": "Source Code",
+    "liveDemoLabel": "Live Demo (Coming Soon)"
+  },
+  "items": [
+    {
+      "id": "01",
+      "title": "Virspeed",
+      "description": "Information System Management Shift webbase using Nextjs javascript as Frontend & Laravel as Backend, Shadcn Tailwindcss, Zustand, Prisma and Postgresql as Database",
+      "tags": ["Next.js", "Tailwindcss", "Postgresql", "Neon"],
+      "github": "https://github.com",
+      "image": ""
+    },
+    {
+      "id": "02",
+      "title": "Nexttask",
+      "description": "Multi-Todolist App use Nextjs typescript, Shadcn Tailwindcss, Zustand, Prisma and MySQL as Database",
+      "tags": ["Next.js", "Tailwindcss", "MySQL"],
+      "github": "https://github.com",
+      "image": ""
+    },
+    {
+      "id": "03",
+      "title": "MR:Space2",
+      "description": "Laravel Inertia React SaaS Multisector inventory management use MySQL",
+      "tags": ["PHP", "Laravel", "Inertia", "React", "Tailwindcss", "MySQL"],
+      "github": "https://github.com",
+      "image": ""
+    },
+    {
+      "id": "04",
+      "title": "Areact",
+      "description": "Folder & File management using Vite React for Frontend, + ASP.NET Microsoft with CSharp(C#/CS) as MVC Backend",
+      "tags": ["React", "Vite", "ASP.NET", "Tailwindcss", "C#"],
+      "github": "https://github.com",
+      "image": ""
+    },
+    {
+      "id": "05",
+      "title": "Sevior",
+      "description": "Multi-Tenant Project Management SaaS Web-based use Next.js, Golang, dan PostgreSQL Cloud (Neon)",
+      "tags": ["Next.js", "Tailwindcss", "Golang", "PostgreSQL", "Neon"],
+      "github": "https://github.com",
+      "image": ""
+    },
+    {
+      "id": "06",
+      "title": "Veutyfull",
+      "description": "Destination article management app using MEVN Stack, (Mysql, Express, Vue + Vite + Tailwindcss, Nodejs) with elegance natural ui",
+      "tags": ["Vue.js", "Vite", "Tailwindcss", "Node.js", "Mysql", "Express"],
+      "github": "https://github.com",
+      "image": ""
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "section": {
+    "label": "Pathways",
+    "title": "Experience"
+  },
+  "items": [
+    {
+      "title": "Fullstack Developer",
+      "company": "School Projects",
+      "period": "2023 - 2026",
+      "description": "Designed and developed two complete web applications during vocational school use Cutting edge Technologies like Laravel & Nextjs, covering both frontend and backend development."
+    },
+    {
+      "title": "Internship Programmer",
+      "company": "PT Aplikanusa Lintasarta",
+      "period": "2025 - 2026",
+      "description": "Successfully developed an internal application during the internship program and contributed to improving existing web systems by fixing issues and implementing enhancements."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "site": {
+    "title": "Katirstecy | Portfolio",
+    "description": "A premium portfolio showcasing design and development expertise."
+  },
+  "navigation": {
+    "brandName": "Rifqi Ibrahim",
+    "links": [
+      { "name": "Home", "href": "/" },
+      { "name": "About", "href": "/about" },
+      { "name": "Skills", "href": "/skills" },
+      { "name": "Projects", "href": "/projects" },
+      { "name": "Hobbies", "href": "/hobbies" },
+      { "name": "Contact", "href": "/contact" }
+    ]
+  },
+  "interests": {
+    "section": {
+      "label": "INTERESTS",
+      "title": "Beyond Coding",
+      "subtitle": "Exploring creativity through arts, music, and continuous learning."
+    },
+    "items": [
+      {
+        "title": "Creative Arts",
+        "icon": "Palette",
+        "items": ["Drawing", "Writing", "Fine Arts"]
+      },
+      {
+        "title": "Music",
+        "icon": "Music",
+        "items": ["Guitar", "Piano", "Drums"]
+      },
+      {
+        "title": "Personal Growth",
+        "icon": "Book",
+        "items": ["Reading"]
+      }
+    ]
+  },
+  "contact": {
+    "section": {
+      "label": "CONTACT",
+      "title": "Let's Create Something Meaningful",
+      "subtitle": "Open to collaborations, freelance work, and creative discussions."
+    },
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Your Name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "What's this about?",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your message here...",
+      "submitLabel": "Send Message"
+    },
+    "footerText": "Handcrafted with intent"
+  }
+}
