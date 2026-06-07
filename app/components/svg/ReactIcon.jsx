@@ -2,7 +2,7 @@ import React from "react";
 
 const ReactIcon = (props) => (
   <svg
-    fill="#000000"
+    fill="currentColor"
     width="800px"
     height="800px"
     viewBox="0 0 24 24"

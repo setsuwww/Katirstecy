@@ -2,6 +2,7 @@ import React from "react";
 
 const PostmanIcon = (props) => (
   <svg
+    fill="currentColor"
     width="24px"
     height="24px"
     viewBox="0 0 24 24"

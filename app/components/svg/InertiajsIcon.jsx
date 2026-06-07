@@ -4,6 +4,7 @@ const InertiajsIcon = (props) => (
   <svg
     width="1em"
     height="1em"
+    fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 128 128"
     {...props}
@@ -22,7 +23,7 @@ const InertiajsIcon = (props) => (
       </linearGradient>
     </defs>
     <path
-      fill="#000000"
+      fill="currentColor"
       d="M92.433 28.433H55.625L91.192 64L55.625 99.567h36.808L128 64zm-55.625 0H0L35.567 64L0 99.567h36.808L72.375 64z"
     ></path>
   </svg>

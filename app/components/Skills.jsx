@@ -91,7 +91,7 @@ const SkillChip = ({ name }) => {
 
   return (
     <div
-      className="flex items-center gap-4 bg-white px-7 py-3.5 rounded-full border border-neutral-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[var(--hover-shadow)] hover:border-[var(--brand-color)] hover:-translate-y-1 transition-all duration-300 mx-5 shrink-0 group cursor-default"
+      className="flex items-center gap-4 bg-white px-7 py-3.5 rounded-md border border-neutral-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[var(--hover-shadow)] hover:border-[var(--brand-color)] hover:-translate-y-1 transition-all duration-300 mx-5 shrink-0 group cursor-default"
       style={{
         "--brand-color": brandColor,
         "--hover-shadow": `0 10px 30px ${hexToRgba(brandColor, 0.18)}`,
@@ -145,7 +145,7 @@ const MarqueeRow = ({ items, direction = "left" }) => {
   const displayItems = [...items, ...items];
 
   return (
-    <div className="relative flex overflow-hidden py-4">
+    <div className="relative flex overflow-hidden py-3">
       <div ref={rowRef} className="flex whitespace-nowrap">
         {displayItems.map((item, idx) => (
           <SkillChip key={idx} name={item} />
@@ -221,7 +221,7 @@ const Skills = () => {
           </p>
         </header>
 
-        <div className="space-y-4 md:space-y-6">
+        <div className="space-y-0 md:space-y-2">
           {categories.map((cat, idx) => (
             <MarqueeRow key={idx} items={cat.items} direction={cat.direction} />
           ))}
