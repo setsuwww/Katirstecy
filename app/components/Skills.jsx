@@ -52,52 +52,90 @@ const techIcons = {
   "VS Code": VSCodeIcon, //Blue
 };
 
-const techColors = {
-  JavaScript: "#F7DF1E",
-  TypeScript: "#3178C6",
-  PHP: "#777BB4",
-  Python: "#3776AB",
-  Java: "#ED8B00",
-  "Next.js": "#000000",
-  React: "#61DAFB",
-  Laravel: "#FF2D20",
-  "Inertia.js": "#9553E9",
-  TailwindCSS: "#06B6D4",
-  "Express.js": "#F5C542",
-  MySQL: "#4479A1",
-  PostgreSQL: "#336791",
-  MongoDB: "#47A248",
-  Redis: "#DC382D",
-  Git: "#F05032",
-  GitHub: "#181717",
-  Linux: "#FCC624",
-  Docker: "#2496ED",
-  Postman: "#FF6C37",
-  Figma: "#A259FF",
-  "VS Code": "#007ACC",
-};
-
-const hexToRgba = (hex, alpha) => {
-  if (!hex || hex.length < 7) return `rgba(115, 115, 115, ${alpha})`;
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+const techStyles = {
+  JavaScript: {
+    icon: "group-hover:text-yellow-600",
+  },
+  TypeScript: {
+    icon: "group-hover:text-blue-600",
+  },
+  PHP: {
+    icon: "group-hover:text-indigo-400",
+  },
+  Python: {
+    icon: "group-hover:text-blue-500",
+  },
+  Java: {
+    icon: "group-hover:text-orange-600",
+  },
+  "Next.js": {
+    icon: "group-hover:text-black",
+  },
+  React: {
+    icon: "group-hover:text-sky-400",
+  },
+  Laravel: {
+    icon: "group-hover:text-red-500",
+  },
+  "Inertia.js": {
+    icon: "group-hover:text-violet-500",
+  },
+  TailwindCSS: {
+    icon: "group-hover:text-cyan-400",
+  },
+  "Express.js": {
+    icon: "group-hover:text-yellow-500",
+  },
+  MySQL: {
+    icon: "group-hover:text-blue-500",
+  },
+  PostgreSQL: {
+    icon: "group-hover:text-blue-400",
+  },
+  MongoDB: {
+    icon: "group-hover:text-emerald-500",
+  },
+  Redis: {
+    icon: "group-hover:text-red-600",
+  },
+  Git: {
+    icon: "group-hover:text-orange-600",
+  },
+  GitHub: {
+    icon: "group-hover:text-black",
+  },
+  Linux: {
+    icon: "group-hover:text-yellow-500",
+  },
+  Docker: {
+    icon: "group-hover:text-blue-400",
+  },
+  Postman: {
+    icon: "group-hover:text-orange-500",
+  },
+  Figma: {
+    icon: "group-hover:text-purple-500",
+  },
+  "VS Code": {
+    icon: "group-hover:text-blue-500",
+  },
 };
 
 const SkillChip = ({ name }) => {
   const Icon = techIcons[name];
-  const brandColor = techColors[name] || "#737373";
+  const styles = techStyles[name] || {
+    icon: "group-hover:text-neutral-600",
+    border: "group-hover:border-neutral-400",
+    glow: "group-hover:shadow-neutral-400/10",
+  };
 
   return (
     <div
-      className="flex items-center gap-4 bg-white px-7 py-3.5 rounded-md border border-neutral-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[var(--hover-shadow)] hover:border-[var(--brand-color)] hover:-translate-y-1 transition-all duration-300 mx-5 shrink-0 group cursor-default"
-      style={{
-        "--brand-color": brandColor,
-        "--hover-shadow": `0 10px 30px ${hexToRgba(brandColor, 0.18)}`,
-      }}
+      className={`flex items-center gap-4 bg-white px-4.5 py-3.5 rounded-md border border-neutral-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-5 shrink-0 group cursor-default ${styles.border} ${styles.glow}`}
     >
-      <div className="w-6 h-6 text-neutral-400 group-hover:text-[var(--brand-color)] group-hover:scale-125 transition-all duration-500 flex items-center justify-center">
+      <div
+        className={`w-6 h-6 text-neutral-400 group-hover:scale-125 transition-all duration-500 flex items-center justify-center ${styles.icon}`}
+      >
         {Icon ? (
           <Icon className="w-full h-full" />
         ) : (
@@ -119,26 +157,58 @@ const MarqueeRow = ({ items, direction = "left" }) => {
     if (!row) return;
 
     const totalWidth = row.scrollWidth / 2;
+    const baseSpeed = 30 + Math.random() * 10;
 
-    const animation = gsap.to(row, {
-      x: direction === "left" ? -totalWidth : 0,
-      duration: 30 + Math.random() * 10,
-      ease: "none",
-      repeat: -1,
-      paused: false,
-    });
-
-    if (direction === "right") {
-      gsap.set(row, { x: -totalWidth });
-      gsap.to(row, {
-        x: 0,
-        duration: 30 + Math.random() * 10,
+    // Create a single infinite animation for both directions
+    const animation = gsap.fromTo(
+      row,
+      { x: direction === "left" ? 0 : -totalWidth },
+      {
+        x: direction === "left" ? -totalWidth : 0,
+        duration: baseSpeed,
         ease: "none",
         repeat: -1,
-      });
-    }
+      },
+    );
 
-    return () => animation.kill();
+    // Scroll Reactive Logic
+    let scrollVelocity = 0;
+    let lastScrollY = window.scrollY;
+
+    const updateVelocity = () => {
+      const currentScrollY = window.scrollY;
+      scrollVelocity = currentScrollY - lastScrollY;
+      lastScrollY = currentScrollY;
+
+      // Calculate target timeScale based on velocity
+      // Downward scroll (velocity > 0): speed increases
+      // Upward scroll (velocity < 0): speed reverses
+      let targetTimeScale = 1;
+
+      if (Math.abs(scrollVelocity) > 0.5) {
+        // Multiplier for noticeable acceleration (0.15)
+        targetTimeScale = 1 + scrollVelocity * 0.15;
+      }
+
+      // Smoothly interpolate timeScale for that "premium" feel
+      gsap.to(animation, {
+        timeScale: targetTimeScale,
+        duration: 0.8,
+        ease: "power2.out",
+        overwrite: true,
+      });
+    };
+
+    const tickerListener = () => {
+      updateVelocity();
+    };
+
+    gsap.ticker.add(tickerListener);
+
+    return () => {
+      animation.kill();
+      gsap.ticker.remove(tickerListener);
+    };
   }, [direction]);
 
   // Duplicate items for seamless loop
@@ -221,7 +291,12 @@ const Skills = () => {
           </p>
         </header>
 
-        <div className="space-y-0 md:space-y-2">
+        <div className="relative space-y-4 md:space-y-6">
+          {/* Left Fade Mask */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#F2F2EB] to-transparent z-20 pointer-events-none" />
+          {/* Right Fade Mask */}
+          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#F2F2EB] to-transparent z-20 pointer-events-none" />
+
           {categories.map((cat, idx) => (
             <MarqueeRow key={idx} items={cat.items} direction={cat.direction} />
           ))}
