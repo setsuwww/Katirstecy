@@ -193,6 +193,7 @@ const SkillChip = React.memo(({ name }) => {
     </div>
   );
 });
+SkillChip.displayName = "SkillChip";
 
 const MarqueeRow = React.memo(({ items, direction = "left" }) => {
   const rowRef = useRef(null);
@@ -256,6 +257,7 @@ const MarqueeRow = React.memo(({ items, direction = "left" }) => {
     </div>
   );
 });
+MarqueeRow.displayName = "MarqueeRow";
 
 const categories = [
   {
@@ -317,5 +319,7 @@ const Skills = () => {
     </section>
   );
 };
+
+Skills.displayName = "Skills";
 
 export default React.memo(Skills);

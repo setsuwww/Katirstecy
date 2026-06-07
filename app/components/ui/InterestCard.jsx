@@ -31,11 +31,13 @@ const InterestCard = ({ category }) => {
         </div>
 
         <div className="mt-auto pt-8">
-           <div className="w-8 h-[1px] bg-neutral-200 group-hover/interest:w-16 transition-all duration-700" />
+          <div className="w-8 h-[1px] bg-neutral-200 group-hover/interest:w-16 transition-all duration-700" />
         </div>
       </PaperStackCard>
     </div>
   );
 };
+
+InterestCard.displayName = "InterestCard";
 
 export default React.memo(InterestCard);

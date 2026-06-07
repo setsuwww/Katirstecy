@@ -59,4 +59,6 @@ const CertificationCard = ({ cert, index }) => {
   );
 };
 
+CertificationCard.displayName = "CertificationCard";
+
 export default React.memo(CertificationCard);

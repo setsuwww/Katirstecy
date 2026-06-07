@@ -12,23 +12,26 @@ gsap.registerPlugin(ScrollTrigger);
 const Interests = () => {
   const sectionRef = useRef(null);
 
-  const interestCategories = useMemo(() => [
-    {
-      title: "Creative Arts",
-      icon: <Palette className="w-5 h-5 text-neutral-400" />,
-      items: ["Drawing", "Writing", "Fine Arts"],
-    },
-    {
-      title: "Music",
-      icon: <Music className="w-5 h-5 text-neutral-400" />,
-      items: ["Guitar", "Piano", "Drums"],
-    },
-    {
-      title: "Personal Growth",
-      icon: <Book className="w-5 h-5 text-neutral-400" />,
-      items: ["Reading"],
-    },
-  ], []);
+  const interestCategories = useMemo(
+    () => [
+      {
+        title: "Creative Arts",
+        icon: <Palette className="w-5 h-5 text-neutral-400" />,
+        items: ["Drawing", "Writing", "Fine Arts"],
+      },
+      {
+        title: "Music",
+        icon: <Music className="w-5 h-5 text-neutral-400" />,
+        items: ["Guitar", "Piano", "Drums"],
+      },
+      {
+        title: "Personal Growth",
+        icon: <Book className="w-5 h-5 text-neutral-400" />,
+        items: ["Reading"],
+      },
+    ],
+    [],
+  );
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -45,7 +48,7 @@ const Interests = () => {
             trigger: sectionRef.current,
             start: "top 80%",
           },
-        }
+        },
       );
     }, sectionRef);
     return () => ctx.revert();
@@ -78,5 +81,7 @@ const Interests = () => {
     </section>
   );
 };
+
+Interests.displayName = "Interests";
 
 export default React.memo(Interests);

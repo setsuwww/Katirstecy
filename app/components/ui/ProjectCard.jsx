@@ -48,4 +48,6 @@ const ProjectCard = ({ project, onPreview }) => {
   );
 };
 
+ProjectCard.displayName = "ProjectCard";
+
 export default React.memo(ProjectCard);

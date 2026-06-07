@@ -74,27 +74,6 @@ const Projects = () => {
     [],
   );
 
-  const certifications = useMemo(
-    () => [
-      {
-        title: "Full Stack Web Development",
-        issuer: "University of Technology",
-        year: "2023",
-      },
-      {
-        title: "Backend Engineering",
-        issuer: "Advanced Tech Institute",
-        year: "2022",
-      },
-      {
-        title: "Cloud Fundamentals",
-        issuer: "Cloud Academy",
-        year: "2023",
-      },
-    ],
-    [],
-  );
-
   const handlePreview = useCallback((project) => {
     setSelectedProject(project);
   }, []);
@@ -166,24 +145,6 @@ const Projects = () => {
                 className="project-card-wrapper flex-shrink-0 w-[calc(100vw-3rem)] md:w-auto snap-center"
               >
                 <ProjectCard project={project} onPreview={handlePreview} />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Certifications Section */}
-        <div className="certifications-section">
-          <div className="flex items-center gap-6 mb-12">
-            <h3 className="font-serif text-3xl md:text-4xl text-neutral-900 font-light italic shrink-0">
-              Certifications
-            </h3>
-            <div className="h-[1px] flex-grow bg-neutral-200" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certifications.map((cert, idx) => (
-              <div key={idx} className="cert-card-wrapper h-full">
-                <CertificationCard cert={cert} index={idx + 1} />
               </div>
             ))}
           </div>

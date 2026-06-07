@@ -27,4 +27,6 @@ const SectionHeader = ({ label, title, subtitle, className = "" }) => {
   );
 };
 
+SectionHeader.displayName = "SectionHeader";
+
 export default React.memo(SectionHeader);
