@@ -1,17 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Skills", href: "/skills" },
-  { name: "Projects", href: "/projects" },
-  { name: "Hobbies", href: "/hobbies" },
-  { name: "Contact", href: "/contact" },
-];
+import settings from "../constants/settings.json";
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -22,13 +14,13 @@ export const Navbar = () => {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-2.5 h-2.5 bg-[#E6D500] rotate-45 transition-transform duration-500 group-hover:rotate-135" />
           <span className="font-serif text-[1.4rem] md:text-2xl text-[#111111] leading-none tracking-tight">
-            Rifqi Ibrahim
+            {settings.navigation.brandName}
           </span>
         </Link>
 
         {/* Navigation Section */}
         <div className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => {
+          {settings.navigation.links.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link

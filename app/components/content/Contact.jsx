@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeader from "../ui/SectionHeader";
 import PaperStackCard from "../PaperStackCard";
 import { Send, PenLine } from "lucide-react";
+import settings from "../../constants/settings.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,9 +63,9 @@ const Contact = () => {
 
       <div className="relative max-w-7xl mx-auto px-6">
         <SectionHeader
-          label="CONTACT"
-          title="Let's Create Something Meaningful"
-          subtitle="Open to collaborations, freelance work, and creative discussions."
+          label={settings.contact.section.label}
+          title={settings.contact.section.title}
+          subtitle={settings.contact.section.subtitle}
         />
 
         <div className="max-w-3xl mx-auto relative">
@@ -79,44 +80,44 @@ const Contact = () => {
               >
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold ml-1">
-                    Name
+                    {settings.contact.form.nameLabel}
                   </label>
                   <input
                     type="text"
-                    placeholder="Your Name"
+                    placeholder={settings.contact.form.namePlaceholder}
                     className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300 font-serif italic"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold ml-1">
-                    Email
+                    {settings.contact.form.emailLabel}
                   </label>
                   <input
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder={settings.contact.form.emailPlaceholder}
                     className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300"
                   />
                 </div>
 
                 <div className="md:col-span-2 space-y-2">
                   <label className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold ml-1">
-                    Subject
+                    {settings.contact.form.subjectLabel}
                   </label>
                   <input
                     type="text"
-                    placeholder="What's this about?"
+                    placeholder={settings.contact.form.subjectPlaceholder}
                     className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300 font-serif italic"
                   />
                 </div>
 
                 <div className="md:col-span-2 space-y-2">
                   <label className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold ml-1">
-                    Message
+                    {settings.contact.form.messageLabel}
                   </label>
                   <textarea
                     rows={6}
-                    placeholder="Your message here..."
+                    placeholder={settings.contact.form.messagePlaceholder}
                     className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-4 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300 resize-none font-serif italic"
                   />
                 </div>
@@ -124,7 +125,7 @@ const Contact = () => {
                 <div className="md:col-span-2 pt-4">
                   <button className="group flex items-center gap-3 bg-neutral-900 text-white px-8 py-4 rounded-full hover:bg-yellow-800 transition-all duration-500 shadow-lg hover:shadow-yellow-800/20">
                     <span className="text-xs uppercase tracking-[0.3em] font-medium">
-                      Send Message
+                      {settings.contact.form.submitLabel}
                     </span>
                     <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </button>
@@ -159,7 +160,7 @@ const Contact = () => {
 
         <div className="mt-24 text-center">
           <p className="text-[10px] uppercase tracking-[0.5em] text-neutral-300 font-medium">
-            Handcrafted with intent
+            {settings.contact.footerText}
           </p>
         </div>
       </div>

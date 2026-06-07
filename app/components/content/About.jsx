@@ -1,9 +1,17 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useMemo,
+  useCallback,
+} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import aboutData from "../../constants/About.json";
+import education from "../../constants/education.json";
+import experience from "../../constants/experience.json";
+import skills from "../../constants/skills.json";
 import { ChevronLeft, ChevronRight, FolderClosed, Quote } from "lucide-react";
 import PaperStackCard from "../PaperStackCard";
 
@@ -17,7 +25,7 @@ const About = () => {
   const bookRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
 
-  const softSkills = useMemo(() => aboutData?.softSkills || [], []);
+  const softSkills = useMemo(() => skills?.softSkills || [], []);
   const currentSkill = softSkills[currentPage];
 
   useEffect(() => {
@@ -118,17 +126,17 @@ const About = () => {
           >
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
-                Chronicle
+                {education.section.label}
               </span>
               <h2 className="font-serif text-5xl text-neutral-900 font-light italic">
-                Education
+                {education.section.title}
               </h2>
             </header>
 
             <div className="relative space-y-10 lg:space-y-12 pl-4">
               <div className="absolute left-[10px] lg:left-[12px] top-0 h-[32rem] lg:h-[38rem] w-[2px] bg-neutral-300" />
 
-              {aboutData.education.map((item, idx) => (
+              {education.items.map((item, idx) => (
                 <div key={idx} className="relative group pl-4">
                   <div className="absolute left-[-12px] lg:left-[-10px] top-[22px] lg:top-[24px] w-[14px] h-[14px] rounded-full bg-white border border-neutral-400 shadow-sm z-10 transition-all duration-500 group-hover:scale-150 group-hover:bg-neutral-900 group-hover:border-neutral-900" />
 
@@ -157,15 +165,15 @@ const About = () => {
           >
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
-                Pathways
+                {experience.section.label}
               </span>
               <h2 className="font-serif text-5xl text-neutral-900 font-light italic">
-                Experience
+                {experience.section.title}
               </h2>
             </header>
 
             <div className="space-y-12 lg:space-y-10 ml-4 lg:ml-0">
-              {aboutData.experience.map((item, idx) => (
+              {experience.items.map((item, idx) => (
                 <PaperStackCard key={idx}>
                   <div className="group space-y-6 p-5 rounded-sm">
                     <div className="flex items-center gap-4">
@@ -200,10 +208,10 @@ const About = () => {
           >
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
-                Internal
+                {skills.softSkillsSection.label}
               </span>
               <h2 className="font-serif text-5xl text-neutral-900 font-light italic">
-                Soft-skills
+                {skills.softSkillsSection.title}
               </h2>
             </header>
 
@@ -257,7 +265,7 @@ const About = () => {
 
             <div className="text-center space-y-2">
               <p className="text-[9px] uppercase tracking-[0.4em] text-neutral-300 font-medium">
-                Scroll to flip
+                {skills.softSkillsSection.helperText}
               </p>
               <div className="w-[1px] h-12 bg-neutral-200 mx-auto" />
             </div>

@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ChevronDownIcon } from "lucide-react";
+import profile from "../../constants/profile.json";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -175,15 +176,6 @@ const Hero = () => {
         ease: "sine.inOut",
       });
 
-      gsap.to(".status-badge", {
-        borderColor: "rgba(34, 197, 94, 0.5)",
-        boxShadow: "0 0 15px rgba(34, 197, 94, 0.15)",
-        duration: 3,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
-
       // 5. Continuous Scroll-Reactive Blob Rotation
       let rotationVelocity = 0;
       let lastScrollY = window.scrollY;
@@ -252,8 +244,8 @@ const Hero = () => {
         <div ref={avatarRef} className="relative">
           <div className="w-20 h-20 rounded-full overflow-hidden border border-black/5 bg-white p-1">
             <Image
-              src="/Jr.jpg"
-              alt="Profile"
+              src={profile.avatar.src}
+              alt={profile.avatar.alt}
               width={100}
               height={100}
               className="object-cover rounded-full w-full h-full border border-white ring-2 ring-blue-500"
@@ -263,12 +255,12 @@ const Hero = () => {
         </div>
 
         <div ref={badgeRef}>
-          <div className="status-badge font-serif inline-flex items-center gap-3 rounded-full bg-linear-to-r from-green-50 via-green-50/30 to-transparent px-6 py-2.5 text-sm lg:text-md tracking-[0.2em] text-green-700 border border-green-500/30 shadow-sm transition-all duration-500">
+          <div className="status-badge font-serif inline-flex items-center gap-3 rounded-full bg-linear-to-r from-green-50 via-green-50/30 to-transparent px-6 py-2.5 text-sm lg:text-md tracking-wide text-green-700 border border-green-500 shadow-sm shadow-green-500 transition-all duration-500">
             <span className="relative flex h-2 w-2">
               <span className="status-dot absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            Let the world know Who am i
+            {profile.hero.badge}
           </div>
         </div>
       </div>
@@ -279,17 +271,11 @@ const Hero = () => {
           ref={headingRef}
           className="font-serif text-6xl lg:text-8xl leading-[1.05] tracking-[-0.03em] text-[#111111] mb-10 mt-4"
         >
-          Hello My Friend
+          {profile.hero.title}
         </h1>
 
         <div className="max-w-xl mx-auto space-y-2">
-          {[
-            "I'm Rifqi Ibrahim, in this portfolio I want to explain",
-            "Interesting facts About me, starting from Skills,",
-            "Projects and Hobbies, I want to show y'all my",
-            "Programming skills in more detail",
-            "So, welcome...",
-          ].map((text, i) => (
+          {profile.hero.lines.map((text, i) => (
             <p
               key={i}
               className="reading-line text-md md:text-xl text-gray-600 font-sans font-light leading-snug tracking-tight will-change-transform opacity-60 scale-[0.98]"

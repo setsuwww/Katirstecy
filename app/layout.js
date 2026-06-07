@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components/Navbar";
+import settings from "./constants/settings.json";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,9 +19,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Katirstecy | Portfolio",
-  description:
-    "A premium portfolio showcasing design and development expertise.",
+  title: settings.site.title,
+  description: settings.site.description,
 };
 
 export default function RootLayout({ children }) {

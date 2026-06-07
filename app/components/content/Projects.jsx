@@ -1,18 +1,12 @@
 "use client";
 
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  useMemo,
-  useCallback,
-} from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeader from "../ui/SectionHeader";
 import ProjectCard from "../ui/ProjectCard";
-import CertificationCard from "../ui/CertificationCard";
 import Modal from "../ui/Modal";
+import projectsData from "../../constants/projects.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,59 +14,7 @@ const Projects = () => {
   const sectionRef = useRef(null);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const projects = useMemo(
-    () => [
-      {
-        id: "01",
-        title: "Virspeed",
-        description:
-          "Information System Management Shift webbase using Nextjs javascript as Frontend & Laravel as Backend, Shadcn Tailwindcss, Zustand, Prisma and Postgresql as Database",
-        tags: ["Next.js", "Tailwindcss", "Postgresql", "Neon"],
-        github: "https://github.com",
-      },
-      {
-        id: "02",
-        title: "Nexttask",
-        description:
-          "Multi-Todolist App use Nextjs typescript, Shadcn Tailwindcss, Zustand, Prisma and MySQL as Database",
-        tags: ["Next.js", "Tailwindcss", "MySQL"],
-        github: "https://github.com",
-      },
-      {
-        id: "03",
-        title: "MR:Space2",
-        description:
-          "Laravel Inertia React SaaS Multisector inventory management use MySQL",
-        tags: ["PHP", "Laravel", "Inertia", "React", "Tailwindcss", "MySQL"],
-        github: "https://github.com",
-      },
-      {
-        id: "04",
-        title: "Areact",
-        description:
-          "Folder & File management using Vite React for Frontend, + ASP.NET Microsoft with CSharp(C#/CS) as MVC Backend",
-        tags: ["React", "Vite", "ASP.NET", "Tailwindcss", "C#"],
-        github: "https://github.com",
-      },
-      {
-        id: "05",
-        title: "Sevior",
-        description:
-          "Multi-Tenant Project Management SaaS Web-based use Next.js, Golang, dan PostgreSQL Cloud (Neon)",
-        tags: ["Next.js", "Tailwindcss", "Golang", "PostgreSQL", "Neon"],
-        github: "https://github.com",
-      },
-      {
-        id: "06",
-        title: "Veutyfull",
-        description:
-          "Destination article management app using MEVN Stack, (Mysql, Express, Vue + Vite + Tailwindcss, Nodejs) with elegance natural ui",
-        tags: ["Vue.js", "Vite", "Tailwindcss", "Node.js", "Mysql", "Express"],
-        github: "https://github.com",
-      },
-    ],
-    [],
-  );
+  const projects = projectsData.items;
 
   const handlePreview = useCallback((project) => {
     setSelectedProject(project);
@@ -130,9 +72,9 @@ const Projects = () => {
 
       <div className="relative max-w-7xl mx-auto px-6">
         <SectionHeader
-          label="PROJECTS"
-          title="Selected Work"
-          subtitle="A collection of projects, experiments and achievements."
+          label={projectsData.section.label}
+          title={projectsData.section.title}
+          subtitle={projectsData.section.subtitle}
         />
 
         {/* Projects Grid / Carousel */}
@@ -166,7 +108,7 @@ const Projects = () => {
             <div className="lg:w-1/2 p-8 md:p-12 flex flex-col gap-8">
               <div>
                 <span className="font-mono text-[10px] tracking-[0.3em] text-neutral-400 uppercase mb-4 block">
-                  Project Details
+                  {projectsData.modal.detailsLabel}
                 </span>
                 <h3 className="font-serif text-3xl md:text-4xl text-neutral-900 leading-tight">
                   {selectedProject.title}
@@ -178,15 +120,13 @@ const Projects = () => {
                   {selectedProject.description}
                 </p>
                 <p className="text-neutral-500 text-sm font-light">
-                  This project demonstrates a commitment to clean architecture
-                  and user-centric design, utilizing modern web standards to
-                  deliver a seamless experience.
+                  {projectsData.modal.description}
                 </p>
               </div>
 
               <div>
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-neutral-400 block mb-4">
-                  Tech Stack
+                  {projectsData.modal.techStackLabel}
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.tags.map((tag, i) => (
@@ -207,10 +147,10 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="text-xs uppercase tracking-widest text-neutral-800 hover:text-yellow-800 transition-colors flex items-center gap-2"
                 >
-                  Source Code
+                  {projectsData.modal.sourceCodeLabel}
                 </a>
                 <button className="text-xs uppercase tracking-widest text-neutral-400 cursor-not-allowed">
-                  Live Demo (Coming Soon)
+                  {projectsData.modal.liveDemoLabel}
                 </button>
               </div>
             </div>
