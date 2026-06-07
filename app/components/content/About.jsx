@@ -128,7 +128,7 @@ const About = () => {
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
                 {education.section.label}
               </span>
-              <h2 className="font-serif text-5xl text-neutral-900 font-light italic">
+              <h2 className="font-serif text-3xl lg:text-5xl text-neutral-900 font-light italic">
                 {education.section.title}
               </h2>
             </header>
@@ -167,7 +167,7 @@ const About = () => {
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
                 {experience.section.label}
               </span>
-              <h2 className="font-serif text-5xl text-neutral-900 font-light italic">
+              <h2 className="font-serif text-3xl lg:text-5xl text-neutral-900 font-light italic">
                 {experience.section.title}
               </h2>
             </header>
@@ -182,17 +182,17 @@ const About = () => {
                       </div>
 
                       <div className="flex flex-col">
-                        <h3 className="font-serif text-2xl text-neutral-800 tracking-tight transition-all duration-300 group-hover:text-yellow-800">
+                        <h3 className="font-serif text-xl lg:text-2xl text-neutral-800 tracking-tight transition-all duration-300 group-hover:text-yellow-800">
                           {item.company}
                         </h3>
 
-                        <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-medium mt-1">
+                        <p className="text-[10px] lg:text-xs uppercase tracking-[0.2em] text-neutral-500 font-medium mt-1">
                           {item.title}
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-md text-neutral-500 font-light leading-relaxed text-balance max-w-[300px] lg:max-w-[400px]">
+                    <p className="text-sm lg:text-md text-neutral-500 font-light leading-relaxed text-balance max-w-[300px] lg:max-w-[400px]">
                       {item.description}
                     </p>
                   </div>
@@ -210,7 +210,7 @@ const About = () => {
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
                 {skills.softSkillsSection.label}
               </span>
-              <h2 className="font-serif text-5xl text-neutral-900 font-light italic">
+              <h2 className="font-serif text-3xl lg:text-5xl text-neutral-900 font-light italic">
                 {skills.softSkillsSection.title}
               </h2>
             </header>
@@ -231,11 +231,11 @@ const About = () => {
                     strokeWidth={0.5}
                   />
                   <div className="space-y-8">
-                    <h3 className="font-serif text-4xl text-neutral-900 tracking-tighter leading-[0.9] text-balance">
+                    <h3 className="font-serif text-2xl lg:text-4xl text-neutral-900 tracking-tighter leading-[0.9] text-balance">
                       {currentSkill?.name} .
                     </h3>
                     <div className="w-8 h-[1px] bg-neutral-200" />
-                    <p className="text-lg text-neutral-500 font-light leading-relaxed max-w-[280px]">
+                    <p className="text-md lg:text-lg text-neutral-500 font-light leading-relaxed max-w-[280px]">
                       {currentSkill?.description}
                     </p>
                   </div>
