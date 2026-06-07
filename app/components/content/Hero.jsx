@@ -165,8 +165,54 @@ const Hero = () => {
         ease: "sine.inOut",
       });
 
+      // 4. Status Badge Pulse Effect (Breathing)
+      gsap.to(".status-dot", {
+        opacity: 0.3,
+        scale: 1.8,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      gsap.to(".status-badge", {
+        borderColor: "rgba(34, 197, 94, 0.5)",
+        boxShadow: "0 0 15px rgba(34, 197, 94, 0.15)",
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      // 5. Continuous Scroll-Reactive Blob Rotation
+      let rotationVelocity = 0;
+      let lastScrollY = window.scrollY;
+      let currentRotation1 = 0;
+      let currentRotation2 = 0;
+
+      const tickerListener = () => {
+        const currentScrollY = window.scrollY;
+        const velocity = currentScrollY - lastScrollY;
+        lastScrollY = currentScrollY;
+
+        // Add momentum to velocity
+        rotationVelocity += velocity * 0.05;
+        // Friction / Deceleration
+        rotationVelocity *= 0.95;
+
+        // Apply rotation
+        currentRotation1 += 0.2 + rotationVelocity;
+        currentRotation2 -= 0.15 + rotationVelocity;
+
+        gsap.set(blob1Ref.current, { rotation: currentRotation1 });
+        gsap.set(blob2Ref.current, { rotation: currentRotation2 });
+      };
+
+      gsap.ticker.add(tickerListener);
+
       return () => {
         heading.revert();
+        gsap.ticker.remove(tickerListener);
       };
     },
     { scope: containerRef },
@@ -217,7 +263,11 @@ const Hero = () => {
         </div>
 
         <div ref={badgeRef}>
-          <div className="font-serif inline-flex items-center rounded-full bg-linear-to-r from-green-100/70 via-green-100/30 to-transparent px-5 py-2 text-sm lg:text-md tracking-widest text-[#3C763D] border border-green-500">
+          <div className="status-badge font-serif inline-flex items-center gap-3 rounded-full bg-linear-to-r from-green-50 via-green-50/30 to-transparent px-6 py-2.5 text-sm lg:text-md tracking-[0.2em] text-green-700 border border-green-500/30 shadow-sm transition-all duration-500">
+            <span className="relative flex h-2 w-2">
+              <span className="status-dot absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
             Let the world know Who am i
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import { gsap } from "gsap";
 
 // Import SVG Components
@@ -26,102 +26,147 @@ import DockerIcon from "./svg/DockerIcon";
 import PostmanIcon from "./svg/PostmanIcon";
 import FigmaIcon from "./svg/FigmaIcon";
 import VSCodeIcon from "./svg/VSCodeIcon";
+import SectionHeader from "./ui/SectionHeader";
 
 const techIcons = {
-  JavaScript: JavaScriptIcon, //Yellow
-  TypeScript: TypeScriptIcon, //Blue
-  PHP: PHPIcon, //Purple
-  Python: PythonIcon, //Green
-  Java: JavaIcon, //Red
-  "Next.js": NextjsIcon, //Black
-  React: ReactIcon, //Sky
-  Laravel: LaravelIcon, //Red
-  "Inertia.js": InertiajsIcon, //Violet
-  TailwindCSS: TailwindCSSIcon, //Teal
-  "Express.js": ExpressjsIcon, //Yellow
-  MySQL: MySQLIcon, //Blue
-  PostgreSQL: PostgreSQLIcon, //Teal
-  MongoDB: MongoDBIcon, //Emerald
-  Redis: RedisIcon, //Rose
-  Git: GitIcon, //Orange
-  GitHub: GitHubIcon, //Black
-  Linux: LinuxIcon, //Black
-  Docker: DockerIcon, //Blue
-  Postman: PostmanIcon, //Orange
-  Figma: FigmaIcon, //Green
-  "VS Code": VSCodeIcon, //Blue
+  JavaScript: JavaScriptIcon,
+  TypeScript: TypeScriptIcon,
+  PHP: PHPIcon,
+  Python: PythonIcon,
+  Java: JavaIcon,
+  "Next.js": NextjsIcon,
+  React: ReactIcon,
+  Laravel: LaravelIcon,
+  "Inertia.js": InertiajsIcon,
+  TailwindCSS: TailwindCSSIcon,
+  "Express.js": ExpressjsIcon,
+  MySQL: MySQLIcon,
+  PostgreSQL: PostgreSQLIcon,
+  MongoDB: MongoDBIcon,
+  Redis: RedisIcon,
+  Git: GitIcon,
+  GitHub: GitHubIcon,
+  Linux: LinuxIcon,
+  Docker: DockerIcon,
+  Postman: PostmanIcon,
+  Figma: FigmaIcon,
+  "VS Code": VSCodeIcon,
 };
 
 const techStyles = {
   JavaScript: {
-    icon: "group-hover:text-yellow-600",
+    icon: "group-hover:text-yellow-400",
+    border: "group-hover:border-yellow-400",
+    glow: "group-hover:shadow-yellow-400/20",
   },
   TypeScript: {
     icon: "group-hover:text-blue-600",
+    border: "group-hover:border-blue-600",
+    glow: "group-hover:shadow-blue-600/20",
   },
   PHP: {
     icon: "group-hover:text-indigo-400",
+    border: "group-hover:border-indigo-400",
+    glow: "group-hover:shadow-indigo-400/20",
   },
   Python: {
     icon: "group-hover:text-blue-500",
+    border: "group-hover:border-blue-500",
+    glow: "group-hover:shadow-blue-500/20",
   },
   Java: {
     icon: "group-hover:text-orange-600",
+    border: "group-hover:border-orange-600",
+    glow: "group-hover:shadow-orange-600/20",
   },
   "Next.js": {
     icon: "group-hover:text-black",
+    border: "group-hover:border-black",
+    glow: "group-hover:shadow-black/10",
   },
   React: {
     icon: "group-hover:text-sky-400",
+    border: "group-hover:border-sky-400",
+    glow: "group-hover:shadow-sky-400/20",
   },
   Laravel: {
     icon: "group-hover:text-red-500",
+    border: "group-hover:border-red-500",
+    glow: "group-hover:shadow-red-500/20",
   },
   "Inertia.js": {
     icon: "group-hover:text-violet-500",
+    border: "group-hover:border-violet-500",
+    glow: "group-hover:shadow-violet-500/20",
   },
   TailwindCSS: {
     icon: "group-hover:text-cyan-400",
+    border: "group-hover:border-cyan-400",
+    glow: "group-hover:shadow-cyan-400/20",
   },
   "Express.js": {
     icon: "group-hover:text-yellow-500",
+    border: "group-hover:border-yellow-500",
+    glow: "group-hover:shadow-yellow-500/20",
   },
   MySQL: {
     icon: "group-hover:text-blue-500",
+    border: "group-hover:border-blue-500",
+    glow: "group-hover:shadow-blue-500/20",
   },
   PostgreSQL: {
     icon: "group-hover:text-blue-400",
+    border: "group-hover:border-blue-400",
+    glow: "group-hover:shadow-blue-400/20",
   },
   MongoDB: {
     icon: "group-hover:text-emerald-500",
+    border: "group-hover:border-emerald-500",
+    glow: "group-hover:shadow-emerald-500/20",
   },
   Redis: {
     icon: "group-hover:text-red-600",
+    border: "group-hover:border-red-600",
+    glow: "group-hover:shadow-red-600/20",
   },
   Git: {
     icon: "group-hover:text-orange-600",
+    border: "group-hover:border-orange-600",
+    glow: "group-hover:shadow-orange-600/20",
   },
   GitHub: {
     icon: "group-hover:text-black",
+    border: "group-hover:border-black",
+    glow: "group-hover:shadow-black/10",
   },
   Linux: {
     icon: "group-hover:text-yellow-500",
+    border: "group-hover:border-yellow-500",
+    glow: "group-hover:shadow-yellow-500/20",
   },
   Docker: {
     icon: "group-hover:text-blue-400",
+    border: "group-hover:border-blue-400",
+    glow: "group-hover:shadow-blue-400/20",
   },
   Postman: {
     icon: "group-hover:text-orange-500",
+    border: "group-hover:border-orange-500",
+    glow: "group-hover:shadow-orange-500/20",
   },
   Figma: {
     icon: "group-hover:text-purple-500",
+    border: "group-hover:border-purple-500",
+    glow: "group-hover:shadow-purple-500/20",
   },
   "VS Code": {
     icon: "group-hover:text-blue-500",
+    border: "group-hover:border-blue-500",
+    glow: "group-hover:shadow-blue-500/20",
   },
 };
 
-const SkillChip = ({ name }) => {
+const SkillChip = React.memo(({ name }) => {
   const Icon = techIcons[name];
   const styles = techStyles[name] || {
     icon: "group-hover:text-neutral-600",
@@ -131,7 +176,7 @@ const SkillChip = ({ name }) => {
 
   return (
     <div
-      className={`flex items-center gap-4 bg-white px-4.5 py-3.5 rounded-md border border-neutral-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-5 shrink-0 group cursor-default ${styles.border} ${styles.glow}`}
+      className={`flex items-center gap-4 bg-white px-7 py-3.5 rounded-full border border-neutral-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-5 shrink-0 group cursor-default ${styles.border} ${styles.glow}`}
     >
       <div
         className={`w-6 h-6 text-neutral-400 group-hover:scale-125 transition-all duration-500 flex items-center justify-center ${styles.icon}`}
@@ -147,9 +192,9 @@ const SkillChip = ({ name }) => {
       </span>
     </div>
   );
-};
+});
 
-const MarqueeRow = ({ items, direction = "left" }) => {
+const MarqueeRow = React.memo(({ items, direction = "left" }) => {
   const rowRef = useRef(null);
 
   useEffect(() => {
@@ -159,7 +204,6 @@ const MarqueeRow = ({ items, direction = "left" }) => {
     const totalWidth = row.scrollWidth / 2;
     const baseSpeed = 30 + Math.random() * 10;
 
-    // Create a single infinite animation for both directions
     const animation = gsap.fromTo(
       row,
       { x: direction === "left" ? 0 : -totalWidth },
@@ -171,7 +215,6 @@ const MarqueeRow = ({ items, direction = "left" }) => {
       },
     );
 
-    // Scroll Reactive Logic
     let scrollVelocity = 0;
     let lastScrollY = window.scrollY;
 
@@ -180,17 +223,11 @@ const MarqueeRow = ({ items, direction = "left" }) => {
       scrollVelocity = currentScrollY - lastScrollY;
       lastScrollY = currentScrollY;
 
-      // Calculate target timeScale based on velocity
-      // Downward scroll (velocity > 0): speed increases
-      // Upward scroll (velocity < 0): speed reverses
       let targetTimeScale = 1;
-
       if (Math.abs(scrollVelocity) > 0.5) {
-        // Multiplier for noticeable acceleration (0.15)
         targetTimeScale = 1 + scrollVelocity * 0.15;
       }
 
-      // Smoothly interpolate timeScale for that "premium" feel
       gsap.to(animation, {
         timeScale: targetTimeScale,
         duration: 0.8,
@@ -199,20 +236,15 @@ const MarqueeRow = ({ items, direction = "left" }) => {
       });
     };
 
-    const tickerListener = () => {
-      updateVelocity();
-    };
-
-    gsap.ticker.add(tickerListener);
+    gsap.ticker.add(updateVelocity);
 
     return () => {
       animation.kill();
-      gsap.ticker.remove(tickerListener);
+      gsap.ticker.remove(updateVelocity);
     };
   }, [direction]);
 
-  // Duplicate items for seamless loop
-  const displayItems = [...items, ...items];
+  const displayItems = useMemo(() => [...items, ...items], [items]);
 
   return (
     <div className="relative flex overflow-hidden py-3">
@@ -223,78 +255,56 @@ const MarqueeRow = ({ items, direction = "left" }) => {
       </div>
     </div>
   );
-};
+});
+
+const categories = [
+  {
+    items: ["JavaScript", "TypeScript", "PHP", "Python", "Java"],
+    direction: "right",
+  },
+  {
+    items: [
+      "Next.js",
+      "React",
+      "Laravel",
+      "Inertia.js",
+      "TailwindCSS",
+      "Express.js",
+    ],
+    direction: "left",
+  },
+  {
+    items: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
+    direction: "right",
+  },
+  {
+    items: ["Git", "GitHub", "Linux", "Docker", "Postman", "Figma", "VS Code"],
+    direction: "left",
+  },
+];
 
 const Skills = () => {
   const sectionRef = useRef(null);
 
-  const categories = [
-    {
-      items: ["JavaScript", "TypeScript", "PHP", "Python", "Java"],
-      direction: "right",
-    },
-    {
-      items: [
-        "Next.js",
-        "React",
-        "Laravel",
-        "Inertia.js",
-        "TailwindCSS",
-        "Express.js",
-      ],
-      direction: "left",
-    },
-    {
-      items: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
-      direction: "right",
-    },
-    {
-      items: [
-        "Git",
-        "GitHub",
-        "Linux",
-        "Docker",
-        "Postman",
-        "Figma",
-        "VS Code",
-      ],
-      direction: "left",
-    },
-  ];
-
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#F2F2EB] py-24 lg:py-32 overflow-hidden border-t border-neutral-200/50"
+      className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
     >
-      {/* Decorative Elements matching About section */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[500px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute inset-0 bg-grid opacity-[0.015] pointer-events-none" />
       <div className="absolute inset-0 bg-paper-grain opacity-[0.02] mix-blend-multiply pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6">
-        <header className="text-center mb-20 space-y-6">
-          <div className="space-y-3">
-            <span className="text-[10px] uppercase tracking-[0.4em] text-neutral-400 font-semibold block">
-              TECHNOLOGIES
-            </span>
-            <h2 className="font-serif text-6xl md:text-7xl text-neutral-900 font-light italic tracking-tight">
-              Skills
-            </h2>
-          </div>
-
-          <div className="w-12 h-[1px] bg-neutral-300 mx-auto" />
-
-          <p className="text-sm md:text-md text-neutral-500 font-light leading-relaxed max-w-[280px] md:max-w-md mx-auto text-balance">
-            Technologies, frameworks and tools I use to build modern digital
-            products.
-          </p>
-        </header>
+        <SectionHeader
+          label="TECHNOLOGIES"
+          title="Skills"
+          subtitle="Technologies, frameworks and tools I use to build modern digital products."
+        />
 
         <div className="relative space-y-4 md:space-y-6">
-          {/* Left Fade Mask */}
+          {/* Edge Fade Masks */}
           <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#F2F2EB] to-transparent z-20 pointer-events-none" />
-          {/* Right Fade Mask */}
           <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#F2F2EB] to-transparent z-20 pointer-events-none" />
 
           {categories.map((cat, idx) => (
@@ -303,10 +313,9 @@ const Skills = () => {
         </div>
       </div>
 
-      {/* Subtle bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#F2F2EB] to-transparent pointer-events-none" />
     </section>
   );
 };
 
-export default Skills;
+export default React.memo(Skills);

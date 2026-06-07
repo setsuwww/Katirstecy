@@ -17,37 +17,34 @@ const About = () => {
   const bookRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
 
-  const softSkills = aboutData?.softSkills || [];
+  const softSkills = useMemo(() => aboutData?.softSkills || [], []);
   const currentSkill = softSkills[currentPage];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Slow, confident scroll reveals
-      const columns = [
+      // Consolidated reveal animations
+      const cols = [
         educationRef.current,
         experienceRef.current,
         skillsRef.current,
       ];
-
-      columns.forEach((col, i) => {
-        gsap.fromTo(
-          col,
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1.5,
-            ease: "power2.out",
-            delay: i * 0.2,
-            scrollTrigger: {
-              trigger: col,
-              start: "top 85%",
-            },
+      gsap.fromTo(
+        cols,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 85%",
           },
-        );
-      });
+        },
+      );
 
-      // Subtle parallax for the background grid
+      // Parallax grid
       gsap.to(".bg-grid-overlay", {
         y: -50,
         scrollTrigger: {
@@ -62,43 +59,47 @@ const About = () => {
     return () => ctx.revert();
   }, []);
 
-  const flipPage = (direction) => {
-    const isNext = direction === "next";
-    const nextIdx = isNext
-      ? (currentPage + 1) % softSkills.length
-      : (currentPage - 1 + softSkills.length) % softSkills.length;
+  const flipPage = useCallback(
+    (direction) => {
+      const isNext = direction === "next";
+      const nextIdx = isNext
+        ? (currentPage + 1) % softSkills.length
+        : (currentPage - 1 + softSkills.length) % softSkills.length;
 
-    const tl = gsap.timeline();
+      const tl = gsap.timeline();
+      tl.to(bookRef.current, {
+        rotateY: isNext ? -110 : 110,
+        x: isNext ? -20 : 20,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.inOut",
+        onComplete: () => {
+          setCurrentPage(nextIdx);
+          gsap.fromTo(
+            bookRef.current,
+            { rotateY: isNext ? 110 : -110, x: isNext ? 20 : -20, opacity: 0 },
+            {
+              rotateY: 0,
+              x: 0,
+              opacity: 1,
+              duration: 0.8,
+              ease: "back.out(1.2)",
+            },
+          );
+        },
+      });
+    },
+    [currentPage, softSkills.length],
+  );
 
-    // Physics-based weighted flip
-    tl.to(bookRef.current, {
-      rotateY: isNext ? -110 : 110,
-      x: isNext ? -20 : 20,
-      opacity: 0,
-      duration: 0.6,
-      ease: "power2.inOut",
-      onComplete: () => {
-        setCurrentPage(nextIdx);
-        gsap.fromTo(
-          bookRef.current,
-          { rotateY: isNext ? 110 : -110, x: isNext ? 20 : -20, opacity: 0 },
-          {
-            rotateY: 0,
-            x: 0,
-            opacity: 1,
-            duration: 0.8,
-            ease: "back.out(1.2)",
-          },
-        );
-      },
-    });
-  };
-
-  const handleWheel = (e) => {
-    if (Math.abs(e.deltaY) < 30) return;
-    if (e.deltaY > 0) flipPage("next");
-    else flipPage("prev");
-  };
+  const handleWheel = useCallback(
+    (e) => {
+      if (Math.abs(e.deltaY) < 30) return;
+      if (e.deltaY > 0) flipPage("next");
+      else flipPage("prev");
+    },
+    [flipPage],
+  );
 
   return (
     <section
