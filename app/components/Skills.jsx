@@ -28,43 +28,83 @@ import FigmaIcon from "./svg/FigmaIcon";
 import VSCodeIcon from "./svg/VSCodeIcon";
 
 const techIcons = {
-  JavaScript: JavaScriptIcon,
-  TypeScript: TypeScriptIcon,
-  PHP: PHPIcon,
-  Python: PythonIcon,
-  Java: JavaIcon,
-  "Next.js": NextjsIcon,
-  React: ReactIcon,
-  Laravel: LaravelIcon,
-  "Inertia.js": InertiajsIcon,
-  TailwindCSS: TailwindCSSIcon,
-  "Express.js": ExpressjsIcon,
-  MySQL: MySQLIcon,
-  PostgreSQL: PostgreSQLIcon,
-  MongoDB: MongoDBIcon,
-  Redis: RedisIcon,
-  Git: GitIcon,
-  GitHub: GitHubIcon,
-  Linux: LinuxIcon,
-  Docker: DockerIcon,
-  Postman: PostmanIcon,
-  Figma: FigmaIcon,
-  "VS Code": VSCodeIcon,
+  JavaScript: JavaScriptIcon, //Yellow
+  TypeScript: TypeScriptIcon, //Blue
+  PHP: PHPIcon, //Purple
+  Python: PythonIcon, //Green
+  Java: JavaIcon, //Red
+  "Next.js": NextjsIcon, //Black
+  React: ReactIcon, //Sky
+  Laravel: LaravelIcon, //Red
+  "Inertia.js": InertiajsIcon, //Violet
+  TailwindCSS: TailwindCSSIcon, //Teal
+  "Express.js": ExpressjsIcon, //Yellow
+  MySQL: MySQLIcon, //Blue
+  PostgreSQL: PostgreSQLIcon, //Teal
+  MongoDB: MongoDBIcon, //Emerald
+  Redis: RedisIcon, //Rose
+  Git: GitIcon, //Orange
+  GitHub: GitHubIcon, //Black
+  Linux: LinuxIcon, //Black
+  Docker: DockerIcon, //Blue
+  Postman: PostmanIcon, //Orange
+  Figma: FigmaIcon, //Green
+  "VS Code": VSCodeIcon, //Blue
+};
+
+const techColors = {
+  JavaScript: "#F7DF1E",
+  TypeScript: "#3178C6",
+  PHP: "#777BB4",
+  Python: "#3776AB",
+  Java: "#ED8B00",
+  "Next.js": "#000000",
+  React: "#61DAFB",
+  Laravel: "#FF2D20",
+  "Inertia.js": "#9553E9",
+  TailwindCSS: "#06B6D4",
+  "Express.js": "#F5C542",
+  MySQL: "#4479A1",
+  PostgreSQL: "#336791",
+  MongoDB: "#47A248",
+  Redis: "#DC382D",
+  Git: "#F05032",
+  GitHub: "#181717",
+  Linux: "#FCC624",
+  Docker: "#2496ED",
+  Postman: "#FF6C37",
+  Figma: "#A259FF",
+  "VS Code": "#007ACC",
+};
+
+const hexToRgba = (hex, alpha) => {
+  if (!hex || hex.length < 7) return `rgba(115, 115, 115, ${alpha})`;
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
 const SkillChip = ({ name }) => {
   const Icon = techIcons[name];
+  const brandColor = techColors[name] || "#737373";
 
   return (
-    <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full hairline-border shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-500 mx-4 shrink-0 group">
-      <div className="w-5 h-5 text-neutral-400 group-hover:text-neutral-900 transition-colors duration-500 flex items-center justify-center">
+    <div
+      className="flex items-center gap-4 bg-white px-7 py-3.5 rounded-full border border-neutral-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[var(--hover-shadow)] hover:border-[var(--brand-color)] hover:-translate-y-1 transition-all duration-300 mx-5 shrink-0 group cursor-default"
+      style={{
+        "--brand-color": brandColor,
+        "--hover-shadow": `0 10px 30px ${hexToRgba(brandColor, 0.18)}`,
+      }}
+    >
+      <div className="w-6 h-6 text-neutral-400 group-hover:text-[var(--brand-color)] group-hover:scale-125 transition-all duration-500 flex items-center justify-center">
         {Icon ? (
           <Icon className="w-full h-full" />
         ) : (
-          <div className="w-2 h-2 rounded-full bg-neutral-300" />
+          <div className="w-2.5 h-2.5 rounded-full bg-neutral-300" />
         )}
       </div>
-      <span className="text-sm font-sans tracking-tight text-neutral-600 group-hover:text-neutral-900 transition-colors duration-500 font-medium">
+      <span className="text-md font-sans tracking-tight text-neutral-500 group-hover:text-neutral-900 transition-colors duration-500 font-medium">
         {name}
       </span>
     </div>
