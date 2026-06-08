@@ -25,7 +25,6 @@ const Hero = () => {
 
   useGSAP(
     () => {
-      // 1. Initial Intro Animation
       const heading = new SplitType(headingRef.current, {
         types: "chars,words",
       });
@@ -76,14 +75,13 @@ const Hero = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=60%", // Significantly reduced scroll distance
-          scrub: 0.4, // Lower scrub for immediate feedback
+          end: "+=60%",
+          scrub: 0.4,
           pin: true,
           pinSpacing: true,
         },
       });
 
-      // Organic Blob Movements (Rotation, drift, and scale)
       readingTl.to(
         blob1Ref.current,
         {
@@ -108,8 +106,6 @@ const Hero = () => {
         0,
       );
 
-      // 4-Tier Static Reading Focus Hierarchy
-      // Lines remain vertically fixed; focus transitions through scale, opacity, and weight
       lines.forEach((_, index) => {
         const step = index;
 
@@ -122,19 +118,16 @@ const Hero = () => {
           let targetGlow = "none";
 
           if (i === index) {
-            // Active line
             targetOpacity = 1;
             targetScale = 1.08;
             targetBlur = "blur(0px)";
             targetWeight = "500";
             targetColor = "#111111";
           } else if (i === index - 1) {
-            // Line above
             targetOpacity = 1;
             targetScale = 1.0;
             targetBlur = "blur(0px)";
           } else if (i === index + 1) {
-            // Line below
             targetOpacity = 1;
             targetScale = 0.95;
             targetBlur = "blur(0px)";
@@ -212,22 +205,18 @@ const Hero = () => {
 
   return (
     <section
+      id="hero"
       ref={containerRef}
       className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden bg-white"
     >
-      {/* 1. Paper Grain Texture */}
       <div className="absolute inset-0 bg-paper-grain opacity-[0.025] mix-blend-multiply pointer-events-none" />
-
-      {/* 2. Top Center Soft Lighting */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[800px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
-
-      {/* 3. Subtle Vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.015)_100%)] pointer-events-none" />
 
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-[16%] top-0 h-full w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_12px,transparent_12px,transparent_24px)]" />
+        <div className="absolute left-[16%] top-0 h-full w-px lg:w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_12px,transparent_12px,transparent_24px)]" />
 
-        <div className="absolute right-[16%] top-0 h-full w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_12px,transparent_12px,transparent_24px)]" />
+        <div className="absolute right-[16%] top-0 h-full w-px lg:w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_12px,transparent_12px,transparent_24px)]" />
       </div>
 
       <div
@@ -240,7 +229,7 @@ const Hero = () => {
       ></div>
 
       {/* Top Section: Avatar & Badge */}
-      <div className="flex flex-col items-center gap-8 mb-12">
+      <div className="flex flex-col items-center gap-8 mb-12 mt-2 lg:mt-0">
         <div ref={avatarRef} className="relative">
           <div className="w-20 h-20 rounded-full overflow-hidden border border-black/5 bg-white p-1">
             <Image
@@ -255,7 +244,7 @@ const Hero = () => {
         </div>
 
         <div ref={badgeRef}>
-          <div className="status-badge font-serif inline-flex items-center gap-3 rounded-full bg-linear-to-r from-green-50 via-green-50/30 to-transparent px-6 py-2.5 text-sm lg:text-md tracking-wide text-green-700 border border-green-500 shadow-sm shadow-green-500 transition-all duration-500">
+          <div className="status-badge font-serif inline-flex items-center gap-3 rounded-full bg-linear-to-r from-green-50 via-green-50/30 to-transparent px-4 lg:px-6 py-1.5 lg:py-2.5 text-xs lg:text-md tracking-wide text-green-700 border border-green-300 shadow-sm shadow-green-100 transition-all duration-500">
             <span className="relative flex h-2 w-2">
               <span className="status-dot absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -269,7 +258,7 @@ const Hero = () => {
       <div ref={mainContentRef} className="max-w-5xl mx-auto z-10">
         <h1
           ref={headingRef}
-          className="font-serif text-6xl lg:text-8xl leading-[1.05] tracking-[-0.03em] text-[#111111] mb-10 mt-4"
+          className="font-serif text-5xl lg:text-8xl leading-[1.05] tracking-[-0.03em] text-[#111111] mb-10 mt-2 lg:mt-4"
         >
           {profile.hero.title}
         </h1>
@@ -278,7 +267,7 @@ const Hero = () => {
           {profile.hero.lines.map((text, i) => (
             <p
               key={i}
-              className="reading-line text-md md:text-xl text-gray-600 font-sans font-light leading-snug tracking-tight will-change-transform opacity-60 scale-[0.98]"
+              className="reading-line text-sm md:text-xl text-gray-600 font-sans font-light leading-snug tracking-tight will-change-transform opacity-60 scale-[0.98]"
             >
               {text}
             </p>
@@ -289,7 +278,7 @@ const Hero = () => {
       {/* Bottom Section: Scroll Indicator */}
       <div
         ref={scrollRef}
-        className="absolute bottom-30 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+        className="lg:flex hidden absolute bottom-8 lg:bottom-30 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
       >
         <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:bg-black/5 transition-all duration-300 cursor-pointer">
           <ChevronDownIcon className="w-6 h-6 text-[#111111]" />

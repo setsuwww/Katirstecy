@@ -131,7 +131,7 @@ const SkillChip = React.memo(({ name }) => {
 
   return (
     <div
-      className={`flex items-center gap-4 bg-white px-4 py-3.5 rounded-md border border-neutral-200 hover:border-neutral-500 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-5 shrink-0 group cursor-default`}
+      className={`flex items-center  gap-2 lg:gap-4 bg-white p-2 lg:px-4 lg:py-3.5 rounded-md border border-neutral-200 hover:border-neutral-500 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-5 shrink-0 group cursor-default`}
     >
       <div
         className={`w-6 h-6 text-neutral-400 group-hover:scale-125 transition-all duration-500 flex items-center justify-center ${styles.icon}`}
@@ -142,7 +142,7 @@ const SkillChip = React.memo(({ name }) => {
           <div className="w-2.5 h-2.5 rounded-full bg-neutral-300" />
         )}
       </div>
-      <span className="text-md font-sans tracking-tight text-neutral-500 group-hover:text-neutral-900 transition-colors duration-500 font-medium">
+      <span className="text-sm lg:text-md font-sans tracking-tight text-neutral-500 group-hover:text-neutral-900 transition-colors duration-500 font-medium">
         {name}
       </span>
     </div>
@@ -219,6 +219,7 @@ const Skills = () => {
 
   return (
     <section
+      id="skills"
       ref={sectionRef}
       className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
     >

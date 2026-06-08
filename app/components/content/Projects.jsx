@@ -63,6 +63,7 @@ const Projects = () => {
 
   return (
     <section
+      id="projects"
       ref={sectionRef}
       className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
     >

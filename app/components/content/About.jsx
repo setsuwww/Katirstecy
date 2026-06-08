@@ -111,6 +111,7 @@ const About = () => {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
       className="relative bg-[#F2F2EB] py-16 lg:py-48 px-6 md:px-12 lg:px-24 overflow-hidden"
     >
@@ -118,7 +119,7 @@ const About = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.015)_100%)] pointer-events-none" />
       <div className="absolute inset-0 bg-grid opacity-[0.02] bg-grid-overlay pointer-events-none" />
 
-      <div className="relative max-w-350 mx-auto p-2">
+      <div className="relative max-w-350 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
           <div
             ref={educationRef}
@@ -216,7 +217,7 @@ const About = () => {
             </header>
 
             <div
-              className="group relative h-[480px] flex items-center justify-center p-10 lg:p-0"
+              className="group relative h-[440px] lg:h-[480px] flex items-center justify-center p-2 lg:p-0"
               onWheel={handleWheel}
             >
               <PaperStackCard

@@ -54,6 +54,7 @@ const Contact = () => {
 
   return (
     <section
+      id="contact"
       ref={sectionRef}
       className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
     >
@@ -123,11 +124,11 @@ const Contact = () => {
                 </div>
 
                 <div className="md:col-span-2 pt-4">
-                  <button className="group flex items-center gap-3 bg-neutral-900 text-white px-8 py-4 rounded-full hover:bg-yellow-800 transition-all duration-500 shadow-lg hover:shadow-yellow-800/20">
-                    <span className="text-xs uppercase tracking-[0.3em] font-medium">
+                  <button className="group flex items-center gap-3 bg-neutral-900 text-white px-4 py-2 lg:px-8 lg:py-4 rounded-full hover:bg-yellow-800 transition-all duration-500 shadow-lg hover:shadow-yellow-800/20">
+                    <span className="text-xs tracking-wide font-medium">
                       {settings.contact.form.submitLabel}
                     </span>
-                    <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    <Send className="w-4 h-4" />
                   </button>
                 </div>
               </form>
@@ -137,7 +138,7 @@ const Contact = () => {
           {/* Pen Illustration Placeholder */}
           <div
             ref={penRef}
-            className="hidden lg:block absolute -right-20 -bottom-20 w-64 h-64 pointer-events-none z-20"
+            className="absolute -right-4 lg:right-4 bottom-4 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 pointer-events-none z-20 drop-shadow-sm"
           >
             {/* Visual representation of a pen using CSS/SVG */}
             <div className="relative w-full h-full flex items-center justify-center">
@@ -156,12 +157,6 @@ const Contact = () => {
               />
             </div>
           </div>
-        </div>
-
-        <div className="mt-24 text-center">
-          <p className="text-[10px] uppercase tracking-[0.5em] text-neutral-300 font-medium">
-            {settings.contact.footerText}
-          </p>
         </div>
       </div>
     </section>
