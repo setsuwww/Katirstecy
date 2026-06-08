@@ -146,7 +146,7 @@ const About = () => {
                       <span className="text-[10px] font-sans tracking-widest text-neutral-400 font-semibold">
                         {item.period}
                       </span>
-                      <h3 className="font-serif text-xl text-neutral-800 group-hover:text-yellow-800 leading-tight tracking-tight group-hover:translate-x-1 transition-transform duration-500">
+                      <h3 className="font-serif text-lg lg:text-xl text-neutral-800 group-hover:text-yellow-800 leading-tight tracking-tight group-hover:translate-x-1 transition-transform duration-500">
                         {item.institution}
                       </h3>
                       <p className="text-sm text-neutral-500 font-light leading-relaxed max-w-[400px]">
@@ -183,11 +183,11 @@ const About = () => {
                       </div>
 
                       <div className="flex flex-col">
-                        <h3 className="font-serif text-xl lg:text-2xl text-neutral-800 tracking-tight transition-all duration-300 group-hover:text-yellow-800">
+                        <h3 className="font-serif text-lg lg:text-2xl text-neutral-800 tracking-tight transition-all duration-300 group-hover:text-yellow-800">
                           {item.company}
                         </h3>
 
-                        <p className="text-[10px] lg:text-xs uppercase tracking-[0.2em] text-neutral-500 font-medium mt-1">
+                        <p className="text-[8px] lg:text-xs uppercase tracking-[0.2em] text-neutral-500 font-medium mt-1">
                           {item.title}
                         </p>
                       </div>
@@ -262,13 +262,6 @@ const About = () => {
                   </div>
                 </div>
               </PaperStackCard>
-            </div>
-
-            <div className="text-center space-y-2">
-              <p className="text-[9px] uppercase tracking-[0.4em] text-neutral-300 font-medium">
-                {skills.softSkillsSection.helperText}
-              </p>
-              <div className="w-[1px] h-12 bg-neutral-200 mx-auto" />
             </div>
           </div>
         </div>
