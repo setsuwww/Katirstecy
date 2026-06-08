@@ -131,7 +131,7 @@ const SkillChip = React.memo(({ name }) => {
 
   return (
     <div
-      className={`flex items-center  gap-2 lg:gap-4 bg-white p-2 lg:px-4 lg:py-3.5 rounded-md border border-neutral-200 hover:border-neutral-500 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-5 shrink-0 group cursor-default`}
+      className={`flex items-center gap-2 lg:gap-4 bg-white p-2 lg:px-4 lg:py-3.5 rounded-md border border-neutral-200 hover:border-neutral-500 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-5 shrink-0 group cursor-default`}
     >
       <div
         className={`w-6 h-6 text-neutral-400 group-hover:scale-125 transition-all duration-500 flex items-center justify-center ${styles.icon}`}
@@ -234,7 +234,7 @@ const Skills = () => {
           subtitle={skillsData.section.subtitle}
         />
 
-        <div className="relative space-y-4 md:space-y-6">
+        <div className="relative space-y-0 md:space-y-6">
           {/* Edge Fade Masks */}
           <div className="absolute left-0 top-0 bottom-0 h-100 w-24 md:w-40 bg-gradient-to-r from-[#F2F2EB] to-transparent z-20 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 h-100 w-24 md:w-40 bg-gradient-to-l from-[#F2F2EB] to-transparent z-20 pointer-events-none" />
