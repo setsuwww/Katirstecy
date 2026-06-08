@@ -205,7 +205,7 @@ const Hero = () => {
 
   return (
     <section
-      id="hero"
+      id="home"
       ref={containerRef}
       className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden bg-white"
     >
