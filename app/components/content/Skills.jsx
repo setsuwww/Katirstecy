@@ -57,69 +57,113 @@ const techIcons = {
 const techStyles = {
   JavaScript: {
     icon: "group-hover:text-yellow-400",
+    text: "group-hover:text-yellow-400",
+    border: "hover:border-yellow-400",
   },
   TypeScript: {
     icon: "group-hover:text-blue-600",
+    text: "group-hover:text-blue-600",
+    border: "hover:border-blue-600",
   },
   PHP: {
     icon: "group-hover:text-indigo-400",
+    text: "group-hover:text-indigo-400",
+    border: "hover:border-indigo-400",
   },
   Python: {
     icon: "group-hover:text-blue-500",
+    text: "group-hover:text-blue-500",
+    border: "hover:border-blue-500",
   },
   Java: {
     icon: "group-hover:text-orange-600",
+    text: "group-hover:text-orange-600",
+    border: "hover:border-orange-600",
   },
   "Next.js": {
     icon: "group-hover:text-black",
+    text: "group-hover:text-black",
+    border: "hover:border-black",
   },
   React: {
     icon: "group-hover:text-sky-400",
+    text: "group-hover:text-sky-400",
+    border: "hover:border-sky-400",
   },
   Laravel: {
     icon: "group-hover:text-red-500",
+    text: "group-hover:text-red-500",
+    border: "hover:border-red-500",
   },
   "Inertia.js": {
     icon: "group-hover:text-violet-500",
+    text: "group-hover:text-violet-500",
+    border: "hover:border-violet-500",
   },
   TailwindCSS: {
     icon: "group-hover:text-cyan-400",
+    text: "group-hover:text-cyan-400",
+    border: "hover:border-cyan-400",
   },
   "Express.js": {
     icon: "group-hover:text-yellow-500",
+    text: "group-hover:text-yellow-500",
+    border: "hover:border-yellow-500",
   },
   MySQL: {
     icon: "group-hover:text-blue-500",
+    text: "group-hover:text-blue-500",
+    border: "hover:border-blue-500",
   },
   PostgreSQL: {
     icon: "group-hover:text-blue-400",
+    text: "group-hover:text-blue-400",
+    border: "hover:border-blue-400",
   },
   MongoDB: {
     icon: "group-hover:text-emerald-500",
+    text: "group-hover:text-emerald-500",
+    border: "hover:border-emerald-500",
   },
   Redis: {
     icon: "group-hover:text-red-600",
+    text: "group-hover:text-red-600",
+    border: "hover:border-red-600",
   },
   Git: {
     icon: "group-hover:text-orange-600",
+    text: "group-hover:text-orange-600",
+    border: "hover:border-orange-600",
   },
   GitHub: {
     icon: "group-hover:text-black",
+    text: "group-hover:text-black",
+    border: "hover:border-black",
   },
   Linux: {
     icon: "group-hover:text-yellow-500",
+    text: "group-hover:text-yellow-500",
+    border: "hover:border-yellow-500",
   },
   Docker: {
     icon: "group-hover:text-blue-400",
+    text: "group-hover:text-blue-400",
+    border: "hover:border-blue-400",
   },
   Postman: {
     icon: "group-hover:text-orange-500",
+    text: "group-hover:text-orange-500",
+    border: "hover:border-orange-500",
   },
   Figma: {
     icon: "group-hover:text-purple-500",
+    text: "group-hover:text-purple-500",
+    border: "hover:border-purple-500",
   },
   "VS Code": {
     icon: "group-hover:text-blue-500",
+    text: "group-hover:text-blue-500",
+    border: "hover:border-blue-500",
   },
 };
 
@@ -127,22 +171,26 @@ const SkillChip = React.memo(({ name }) => {
   const Icon = techIcons[name];
   const styles = techStyles[name] || {
     icon: "group-hover:text-neutral-600",
+    text: "group-hover:text-neutral-600",
+    border: "hover:border-neutral-600",
   };
 
   return (
     <div
-      className={`flex items-center gap-2 lg:gap-4 bg-white p-2 lg:px-4 lg:py-3.5 rounded-md border border-neutral-200 hover:border-neutral-500 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-5 shrink-0 group cursor-default`}
+      className={`flex items-center gap-1 lg:gap-4 bg-white px-3 py-2 lg:px-4 lg:py-3.5 rounded-md border border-neutral-200 ${styles.border} shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-5 shrink-0 group cursor-default`}
     >
       <div
-        className={`w-6 h-6 text-neutral-400 group-hover:scale-125 transition-all duration-500 flex items-center justify-center ${styles.icon}`}
+        className={`w-6 h-6 text-neutral-400 group-hover:scale-105 lg:group-hover:scale-125 transition-all duration-500 flex items-center justify-center ${styles.icon}`}
       >
         {Icon ? (
-          <Icon className="w-full h-full" />
+          <Icon className="w-5 h-5 lg:w-full lg:h-full" />
         ) : (
           <div className="w-2.5 h-2.5 rounded-full bg-neutral-300" />
         )}
       </div>
-      <span className="text-sm lg:text-md font-sans tracking-tight text-neutral-500 group-hover:text-neutral-900 transition-colors duration-500 font-medium">
+      <span
+        className={`text-sm lg:text-md font-sans tracking-tight text-neutral-500 transition-colors duration-500 font-medium ${styles.text}`}
+      >
         {name}
       </span>
     </div>
