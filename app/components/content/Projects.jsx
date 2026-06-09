@@ -1,17 +1,12 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useState, useCallback } from "react";
 import SectionHeader from "../ui/SectionHeader";
 import ProjectCard from "../ui/ProjectCard";
 import Modal from "../ui/Modal";
 import projectsData from "../../constants/projects.json";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Projects = () => {
-  const sectionRef = useRef(null);
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = projectsData.items;
@@ -24,47 +19,9 @@ const Projects = () => {
     setSelectedProject(null);
   }, []);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        ".project-card-wrapper",
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          stagger: 0.15,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".projects-grid",
-            start: "top 80%",
-          },
-        },
-      );
-
-      gsap.fromTo(
-        ".cert-card-wrapper",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          stagger: 0.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".certifications-section",
-            start: "top 85%",
-          },
-        },
-      );
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
       id="projects"
-      ref={sectionRef}
       className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[500px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />

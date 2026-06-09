@@ -171,32 +171,8 @@ const MarqueeRow = React.memo(({ items, direction = "left" }) => {
       },
     );
 
-    let scrollVelocity = 0;
-    let lastScrollY = window.scrollY;
-
-    const updateVelocity = () => {
-      const currentScrollY = window.scrollY;
-      scrollVelocity = currentScrollY - lastScrollY;
-      lastScrollY = currentScrollY;
-
-      let targetTimeScale = 1;
-      if (Math.abs(scrollVelocity) > 0.5) {
-        targetTimeScale = 1 + scrollVelocity * 0.15;
-      }
-
-      gsap.to(animation, {
-        timeScale: targetTimeScale,
-        duration: 0.8,
-        ease: "power2.out",
-        overwrite: true,
-      });
-    };
-
-    gsap.ticker.add(updateVelocity);
-
     return () => {
       animation.kill();
-      gsap.ticker.remove(updateVelocity);
     };
   }, [direction]);
 
@@ -215,12 +191,9 @@ const MarqueeRow = React.memo(({ items, direction = "left" }) => {
 MarqueeRow.displayName = "MarqueeRow";
 
 const Skills = () => {
-  const sectionRef = useRef(null);
-
   return (
     <section
       id="skills"
-      ref={sectionRef}
       className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[500px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />

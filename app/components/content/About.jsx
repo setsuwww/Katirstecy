@@ -1,71 +1,17 @@
 "use client";
 
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  useMemo,
-  useCallback,
-} from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useState, useMemo, useCallback } from "react";
 import education from "../../constants/education.json";
 import experience from "../../constants/experience.json";
 import skills from "../../constants/skills.json";
 import { ChevronLeft, ChevronRight, FolderClosed, Quote } from "lucide-react";
 import PaperStackCard from "../PaperStackCard";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const About = () => {
-  const sectionRef = useRef(null);
-  const educationRef = useRef(null);
-  const experienceRef = useRef(null);
-  const skillsRef = useRef(null);
-  const bookRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
 
   const softSkills = useMemo(() => skills?.softSkills || [], []);
   const currentSkill = softSkills[currentPage];
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Consolidated reveal animations
-      const cols = [
-        educationRef.current,
-        experienceRef.current,
-        skillsRef.current,
-      ];
-      gsap.fromTo(
-        cols,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.5,
-          stagger: 0.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 85%",
-          },
-        },
-      );
-
-      // Parallax grid
-      gsap.to(".bg-grid-overlay", {
-        y: -50,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1,
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
 
   const flipPage = useCallback(
     (direction) => {
@@ -73,29 +19,7 @@ const About = () => {
       const nextIdx = isNext
         ? (currentPage + 1) % softSkills.length
         : (currentPage - 1 + softSkills.length) % softSkills.length;
-
-      const tl = gsap.timeline();
-      tl.to(bookRef.current, {
-        rotateY: isNext ? -110 : 110,
-        x: isNext ? -20 : 20,
-        opacity: 0,
-        duration: 0.6,
-        ease: "power2.inOut",
-        onComplete: () => {
-          setCurrentPage(nextIdx);
-          gsap.fromTo(
-            bookRef.current,
-            { rotateY: isNext ? 110 : -110, x: isNext ? 20 : -20, opacity: 0 },
-            {
-              rotateY: 0,
-              x: 0,
-              opacity: 1,
-              duration: 0.8,
-              ease: "back.out(1.2)",
-            },
-          );
-        },
-      });
+      setCurrentPage(nextIdx);
     },
     [currentPage, softSkills.length],
   );
@@ -112,7 +36,6 @@ const About = () => {
   return (
     <section
       id="about"
-      ref={sectionRef}
       className="relative bg-[#F2F2EB] py-16 lg:py-48 px-6 md:px-12 lg:px-24 overflow-hidden"
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[800px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
@@ -121,10 +44,7 @@ const About = () => {
 
       <div className="relative max-w-350 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
-          <div
-            ref={educationRef}
-            className="lg:col-span-3 space-y-10 lg:space-y-16"
-          >
+          <div className="lg:col-span-3 space-y-10 lg:space-y-16">
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
                 {education.section.label}
@@ -160,10 +80,7 @@ const About = () => {
           </div>
 
           {/* 2. EXPERIENCE (Column 4-8) */}
-          <div
-            ref={experienceRef}
-            className="lg:col-span-5 lg:px-12 space-y-10 lg:space-y-16"
-          >
+          <div className="lg:col-span-5 lg:px-12 space-y-10 lg:space-y-16">
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
                 {experience.section.label}
@@ -203,10 +120,7 @@ const About = () => {
           </div>
 
           {/* 3. SOFT SKILLS (Column 9-12) */}
-          <div
-            ref={skillsRef}
-            className="lg:col-span-4 space-y-10 lg:space-y-16"
-          >
+          <div className="lg:col-span-4 space-y-10 lg:space-y-16">
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
                 {skills.softSkillsSection.label}
@@ -223,8 +137,6 @@ const About = () => {
               <PaperStackCard
                 className="h-[480px]"
                 innerClassName="h-full p-8 lg:p-16 flex flex-col justify-between items-start text-left"
-                innerRef={bookRef}
-                innerStyle={{ transformStyle: "preserve-3d" }}
               >
                 <div className="w-full relative z-10">
                   <Quote

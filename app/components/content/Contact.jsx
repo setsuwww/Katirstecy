@@ -1,61 +1,15 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 import SectionHeader from "../ui/SectionHeader";
 import PaperStackCard from "../PaperStackCard";
 import { Send, PenLine } from "lucide-react";
 import settings from "../../constants/settings.json";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Contact = () => {
-  const sectionRef = useRef(null);
-  const formRef = useRef(null);
-  const penRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        formRef.current,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.5,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 75%",
-          },
-        },
-      );
-
-      gsap.fromTo(
-        penRef.current,
-        { rotation: -15, x: 20, opacity: 0 },
-        {
-          rotation: -5,
-          x: 0,
-          opacity: 1,
-          duration: 2,
-          delay: 0.5,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 70%",
-          },
-        },
-      );
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
       id="contact"
-      ref={sectionRef}
       className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[500px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
@@ -70,7 +24,7 @@ const Contact = () => {
         />
 
         <div className="max-w-3xl mx-auto relative">
-          <div ref={formRef}>
+          <div>
             <PaperStackCard
               className="w-full"
               innerClassName="p-8 md:p-16 flex flex-col gap-12"
@@ -136,10 +90,7 @@ const Contact = () => {
           </div>
 
           {/* Pen Illustration Placeholder */}
-          <div
-            ref={penRef}
-            className="absolute -right-4 lg:right-4 bottom-4 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 pointer-events-none z-20 drop-shadow-sm"
-          >
+          <div className="absolute -right-4 lg:right-4 bottom-4 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 pointer-events-none z-20 drop-shadow-sm -rotate-5">
             {/* Visual representation of a pen using CSS/SVG */}
             <div className="relative w-full h-full flex items-center justify-center">
               {/* Pen Body */}

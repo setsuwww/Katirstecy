@@ -2,22 +2,11 @@
 
 import React, { useEffect } from "react";
 import { X } from "lucide-react";
-import { gsap } from "gsap";
 
 const Modal = ({ isOpen, onClose, children }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      gsap.fromTo(
-        ".modal-backdrop",
-        { opacity: 0 },
-        { opacity: 1, duration: 0.4, ease: "power2.out" }
-      );
-      gsap.fromTo(
-        ".modal-content",
-        { scale: 0.9, opacity: 0, y: 20 },
-        { scale: 1, opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.2)" }
-      );
     } else {
       document.body.style.overflow = "unset";
     }
@@ -26,19 +15,22 @@ const Modal = ({ isOpen, onClose, children }) => {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = "unset";
+    };
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 transition-opacity duration-300">
       <div
-        className="modal-backdrop absolute inset-0 bg-black/80 backdrop-blur-sm"
+        className="modal-backdrop absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
         onClick={onClose}
       />
 
-      <div className="modal-content relative w-full max-w-4xl bg-[#F2F2EB] rounded-sm shadow-2xl overflow-hidden overflow-y-auto max-h-[90vh]">
+      <div className="modal-content relative w-full max-w-4xl bg-[#F2F2EB] rounded-sm shadow-2xl overflow-hidden overflow-y-auto max-h-[90vh] transition-all duration-300 transform scale-100 opacity-100">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-10 p-2 bg-white/50 hover:bg-white rounded-full transition-colors"
@@ -46,9 +38,7 @@ const Modal = ({ isOpen, onClose, children }) => {
           <X className="w-5 h-5 text-neutral-800" />
         </button>
 
-        <div className="relative">
-          {children}
-        </div>
+        <div className="relative">{children}</div>
       </div>
     </div>
   );
