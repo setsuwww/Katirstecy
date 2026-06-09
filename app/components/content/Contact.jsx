@@ -1,12 +1,60 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeader from "../ui/SectionHeader";
 import PaperStackCard from "../PaperStackCard";
 import { Send, PenLine } from "lucide-react";
 import settings from "../../constants/settings.json";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, email, subject, message } = formData;
+
+    // Sederhana Validasi
+    if (!name || !email || !subject || !message) {
+      alert("Semua field wajib diisi.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Email harus valid.");
+      return;
+    }
+
+    // Generate WhatsApp Message
+    const whatsappMessage = `Hello Rifqi,
+
+Nama: ${name}
+Email: ${email}
+Subject: ${subject}
+
+Pesan:
+${message}`;
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/${settings.contact.whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <section
       id="contact"
@@ -31,7 +79,7 @@ const Contact = () => {
             >
               <form
                 className="grid grid-cols-1 md:grid-cols-2 gap-8"
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={handleSubmit}
               >
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold ml-1">
@@ -39,6 +87,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder={settings.contact.form.namePlaceholder}
                     className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300 font-serif italic"
                   />
@@ -50,6 +101,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder={settings.contact.form.emailPlaceholder}
                     className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300"
                   />
@@ -61,6 +115,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder={settings.contact.form.subjectPlaceholder}
                     className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300 font-serif italic"
                   />
@@ -72,13 +129,19 @@ const Contact = () => {
                   </label>
                   <textarea
                     rows={6}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder={settings.contact.form.messagePlaceholder}
                     className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-4 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300 resize-none font-serif italic"
                   />
                 </div>
 
                 <div className="md:col-span-2 pt-4">
-                  <button className="group flex items-center gap-3 bg-neutral-900 text-white px-4 py-2 lg:px-8 lg:py-4 rounded-full hover:bg-yellow-800 transition-all duration-500 shadow-lg hover:shadow-yellow-800/20">
+                  <button
+                    type="submit"
+                    className="group flex items-center gap-3 bg-neutral-900 text-white px-4 py-2 lg:px-8 lg:py-4 rounded-full hover:bg-yellow-800 transition-all duration-500 shadow-lg hover:shadow-yellow-800/20"
+                  >
                     <span className="text-xs tracking-wide font-medium">
                       {settings.contact.form.submitLabel}
                     </span>
