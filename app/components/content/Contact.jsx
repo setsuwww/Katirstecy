@@ -58,7 +58,7 @@ ${message}`;
   return (
     <section
       id="contact"
-      className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
+      className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-olive-200/50"
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[500px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute inset-0 bg-grid opacity-[0.015] pointer-events-none" />
@@ -82,7 +82,7 @@ ${message}`;
                 onSubmit={handleSubmit}
               >
                 <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold ml-1">
+                  <label className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1">
                     {settings.contact.form.nameLabel}
                   </label>
                   <input
@@ -91,12 +91,12 @@ ${message}`;
                     value={formData.name}
                     onChange={handleChange}
                     placeholder={settings.contact.form.namePlaceholder}
-                    className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300 font-serif italic"
+                    className="w-full placeholder-olive-400 bg-olive-50/50 border border-olive-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold ml-1">
+                  <label className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1">
                     {settings.contact.form.emailLabel}
                   </label>
                   <input
@@ -105,12 +105,12 @@ ${message}`;
                     value={formData.email}
                     onChange={handleChange}
                     placeholder={settings.contact.form.emailPlaceholder}
-                    className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300"
+                    className="w-full placeholder-olive-400 bg-olive-50/50 border border-olive-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300"
                   />
                 </div>
 
                 <div className="md:col-span-2 space-y-2">
-                  <label className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold ml-1">
+                  <label className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1">
                     {settings.contact.form.subjectLabel}
                   </label>
                   <input
@@ -119,12 +119,12 @@ ${message}`;
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder={settings.contact.form.subjectPlaceholder}
-                    className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300 font-serif italic"
+                    className="w-full placeholder-olive-400 bg-olive-50/50 border border-olive-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
                   />
                 </div>
 
                 <div className="md:col-span-2 space-y-2">
-                  <label className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold ml-1">
+                  <label className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1">
                     {settings.contact.form.messageLabel}
                   </label>
                   <textarea
@@ -133,14 +133,14 @@ ${message}`;
                     value={formData.message}
                     onChange={handleChange}
                     placeholder={settings.contact.form.messagePlaceholder}
-                    className="w-full bg-neutral-50/50 border border-neutral-200 rounded-sm px-4 py-4 text-sm focus:outline-none focus:border-neutral-400 focus:bg-white transition-all duration-300 resize-none font-serif italic"
+                    className="w-full placeholder-olive-400 bg-olive-50/50 border border-olive-200 rounded-sm px-4 py-4 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 resize-none font-serif italic"
                   />
                 </div>
 
                 <div className="md:col-span-2 pt-4">
                   <button
                     type="submit"
-                    className="group flex items-center gap-3 bg-neutral-900 text-white px-4 py-2 lg:px-8 lg:py-4 rounded-full hover:bg-yellow-800 transition-all duration-500 shadow-lg hover:shadow-yellow-800/20"
+                    className="group flex items-center gap-3 bg-olive-600 text-white px-4 py-2 lg:px-8 lg:py-4 rounded-full hover:bg-olive-700 transition-all duration-500 shadow-lg hover:shadow-yellow-800/20"
                   >
                     <span className="text-xs tracking-wide font-medium">
                       {settings.contact.form.submitLabel}
@@ -157,16 +157,16 @@ ${message}`;
             {/* Visual representation of a pen using CSS/SVG */}
             <div className="relative w-full h-full flex items-center justify-center">
               {/* Pen Body */}
-              <div className="w-1.5 h-52 bg-neutral-900 rounded-full shadow-[20px_30px_30px_rgba(0,0,0,0.15)] rotate-[40deg] relative">
+              <div className="w-1.5 h-52 bg-olive-900 rounded-full shadow-[20px_30px_30px_rgba(0,0,0,0.15)] rotate-[40deg] relative">
                 {/* Pen Tip */}
                 <div className="absolute bottom-[-2px] left-1/2 -translate-x-1/2 w-2.5 h-5 bg-yellow-700/80 rounded-b-sm clip-path-tip" />
                 {/* Pen Clip */}
-                <div className="absolute top-10 right-[-3px] w-1 h-14 bg-neutral-700 rounded-full opacity-60 shadow-sm" />
+                <div className="absolute top-10 right-[-3px] w-1 h-14 bg-olive-700 rounded-full opacity-60 shadow-sm" />
                 {/* Pen Cap Detail */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-10 bg-neutral-800 rounded-t-full" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-10 bg-olive-800 rounded-t-full" />
               </div>
               <PenLine
-                className="absolute w-14 h-14 text-neutral-400/10 rotate-[20deg] -translate-x-10 translate-y-10"
+                className="absolute w-14 h-14 text-olive-400/10 rotate-[20deg] -translate-x-10 translate-y-10"
                 strokeWidth={0.3}
               />
             </div>

@@ -28,6 +28,7 @@ import FigmaIcon from "../svg/FigmaIcon";
 import VSCodeIcon from "../svg/VSCodeIcon";
 import SectionHeader from "../ui/SectionHeader";
 import skillsData from "../../constants/skills.json";
+import Image from "next/image";
 
 const techIcons = {
   JavaScript: JavaScriptIcon,
@@ -170,26 +171,26 @@ const techStyles = {
 const SkillChip = React.memo(({ name }) => {
   const Icon = techIcons[name];
   const styles = techStyles[name] || {
-    icon: "group-hover:text-neutral-600",
-    text: "group-hover:text-neutral-600",
-    border: "hover:border-neutral-600",
+    icon: "group-hover:text-olive-600",
+    text: "group-hover:text-olive-600",
+    border: "hover:border-olive-600",
   };
 
   return (
     <div
-      className={`flex items-center gap-1 lg:gap-4 bg-white px-3 py-2 lg:px-4 lg:py-3.5 rounded-md border border-neutral-200 ${styles.border} shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-2 shrink-0 group cursor-default`}
+      className={`flex items-center gap-1 lg:gap-4 bg-white px-3 py-2 lg:px-4 lg:py-3.5 rounded-md border border-olive-200 ${styles.border} shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-2 shrink-0 group cursor-default`}
     >
       <div
-        className={`w-6 h-6 text-neutral-400 group-hover:scale-105 lg:group-hover:scale-125 transition-all duration-500 flex items-center justify-center ${styles.icon}`}
+        className={`w-6 h-6 text-olive-400 group-hover:scale-105 lg:group-hover:scale-125 transition-all duration-500 flex items-center justify-center ${styles.icon}`}
       >
         {Icon ? (
           <Icon className="w-5 h-5 lg:w-full lg:h-full" />
         ) : (
-          <div className="w-2.5 h-2.5 rounded-full bg-neutral-300" />
+          <div className="w-2.5 h-2.5 rounded-full bg-olive-300" />
         )}
       </div>
       <span
-        className={`text-sm lg:text-md font-sans tracking-tight text-neutral-500 transition-colors duration-500 font-medium ${styles.text}`}
+        className={`text-sm lg:text-md font-sans tracking-tight text-olive-500 transition-colors duration-500 font-medium ${styles.text}`}
       >
         {name}
       </span>
@@ -242,8 +243,19 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
+      className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-olive-200/50"
     >
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <Image
+          src="/pgt.png"
+          alt="Paper Texture"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-30 mix-blend-multiply"
+          priority
+        />
+      </div>
+
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[500px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute inset-0 bg-grid opacity-[0.015] pointer-events-none" />
       <div className="absolute inset-0 bg-paper-grain opacity-[0.02] mix-blend-multiply pointer-events-none" />
@@ -257,8 +269,8 @@ const Skills = () => {
 
         <div className="relative space-y-0 md:space-y-6">
           {/* Edge Fade Masks */}
-          <div className="absolute left-0 top-0 bottom-0 h-100 w-24 md:w-40 bg-gradient-to-r from-[#F2F2EB] to-transparent z-20 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 h-100 w-24 md:w-40 bg-gradient-to-l from-[#F2F2EB] to-transparent z-20 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 h-100 w-24 md:w-40 bg-gradient-to-r from-[#EBE9E0] to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 h-100 w-24 md:w-40 bg-gradient-to-l from-[#EBE9E0] to-transparent z-20 pointer-events-none" />
 
           {skillsData.categories.map((cat, idx) => (
             <MarqueeRow key={idx} items={cat.items} direction={cat.direction} />

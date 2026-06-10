@@ -7,12 +7,6 @@
   "hero": {
     "badge": "Let the world know Who am i",
     "title": "Hello My Friend",
-    "lines": [
-      "I'm Rifqi Ibrahim, in this portfolio I want to explain",
-      "Interesting facts About me, starting from Skills,",
-      "Projects and Hobbies, I want to show y'all my",
-      "Programming skills in more detail",
-      "So, welcome..."
-    ]
+    "text": "I'm Rifqi Ibrahim, in this portfolio I want to explain Interesting facts About me, starting from Skills, Projects and Hobbies, I want to show y'all my Programming skills in more detail So, welcome to my Portfolio..."
   }
 }
