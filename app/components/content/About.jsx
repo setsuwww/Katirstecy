@@ -54,7 +54,7 @@ const About = () => {
               </h2>
             </header>
 
-            <div className="relative space-y-10 lg:space-y-12 pl-4">
+            <div className="relative space-y-10 lg:space-y-12 pl-4 pr-4">
               <div className="absolute left-[10px] lg:left-[12px] top-0 h-[32rem] lg:h-[38rem] w-[2px] bg-neutral-300" />
 
               {education.items.map((item, idx) => (
@@ -62,7 +62,7 @@ const About = () => {
                   <div className="absolute left-[-12px] lg:left-[-10px] top-[22px] lg:top-[24px] w-[14px] h-[14px] rounded-full bg-white border border-neutral-400 shadow-sm z-10 transition-all duration-500 group-hover:scale-150 group-hover:bg-neutral-900 group-hover:border-neutral-900" />
 
                   <PaperStackCard>
-                    <div className="space-y-4 p-4">
+                    <div className="space-y-4 p-6 lg:p-4">
                       <span className="text-[10px] font-sans tracking-widest text-neutral-400 font-semibold">
                         {item.period}
                       </span>
@@ -90,7 +90,7 @@ const About = () => {
               </h2>
             </header>
 
-            <div className="space-y-12 lg:space-y-10 ml-4 lg:ml-0">
+            <div className="space-y-12 lg:space-y-10 ml-4 mr-4 lg:ml-0 lg:mr-0">
               {experience.items.map((item, idx) => (
                 <PaperStackCard key={idx}>
                   <div className="group space-y-6 p-5 rounded-sm">
@@ -120,7 +120,7 @@ const About = () => {
           </div>
 
           {/* 3. SOFT SKILLS (Column 9-12) */}
-          <div className="lg:col-span-4 space-y-10 lg:space-y-16">
+          <div className="lg:col-span-4 space-y-10 lg:space-y-16 p-4 lg:p-0">
             <header className="space-y-4">
               <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 font-medium">
                 {skills.softSkillsSection.label}

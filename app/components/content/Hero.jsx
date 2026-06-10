@@ -11,18 +11,14 @@ const Hero = () => {
       id="home"
       className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden bg-white"
     >
-      <div className="absolute inset-0 bg-paper-grain opacity-[0.025] mix-blend-multiply pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[800px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.015)_100%)] pointer-events-none" />
-
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-[16%] top-0 h-full w-px lg:w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_12px,transparent_12px,transparent_24px)]" />
 
         <div className="absolute right-[16%] top-0 h-full w-px lg:w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_12px,transparent_12px,transparent_24px)]" />
       </div>
 
-      <div className="absolute bottom-[40%] left-[25%] w-[15vw] h-[15vw] blur-xl bg-radial from-sky-300 via-sky-100 to-transparent rounded-[50%_40%_60%_30%] opacity-100 z-0"></div>
-      <div className="absolute top-[35%] right-[20%] w-[20vw] h-[20vw] blur-xl bg-radial from-yellow-300 via-yellow-100 to-transparent rounded-[50%_40%_60%_30%] opacity-100 z-0"></div>
+      <div className="absolute bottom-[42%] left-[15%]  lg:bottom-[40%] lg:left-[25%] w-[20vw] h-[20vw] lg:w-[15vw] lg:h-[15vw] blur-lg bg-radial from-sky-300/60 via-sky-100 to-transparent rounded-[50%_40%_60%_30%] opacity-100 z-0"></div>
+      <div className="absolute bottom-[45%] right-[10%] lg:top-[35%] lg:right-[20%] w-[25vw] h-[25vw] lg:w-[20vw] lg:h-[20vw] blur-lg bg-radial from-yellow-300/60 via-yellow-100 to-transparent rounded-[50%_40%_60%_30%] opacity-100 z-0"></div>
 
       {/* Top Section: Avatar & Badge */}
       <div className="flex flex-col items-center gap-8 mb-12 mt-2 lg:mt-0">
