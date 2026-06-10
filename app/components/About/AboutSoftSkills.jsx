@@ -48,7 +48,10 @@ const AboutSoftSkills = () => {
           innerClassName="p-6 lg:p-12 flex flex-col justify-between items-start text-left border-l-4 border-blue-200"
         >
           <div className="w-full relative z-10">
-            <Quote className="w-12 h-12 text-blue-400 mb-8" strokeWidth={0.5} />
+            <Quote
+              className="w-10 h-10 lg:w-12 lg:h-12 text-blue-300 mb-8"
+              strokeWidth={1}
+            />
             <div className="space-y-8">
               <h3 className="font-serif text-2xl lg:text-3xl text-olive-700 tracking-tighter leading-[0.9] text-balance">
                 {currentSkill?.name} .

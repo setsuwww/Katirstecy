@@ -3,7 +3,7 @@ import { PenLine } from "lucide-react";
 
 const ContactPen = () => {
   return (
-    <div className="absolute -right-4 lg:right-4 bottom-4 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 pointer-events-none z-20 drop-shadow-sm -rotate-5">
+    <div className="absolute -right-0 lg:-right-12 lg:bottom-4 bottom-12 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 pointer-events-none z-20 drop-shadow-sm -rotate-5">
       <div className="relative w-full h-full flex items-center justify-center">
         {/* Pen Body */}
         <div className="w-1.5 h-52 bg-olive-900 rounded-full shadow-[20px_30px_30px_rgba(0,0,0,0.15)] rotate-[40deg] relative">

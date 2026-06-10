@@ -31,7 +31,7 @@ const AboutHobbies = () => {
               {galleryImages.map((src, idx) => (
                 <div
                   key={idx}
-                  className="relative aspect-square rounded-md overflow-hidden bg-olive-100/50 shadow-sm border border-olive-200/50"
+                  className="relative aspect-square rounded-md overflow-hidden bg-olive-100/50 shadow-sm border border-olive-200/50 grayscale-0 hover:grayscale-100 hover:scale-90 transition-all"
                 >
                   <Image
                     src={src}

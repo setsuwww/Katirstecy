@@ -66,7 +66,7 @@ ${message}`;
           value={formData.name}
           onChange={handleChange}
           placeholder={settings.contact.form.namePlaceholder}
-          className="w-full placeholder-olive-400 bg-olive-50/50 border border-olive-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
+          className="w-full placeholder-olive-400 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
         />
       </div>
 
@@ -80,7 +80,7 @@ ${message}`;
           value={formData.email}
           onChange={handleChange}
           placeholder={settings.contact.form.emailPlaceholder}
-          className="w-full placeholder-olive-400 bg-olive-50/50 border border-olive-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300"
+          className="w-full placeholder-olive-400 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300"
         />
       </div>
 
@@ -94,7 +94,7 @@ ${message}`;
           value={formData.subject}
           onChange={handleChange}
           placeholder={settings.contact.form.subjectPlaceholder}
-          className="w-full placeholder-olive-400 bg-olive-50/50 border border-olive-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
+          className="w-full placeholder-olive-400 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
         />
       </div>
 
@@ -108,14 +108,14 @@ ${message}`;
           value={formData.message}
           onChange={handleChange}
           placeholder={settings.contact.form.messagePlaceholder}
-          className="w-full placeholder-olive-400 bg-olive-50/50 border border-olive-200 rounded-sm px-4 py-4 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 resize-none font-serif italic"
+          className="w-full placeholder-olive-400 bg-olive-100 border border-olive-300 rounded-sm px-4 py-4 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 resize-none font-serif italic"
         />
       </div>
 
       <div className="md:col-span-2 pt-4">
         <button
           type="submit"
-          className="group flex items-center gap-3 bg-olive-600 text-white px-4 py-2 lg:px-8 lg:py-4 rounded-full hover:bg-olive-700 transition-all duration-500 shadow-lg hover:shadow-yellow-800/20"
+          className="group flex items-center gap-3 bg-linear-to-b from-olive-700 to-olive-600 text-white ring ring-olive-700 border-t border-olive-400 hover:from-olive-600 hover:to-olive-500 px-4 py-2 lg:px-6 lg:py-3 rounded-md shadow-lg hover:shadow-yellow-800/20 transition-colors"
         >
           <span className="text-xs tracking-wide font-medium">
             {settings.contact.form.submitLabel}
