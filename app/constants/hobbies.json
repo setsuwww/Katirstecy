@@ -1,0 +1,24 @@
+{
+  "section": {
+    "label": "My Passions",
+    "title": "Hobbies"
+  },
+  "items": [
+    {
+      "title": "Reading",
+      "description": "I really enjoy reading, especially reading someone's inspiring experience, reading documentation and theory of music and drawing, I also like reading several books about science, astrology and biology"
+    },
+    {
+      "title": "Writing",
+      "description": "I really enjoy writing, I think writing is an effective way to express emotions, ideas and thoughts in my brain spontaneously in the initial stages and one day the writing can be read again as a memory."
+    },
+    {
+      "title": "Drawing",
+      "description": "I also like to draw. Apart from being a typical person who pays attention to aesthetics, I also really like to pay attention to art, drawing can also make my imagination more creative and inovative"
+    },
+    {
+      "title": "Playing Guitar",
+      "description": "I spend almost all my free time playing guitar, studying notes, octaves, harmony, alternate-picking techniques, sweep-picking, and memorizing patterns through the pentatonic scale"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "section": {
+    "label": "Future Focus",
+    "title": "Interests"
+  },
+  "items": [
+    {
+      "title": "Technology",
+      "description": "I am highly interested in technology, software development, systems architecture, artificial intelligence, and emerging innovations."
+    },
+    {
+      "title": "Drawing Techniques",
+      "description": "I enjoy exploring drawing techniques, composition, visual storytelling, and artistic creativity."
+    },
+    {
+      "title": "Reading & Learning Systems",
+      "description": "I am interested in studying effective learning methods, memory techniques, focus strategies, and methods to prevent learning burnout."
+    },
+    {
+      "title": "Music Theory",
+      "description": "I enjoy learning music theory including scales, notes, tempo, rhythm, chord progressions, picking techniques, and musical structure."
+    }
+  ]
+}
