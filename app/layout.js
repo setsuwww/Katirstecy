@@ -22,6 +22,10 @@ const playfair = Playfair_Display({
 export const metadata = {
   title: settings.site.title,
   description: settings.site.description,
+
+  icons: {
+    icon: "/web.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

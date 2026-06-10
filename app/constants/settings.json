@@ -1,7 +1,9 @@
 {
   "site": {
     "title": "Katirstecy | Portfolio",
-    "description": "A premium portfolio showcasing design and development expertise."
+    "description": "A premium portfolio showcasing design and development expertise.",
+
+    "icon": "/favicon.ico"
   },
   "navigation": {
     "brandName": "Rifqi Ibrahim",
