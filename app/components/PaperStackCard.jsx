@@ -26,7 +26,7 @@ const PaperStackCard = ({
       <div
         ref={innerRef}
         style={innerStyle}
-        className={`relative bg-white shadow-[0_20px_50px_rgba(0,0,0,0.04)] overflow-hidden rounded-[1px] border-l border-olive-200/30 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${innerClassName}`}
+        className={`relative bg-white shadow-[0_20px_50px_rgba(0,0,0,0.04)] overflow-hidden rounded-[1px] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${innerClassName}`}
       >
         {/* Paper Grain Texture Overlay */}
         <div className="absolute inset-0 bg-paper-grain opacity-[0.04] mix-blend-multiply pointer-events-none" />

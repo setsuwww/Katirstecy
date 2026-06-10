@@ -10,7 +10,14 @@
       "direction": "right"
     },
     {
-      "items": ["Next.js", "React", "Laravel", "Inertia.js", "TailwindCSS", "Express.js"],
+      "items": [
+        "Next.js",
+        "React",
+        "Laravel",
+        "Inertia.js",
+        "TailwindCSS",
+        "Express.js"
+      ],
       "direction": "left"
     },
     {
@@ -18,7 +25,15 @@
       "direction": "right"
     },
     {
-      "items": ["Git", "GitHub", "Linux", "Docker", "Postman", "Figma", "VS Code"],
+      "items": [
+        "Git",
+        "GitHub",
+        "Linux",
+        "Docker",
+        "Postman",
+        "Figma",
+        "VS Code"
+      ],
       "direction": "left"
     }
   ],
@@ -42,11 +57,11 @@
     },
     {
       "name": "Adaptability",
-      "description": "Quickly adapts to new technologies, frameworks, and project requirements."
+      "description": "Quickly adapts to new technologies, frameworks, project requirements, and new regulations."
     },
     {
       "name": "Emotional Intelligence",
-      "description": "Emotional control and understanding of others."
+      "description": "Good at managing emotions, understanding other people's feelings and positions."
     },
     {
       "name": "Critical Thinking",
@@ -54,7 +69,7 @@
     },
     {
       "name": "Time Management",
-      "description": "Manage time effectively to meet project deadlines and prioritize tasks."
+      "description": "Can manage time by prioritizing tasks that require fast deadlines and disciplined time"
     }
   ]
 }

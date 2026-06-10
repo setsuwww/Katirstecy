@@ -2,7 +2,7 @@
   "section": {
     "label": "PORTFOLIO OF",
     "title": "My Projects",
-    "subtitle": "A collection of projects, experiments and achievements."
+    "subtitle": "A collection of some of my best projects, experiments, and learnings"
   },
   "modal": {
     "detailsLabel": "Project Details",
@@ -15,7 +15,7 @@
     {
       "id": "01",
       "title": "Virspeed",
-      "description": "Information System Management Shift webbase using Nextjs javascript as Frontend & Laravel as Backend, Shadcn Tailwindcss, Zustand, Prisma and Postgresql as Database",
+      "description": "Information System Management Shift webbase using Nextjs javascript, Shadcn, Zustand, Prisma and Postgresql",
       "tags": ["Next.js", "Tailwindcss", "Postgresql", "Neon"],
       "github": "https://github.com",
       "image": ""
@@ -31,7 +31,7 @@
     {
       "id": "03",
       "title": "MR:Space2",
-      "description": "Laravel Inertia React SaaS Multisector inventory management use MySQL",
+      "description": "Laravel Inertia React SPA experience for build SaaS App using Laravel, Inertia, React, Tailwindcss and MySQL",
       "tags": ["PHP", "Laravel", "Inertia", "React", "Tailwindcss", "MySQL"],
       "github": "https://github.com",
       "image": ""

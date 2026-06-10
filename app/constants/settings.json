@@ -13,18 +13,11 @@
       { "name": "Contact", "href": "#contact" }
     ]
   },
-  "interests": {
-    "section": {
-      "label": "INTERESTS",
-      "title": "Beyond Coding",
-      "subtitle": "Exploring creativity through arts, music, and continuous learning."
-    }
-  },
   "contact": {
     "section": {
-      "label": "CONTACT",
-      "title": "Let's Create Something Meaningful",
-      "subtitle": "Open to collaborations, freelance work, and creative discussions."
+      "label": "CONTACT ME",
+      "title": "Let's Work Together!",
+      "subtitle": "Open to collaboration, freelance work, and creative discussions, share your thoughts or opinions"
     },
     "form": {
       "nameLabel": "Name",
