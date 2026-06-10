@@ -49,11 +49,11 @@ const HeroSocialLinks = () => {
           >
             {Icon && (
               <Icon
-                className={`w-3.5 h-3.5 md:w-[18px] md:h-[18px] text-gray-400 transition-colors duration-300 ${hoverClass}`}
+                className={`w-3.5 h-3.5 md:w-[18px] md:h-[18px] text-olive-400 transition-colors duration-300 ${hoverClass}`}
               />
             )}
             <span
-              className={`text-xs lg:text-sm font-sans tracking-widest text-gray-500 uppercase transition-colors duration-300 ${hoverClass}`}
+              className={`text-xs lg:text-sm font-sans tracking-widest text-olive-500 uppercase transition-colors duration-300 ${hoverClass}`}
             >
               {social.name}
             </span>

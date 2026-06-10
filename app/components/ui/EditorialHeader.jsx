@@ -2,7 +2,7 @@ import React from "react";
 
 const EditorialHeader = ({ label, title, className = "" }) => {
   return (
-    <header className={`space-y-4 ${className}`}>
+    <header className={`lg:space-y-2 ${className}`}>
       {label && (
         <span className="text-[10px] uppercase tracking-[0.3em] text-olive-400 font-medium block">
           {label}

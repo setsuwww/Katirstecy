@@ -21,12 +21,11 @@ const AboutHobbies = () => {
         <EditorialHeader
           label={hobbies.section.label}
           title={hobbies.section.title}
-          className="mb-16"
+          className="mb-6 lg:mb-16"
         />
 
         {/* 3-Column Split Layout */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
-          {/* Column Left: 2x2 Gallery */}
           <div className="lg:w-[35%] w-full">
             <div className="grid grid-cols-2 gap-4 h-full">
               {galleryImages.map((src, idx) => (

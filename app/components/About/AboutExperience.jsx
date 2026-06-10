@@ -12,7 +12,7 @@ const AboutExperience = () => {
         title={experience.section.title}
       />
 
-      <div className="space-y-12 lg:space-y-10 ml-4 mr-4 lg:ml-0 lg:mr-0">
+      <div className="space-y-8 lg:space-y-10 ml-4 mr-4 lg:ml-0 lg:mr-0">
         {experience.items.map((item, idx) => (
           <PaperStackCard
             key={idx}

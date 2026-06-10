@@ -25,19 +25,31 @@ const Projects = () => {
       className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-neutral-200/50"
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[500px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute inset-0 bg-grid opacity-[0.015] pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-90 pointer-events-none" />
       <div className="absolute inset-0 bg-paper-grain opacity-[0.02] mix-blend-multiply pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-6xl mx-auto px-6">
         <SectionHeader
           label={projectsData.section.label}
           title={projectsData.section.title}
           subtitle={projectsData.section.subtitle}
         />
-
         {/* Projects Grid / Carousel */}
-        <div className="projects-grid mb-32">
-          <MobileProjectCarousel projects={projects} onPreview={handlePreview} />
+        <div className="projects-grid mb-10">
+          <MobileProjectCarousel
+            projects={projects}
+            onPreview={handlePreview}
+          />
+        </div>
+      </div>
+
+      <div className="flex justify-center lg:hidden">
+        <div className="flex items-center gap-3 text-olive-400">
+          <div className="w-8 h-px bg-olive-300" />
+          <span className="text-[10px] uppercase tracking-[0.3em]">
+            Slide Gallery
+          </span>
+          <div className="w-8 h-px bg-olive-300" />
         </div>
       </div>
 
@@ -105,7 +117,6 @@ const Projects = () => {
           </div>
         )}
       </Modal>
-
       {/* Global CSS for scrollbar hiding */}
       <style jsx global>{`
         .scrollbar-hide::-webkit-scrollbar {

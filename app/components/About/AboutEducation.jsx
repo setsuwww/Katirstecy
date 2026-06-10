@@ -5,13 +5,13 @@ import EditorialHeader from "../ui/EditorialHeader";
 
 const AboutEducation = () => {
   return (
-    <div className="lg:col-span-3 space-y-10 lg:space-y-16">
+    <div className="lg:col-span-3 space-y-10 lg:space-y-16 mt-8 lg:mt-0">
       <EditorialHeader
         label={education.section.label}
         title={education.section.title}
       />
 
-      <div className="relative space-y-10 lg:space-y-12 pl-4 pr-4">
+      <div className="relative space-y-6 lg:space-y-12 pl-4 pr-4">
         <div className="absolute left-[10px] lg:left-[12px] top-0 h-[32rem] lg:h-[38rem] w-[2px] bg-olive-300" />
 
         {education.items.map((item, idx) => (

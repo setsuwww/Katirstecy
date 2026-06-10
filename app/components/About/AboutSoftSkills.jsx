@@ -33,19 +33,19 @@ const AboutSoftSkills = () => {
   );
 
   return (
-    <div className="lg:col-span-4 space-y-10 lg:space-y-16 p-4 lg:p-0">
+    <div className="lg:col-span-4 space-y-10 lg:space-y-16 p-2 lg:p-0">
       <EditorialHeader
         label={skills.softSkillsSection.label}
         title={skills.softSkillsSection.title}
       />
 
       <div
-        className="group relative h-[440px] lg:h-[480px] flex items-center justify-center p-2 lg:p-0"
+        className="group relative flex items-center justify-center p-2 lg:p-0"
         onWheel={handleWheel}
       >
         <PaperStackCard
-          className="h-[480px]"
-          innerClassName="h-full p-8 lg:p-16 flex flex-col justify-between items-start text-left border-l-4 border-blue-200"
+          className="w-full"
+          innerClassName="p-6 lg:p-12 flex flex-col justify-between items-start text-left border-l-4 border-blue-200"
         >
           <div className="w-full relative z-10">
             <Quote className="w-12 h-12 text-blue-400 mb-8" strokeWidth={0.5} />
