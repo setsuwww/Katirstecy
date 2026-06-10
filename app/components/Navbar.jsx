@@ -79,11 +79,11 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="top-0 fixed w-full h-15 lg:h-20 bg-white/30 backdrop-blur-md border-b-2 border-dashed border-olive-300 flex items-center justify-center px-6 md:px-12 z-[9990]">
+    <nav className="top-0 fixed w-full h-15 lg:h-20 bg-olive-50/30 backdrop-blur-md border-b-2 border-dashed border-olive-300 flex items-center justify-center px-6 md:px-12 z-[9990]">
       <div className="w-full max-w-350 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-2.5 h-2.5 bg-[#E6D500] rotate-45 transition-transform duration-500 group-hover:rotate-135" />
-          <span className="font-serif text-md md:text-2xl text-[#111111] leading-none tracking-tight">
+          <span className="font-serif text-md md:text-2xl text-olive-800 leading-none tracking-tight">
             {settings.navigation.brandName}
           </span>
         </Link>
@@ -97,13 +97,13 @@ export const Navbar = () => {
                 href={link.href}
                 className={`relative font-serif text-[1.1rem] transition-colors duration-300 group ${
                   isActive
-                    ? "text-[#111111]"
-                    : "text-[#8A8A8A] hover:text-[#111111]"
+                    ? "text-olive-800"
+                    : "text-olive-400 hover:text-olive-800"
                 }`}
               >
                 {link.name}
                 <span
-                  className={`absolute -bottom-1 left-0 h-px bg-[#111111] transition-all duration-300 ease-in-out ${
+                  className={`absolute -bottom-1 left-0 h-px bg-olive-800 transition-all duration-300 ease-in-out ${
                     isActive ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
@@ -114,7 +114,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-[#111111] z-[9999]"
+          className="md:hidden text-olive-700 z-[9999]"
           onClick={toggleMenu}
           aria-label="Toggle Mobile Menu"
         >
@@ -123,7 +123,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-black/20 backdrop-blur-sm z-[9998] md:hidden transition-opacity duration-300 ${
+          className={`fixed inset-0 bg-olive-900/20 backdrop-blur-sm z-[9998] md:hidden transition-opacity duration-300 ${
             isOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
@@ -149,14 +149,14 @@ export const Navbar = () => {
                     href={link.href}
                     className={`relative font-serif text-[1.5rem] md:text-[1.8rem] py-2 transition-colors duration-300 group ${
                       isActive
-                        ? "text-[#111111]"
-                        : "text-[#8A8A8A] hover:text-[#111111]"
+                        ? "text-olive-800"
+                        : "text-olive-400 hover:text-olive-800"
                     }`}
                     onClick={closeMenu}
                   >
                     {link.name}
                     <span
-                      className={`absolute -bottom-0 left-0 h-0.5 bg-[#111111] transition-all duration-300 ease-in-out ${
+                      className={`absolute -bottom-0 left-0 h-0.5 bg-olive-800 transition-all duration-300 ease-in-out ${
                         isActive ? "w-full" : "w-0 group-hover:w-full"
                       }`}
                     />

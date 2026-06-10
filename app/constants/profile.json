@@ -8,5 +8,23 @@
     "badge": "Let the world know Who am i",
     "title": "Hello My Friend",
     "text": "I'm Rifqi Ibrahim, in this portfolio I want to explain Interesting facts About me, starting from Skills, Projects and Hobbies, I want to show y'all my Programming skills in more detail So, welcome to my Portfolio..."
-  }
+  },
+  "socials": [
+    {
+      "name": "WhatsApp",
+      "url": "https://wa.me/6281401779390"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/setsuwww"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/mg_eaterrrr"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:baimrifqi1@gmail.com"
+    }
+  ]
 }

@@ -140,7 +140,7 @@ const About = () => {
               >
                 <div className="w-full relative z-10">
                   <Quote
-                    className="w-12 h-12 text-olive-400 mb-8"
+                    className="w-12 h-12 text-blue-400 mb-8"
                     strokeWidth={0.5}
                   />
                   <div className="space-y-8">

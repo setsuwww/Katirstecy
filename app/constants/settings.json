@@ -18,24 +18,7 @@
       "label": "INTERESTS",
       "title": "Beyond Coding",
       "subtitle": "Exploring creativity through arts, music, and continuous learning."
-    },
-    "items": [
-      {
-        "title": "Creative Arts",
-        "icon": "Palette",
-        "items": ["Drawing", "Writing", "Fine Arts"]
-      },
-      {
-        "title": "Music",
-        "icon": "Music",
-        "items": ["Guitar", "Piano", "Drums"]
-      },
-      {
-        "title": "Personal Growth",
-        "icon": "Book",
-        "items": ["Reading"]
-      }
-    ]
+    }
   },
   "contact": {
     "section": {
