@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://rifqiibra.com";
+const siteUrl = "https://katirstecy.vercel.app";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
