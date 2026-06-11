@@ -95,6 +95,7 @@ export const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
+                aria-current={isActive ? "page" : undefined}
                 className={`relative font-serif text-[1rem] transition-colors duration-300 group ${
                   isActive
                     ? "text-olive-800"
@@ -116,13 +117,16 @@ export const Navbar = () => {
         <button
           className="md:hidden text-olive-700 z-[9999]"
           onClick={toggleMenu}
-          aria-label="Toggle Mobile Menu"
+          aria-label={isOpen ? "Close Mobile Menu" : "Open Mobile Menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         {/* Mobile Menu Overlay */}
         <div
+          id="mobile-menu"
           className={`fixed inset-0 md:hidden z-[9998] transition-all duration-300 ${
             isOpen
               ? "opacity-100 pointer-events-auto"

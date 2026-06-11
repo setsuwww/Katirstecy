@@ -57,10 +57,14 @@ ${message}`;
       onSubmit={handleSubmit}
     >
       <div className="space-y-2">
-        <label className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1">
+        <label
+          htmlFor="name"
+          className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1"
+        >
           {settings.contact.form.nameLabel}
         </label>
         <input
+          id="name"
           type="text"
           name="name"
           value={formData.name}
@@ -71,10 +75,14 @@ ${message}`;
       </div>
 
       <div className="space-y-2">
-        <label className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1">
+        <label
+          htmlFor="email"
+          className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1"
+        >
           {settings.contact.form.emailLabel}
         </label>
         <input
+          id="email"
           type="email"
           name="email"
           value={formData.email}
@@ -85,10 +93,14 @@ ${message}`;
       </div>
 
       <div className="md:col-span-2 space-y-2">
-        <label className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1">
+        <label
+          htmlFor="subject"
+          className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1"
+        >
           {settings.contact.form.subjectLabel}
         </label>
         <input
+          id="subject"
           type="text"
           name="subject"
           value={formData.subject}
@@ -99,10 +111,14 @@ ${message}`;
       </div>
 
       <div className="md:col-span-2 space-y-2">
-        <label className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1">
+        <label
+          htmlFor="message"
+          className="text-[10px] uppercase tracking-[0.2em] text-olive-400 font-semibold ml-1"
+        >
           {settings.contact.form.messageLabel}
         </label>
         <textarea
+          id="message"
           rows={6}
           name="message"
           value={formData.message}

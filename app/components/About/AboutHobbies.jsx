@@ -35,8 +35,9 @@ const AboutHobbies = () => {
                 >
                   <Image
                     src={src}
-                    alt={`Hobby ${idx + 1}`}
+                    alt={`Hobby activity ${idx + 1}`}
                     fill
+                    sizes="(max-width: 768px) 50vw, 20vw"
                     className="object-cover"
                   />
                 </div>

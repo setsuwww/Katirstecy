@@ -18,6 +18,7 @@ const ProjectCard = ({ project, onPreview }) => {
           <div className="flex gap-3">
             <button
               onClick={() => onPreview(project)}
+              aria-label={`Preview ${project.title}`}
               className="hover:scale-110 transition-transform"
             >
               <ExternalLink className="w-4 h-4 text-olive-300 group-hover/card:text-green-900 transition-colors" />

@@ -70,12 +70,14 @@ const AboutSoftSkills = () => {
             <div className="flex gap-2">
               <button
                 onClick={() => flipPage("prev")}
+                aria-label="Previous soft skill"
                 className="group/btn p-3 bg-olive-200/50 hover:bg-olive-200 transition-all rounded-full border border-olive-100"
               >
                 <ChevronLeft className="w-3 h-3 text-olive-400 group-hover/btn:text-olive-700 transition-colors" />
               </button>
               <button
                 onClick={() => flipPage("next")}
+                aria-label="Next soft skill"
                 className="group/btn p-3 bg-olive-200/50 hover:bg-olive-200 transition-all rounded-full border border-olive-100"
               >
                 <ChevronRight className="w-3 h-3 text-olive-400 group-hover/btn:text-olive-700 transition-colors" />
