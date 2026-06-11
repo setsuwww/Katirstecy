@@ -6,10 +6,10 @@ import EditorialHeader from "../ui/EditorialHeader";
 
 const AboutHobbies = () => {
   const galleryImages = [
-    "/hobbies/hobi1.jpg",
-    "/hobbies/hobi2.jpg",
-    "/hobbies/hobi3.jpg",
-    "/hobbies/hobi4.jpg",
+    "/hobbies/hobi1.avif",
+    "/hobbies/hobi2.avif",
+    "/hobbies/hobi3.avif",
+    "/hobbies/hobi4.avif",
   ];
 
   return (

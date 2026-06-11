@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Paper Texture Overlay */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <Image
-          src="/pgt.png"
+          src="/pgt.avif"
           alt="Paper Texture"
           fill
           sizes="100vw"

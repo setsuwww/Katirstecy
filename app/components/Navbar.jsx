@@ -98,7 +98,7 @@ export const Navbar = () => {
                 className={`relative font-serif text-[1rem] transition-colors duration-300 group ${
                   isActive
                     ? "text-olive-800"
-                    : "text-olive-400 hover:text-olive-800"
+                    : "text-olive-600 hover:text-olive-800"
                 }`}
               >
                 {link.name}
