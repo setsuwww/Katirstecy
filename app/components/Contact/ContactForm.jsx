@@ -70,7 +70,7 @@ ${message}`;
           value={formData.name}
           onChange={handleChange}
           placeholder={settings.contact.form.namePlaceholder}
-          className="w-full placeholder-olive-400 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
+          className="w-full placeholder-olive-400 text-olive-600 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
         />
       </div>
 
@@ -88,7 +88,7 @@ ${message}`;
           value={formData.email}
           onChange={handleChange}
           placeholder={settings.contact.form.emailPlaceholder}
-          className="w-full placeholder-olive-400 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300"
+          className="w-full placeholder-olive-400 text-olive-600 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300"
         />
       </div>
 
@@ -106,7 +106,7 @@ ${message}`;
           value={formData.subject}
           onChange={handleChange}
           placeholder={settings.contact.form.subjectPlaceholder}
-          className="w-full placeholder-olive-400 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
+          className="w-full placeholder-olive-400 text-olive-600 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
         />
       </div>
 
@@ -124,7 +124,7 @@ ${message}`;
           value={formData.message}
           onChange={handleChange}
           placeholder={settings.contact.form.messagePlaceholder}
-          className="w-full placeholder-olive-400 bg-olive-100 border border-olive-300 rounded-sm px-4 py-4 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 resize-none font-serif italic"
+          className="w-full placeholder-olive-400 text-olive-600 bg-olive-100 border border-olive-300 rounded-sm px-4 py-4 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 resize-none font-serif italic"
         />
       </div>
 
