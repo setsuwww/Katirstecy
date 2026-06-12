@@ -115,7 +115,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-olive-700 z-[9999]"
+          className="md:hidden text-olive-700 z-9999"
           onClick={toggleMenu}
           aria-label={isOpen ? "Close Mobile Menu" : "Open Mobile Menu"}
           aria-expanded={isOpen}
@@ -127,7 +127,7 @@ export const Navbar = () => {
         {/* Mobile Menu Overlay */}
         <div
           id="mobile-menu"
-          className={`fixed inset-0 md:hidden z-[9998] transition-all duration-300 ${
+          className={`fixed inset-0 md:hidden z-9998 transition-all duration-300 ${
             isOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
@@ -179,9 +179,8 @@ export const Navbar = () => {
                       }`}
                     >
                       {link.name}
-
                       <span
-                        className={`absolute -bottom-2 left-0 h-[2px] bg-olive-800 transition-all duration-300 ${
+                        className={`absolute -bottom-2 left-0 h-0.5 bg-olive-800 transition-all duration-300 ${
                           isActive ? "w-full" : "w-0 group-hover:w-full"
                         }`}
                       />
@@ -197,7 +196,7 @@ export const Navbar = () => {
                 </p>
 
                 <p className="mt-3 text-sm text-olive-500 leading-relaxed">
-                  Art is life, My life is art.
+                  Art is Everything.
                 </p>
               </div>
             </div>
