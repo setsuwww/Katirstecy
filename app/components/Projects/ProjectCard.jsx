@@ -30,7 +30,7 @@ const ProjectCard = ({ project, onPreview }) => {
           {project.title}
         </h3>
 
-        <p className="text-sm text-olive-500 font-light leading-relaxed mb-8 flex-grow">
+        <p className="text-sm text-olive-500 font-light leading-relaxed mb-8 grow">
           {project.description}
         </p>
 

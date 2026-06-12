@@ -56,8 +56,8 @@ const AboutSoftSkills = () => {
               <h3 className="font-serif text-2xl lg:text-3xl text-olive-700 tracking-tighter leading-[0.9] text-balance">
                 {currentSkill?.name} .
               </h3>
-              <div className="w-8 h-[1px] bg-olive-200" />
-              <p className="text-md lg:text-lg text-olive-500 font-light leading-relaxed max-w-[280px]">
+              <div className="w-8 h-px bg-olive-200" />
+              <p className="text-md lg:text-lg text-olive-500 font-light leading-relaxed max-w-70">
                 {currentSkill?.description}
               </p>
             </div>
