@@ -69,7 +69,7 @@ export const metadata = {
     title: settings.site.title,
     description: settings.site.description,
     images: ["/og-image.png"],
-    creator: "@rifqiibra", // Replace with actual handle if available
+    creator: "@katirrstecuuuu",
   },
   category: "technology",
   icons: {
