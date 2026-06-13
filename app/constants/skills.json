@@ -6,22 +6,43 @@
   },
   "categories": [
     {
-      "items": ["JavaScript", "TypeScript", "PHP", "Python", "Java"],
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "PHP",
+        "Python",
+        "Java",
+        "Golang",
+        "Dart"
+      ],
       "direction": "right"
     },
     {
       "items": [
-        "Next.js",
         "React",
+        "Vue.js",
+        "Svelte",
+        "Angular",
+        "Next.js",
+        "Nuxt.js",
         "Laravel",
         "Inertia.js",
         "TailwindCSS",
-        "Express.js"
+        "Express.js",
+        "Node.js"
       ],
       "direction": "left"
     },
     {
-      "items": ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
+      "items": [
+        "SQLite",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Firebase",
+        "Supabase"
+      ],
       "direction": "right"
     },
     {
@@ -32,7 +53,8 @@
         "Docker",
         "Postman",
         "Figma",
-        "VS Code"
+        "VS Code",
+        "Command"
       ],
       "direction": "left"
     }
