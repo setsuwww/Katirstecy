@@ -31,6 +31,7 @@ export const metadata = {
   description: settings.site.description,
   keywords: [
     "Rifqi Ibrahim",
+    "Katir",
     "Portfolio",
     "Full Stack Developer",
     "Next.js",
