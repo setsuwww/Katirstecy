@@ -13,6 +13,7 @@ import LaravelIcon from "../svg/LaravelIcon";
 import InertiajsIcon from "../svg/InertiajsIcon";
 import TailwindCSSIcon from "../svg/TailwindCSSIcon";
 import ExpressjsIcon from "../svg/ExpressjsIcon";
+import SQLiteIcon from "../svg/SQLiteIcon";
 import MySQLIcon from "../svg/MySQLIcon";
 import PostgreSQLIcon from "../svg/PostgreSQLIcon";
 import MongoDBIcon from "../svg/MongoDBIcon";
@@ -24,6 +25,16 @@ import DockerIcon from "../svg/DockerIcon";
 import PostmanIcon from "../svg/PostmanIcon";
 import FigmaIcon from "../svg/FigmaIcon";
 import VSCodeIcon from "../svg/VSCodeIcon";
+import NodejsIcon from "../svg/NodejsIcon";
+import AngularIcon from "../svg/AngularIcon";
+import VueIcon from "../svg/VueIcon";
+import SvelteIcon from "../svg/SvelteIcon";
+import NuxtjsIcon from "../svg/NuxtjsIcon";
+import FirebaseIcon from "../svg/FirebaseIcon";
+import SupabaseIcon from "../svg/SupabaseIcon";
+import GoIcon from "../svg/GoIcon";
+import DartIcon from "../svg/DartIcon";
+import CommandIcon from "../svg/CommandIcon";
 
 const techIcons = {
   JavaScript: JavaScriptIcon,
@@ -37,10 +48,21 @@ const techIcons = {
   "Inertia.js": InertiajsIcon,
   TailwindCSS: TailwindCSSIcon,
   "Express.js": ExpressjsIcon,
+  SQLite: SQLiteIcon,
   MySQL: MySQLIcon,
   PostgreSQL: PostgreSQLIcon,
   MongoDB: MongoDBIcon,
   Redis: RedisIcon,
+  "Node.js": NodejsIcon,
+  Angular: AngularIcon,
+  "Vue.js": VueIcon,
+  Svelte: SvelteIcon,
+  "Nuxt.js": NuxtjsIcon,
+  Firebase: FirebaseIcon,
+  Supabase: SupabaseIcon,
+  Golang: GoIcon,
+  Dart: DartIcon,
+  Command: CommandIcon,
   Git: GitIcon,
   GitHub: GitHubIcon,
   Linux: LinuxIcon,
@@ -62,14 +84,14 @@ const techStyles = {
     border: "hover:border-blue-600",
   },
   PHP: {
-    icon: "group-hover:text-indigo-400",
-    text: "group-hover:text-indigo-600",
-    border: "hover:border-indigo-400",
+    icon: "group-hover:text-indigo-500",
+    text: "group-hover:text-indigo-700",
+    border: "hover:border-indigo-500",
   },
   Python: {
-    icon: "group-hover:text-blue-500",
-    text: "group-hover:text-blue-700",
-    border: "hover:border-blue-500",
+    icon: "group-hover:text-green-500",
+    text: "group-hover:text-green-700",
+    border: "hover:border-green-500",
   },
   Java: {
     icon: "group-hover:text-orange-600",
@@ -82,9 +104,9 @@ const techStyles = {
     border: "hover:border-black",
   },
   React: {
-    icon: "group-hover:text-sky-400",
-    text: "group-hover:text-sky-600",
-    border: "hover:border-sky-400",
+    icon: "group-hover:text-sky-500",
+    text: "group-hover:text-sky-700",
+    border: "hover:border-sky-500",
   },
   Laravel: {
     icon: "group-hover:text-red-500",
@@ -97,14 +119,69 @@ const techStyles = {
     border: "hover:border-violet-500",
   },
   TailwindCSS: {
-    icon: "group-hover:text-cyan-400",
-    text: "group-hover:text-cyan-600",
-    border: "hover:border-cyan-400",
+    icon: "group-hover:text-cyan-600",
+    text: "group-hover:text-cyan-700",
+    border: "hover:border-cyan-600",
   },
   "Express.js": {
-    icon: "group-hover:text-yellow-500",
+    icon: "group-hover:text-yellow-600",
     text: "group-hover:text-yellow-700",
-    border: "hover:border-yellow-500",
+    border: "hover:border-yellow-600",
+  },
+  "Node.js": {
+    icon: "group-hover:text-lime-500",
+    text: "group-hover:text-lime-700",
+    border: "hover:border-lime-600",
+  },
+  Angular: {
+    icon: "group-hover:text-red-600",
+    text: "group-hover:text-red-700",
+    border: "hover:border-red-600",
+  },
+  "Vue.js": {
+    icon: "group-hover:text-emerald-600",
+    text: "group-hover:text-emerald-700",
+    border: "hover:border-emerald-600",
+  },
+  Svelte: {
+    icon: "group-hover:text-orange-600",
+    text: "group-hover:text-orange-700",
+    border: "hover:border-orange-600",
+  },
+  "Nuxt.js": {
+    icon: "group-hover:text-emerald-500",
+    text: "group-hover:text-emerald-700",
+    border: "hover:border-emerald-500",
+  },
+  Firebase: {
+    icon: "group-hover:text-orange-500",
+    text: "group-hover:text-orange-700",
+    border: "hover:border-orange-500",
+  },
+  Supabase: {
+    icon: "group-hover:text-emerald-500",
+    text: "group-hover:text-emerald-700",
+    border: "hover:border-emerald-500",
+  },
+  Golang: {
+    icon: "group-hover:text-sky-500",
+    text: "group-hover:text-sky-700",
+    border: "hover:border-sky-500",
+  },
+  Dart: {
+    icon: "group-hover:text-blue-500",
+    text: "group-hover:text-blue-700",
+    border: "hover:border-blue-500",
+  },
+  Command: {
+    icon: "group-hover:text-neutral-700",
+    text: "group-hover:text-neutral-900",
+    border: "hover:border-neutral-700",
+  },
+  SQLite: {
+    icon: "group-hover:text-blue-600",
+    text: "group-hover:text-blue-800",
+    border: "hover:border-blue-600",
   },
   MySQL: {
     icon: "group-hover:text-blue-500",
@@ -141,6 +218,11 @@ const techStyles = {
     text: "group-hover:text-yellow-700",
     border: "hover:border-yellow-500",
   },
+  MacOS: {
+    icon: "group-hover:text-yellow-500",
+    text: "group-hover:text-yellow-700",
+    border: "hover:border-yellow-500",
+  },
   Docker: {
     icon: "group-hover:text-blue-400",
     text: "group-hover:text-blue-600",
@@ -152,7 +234,7 @@ const techStyles = {
     border: "hover:border-orange-500",
   },
   Figma: {
-    icon: "group-hover:text-purple-500",
+    icon: "[&_path]:fill-neutral-200 [&_path]:stroke-neutral-400 group-hover:[&_path]:fill-purple-200 group-hover:[&_path]:stroke-purple-700",
     text: "group-hover:text-purple-700",
     border: "hover:border-purple-500",
   },
@@ -173,19 +255,21 @@ const SkillChip = React.memo(({ name }) => {
 
   return (
     <div
-      className={`flex items-center gap-1 lg:gap-4 bg-white px-3 py-2 lg:px-4 lg:py-3.5 rounded-md border border-olive-200 ${styles.border} shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-500 mx-2 shrink-0 group cursor-default`}
+      className={`flex items-center gap-1 lg:gap-4 bg-white px-3 py-2 lg:px-4 lg:py-3.5 rounded-md border border-olive-200 ${styles.border} shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-300 ease-in-out mx-2 shrink-0 group cursor-default`}
     >
       <div
-        className={`w-6 h-6 text-olive-400 group-hover:scale-105 lg:group-hover:scale-125 transition-all duration-500 flex items-center justify-center ${styles.icon}`}
+        className={`w-6 h-6 text-olive-400 group-hover:scale-105 lg:group-hover:scale-115 transition-all duration-300 ease-in-out flex items-center justify-center ${styles.icon}`}
       >
         {Icon ? (
-          <Icon className="w-5 h-5 lg:w-full lg:h-full" />
+          <Icon
+            className={`w-5 h-5 lg:w-full lg:h-full transition-all duration-300 ease-in-out ${styles.icon}`}
+          />
         ) : (
           <div className="w-2.5 h-2.5 rounded-full bg-olive-300" />
         )}
       </div>
       <span
-        className={`text-sm lg:text-md font-sans tracking-tight text-olive-500 transition-colors duration-500 font-medium ${styles.text}`}
+        className={`text-sm lg:text-md font-sans tracking-tight text-olive-500 transition-colors font-medium ${styles.text}`}
       >
         {name}
       </span>

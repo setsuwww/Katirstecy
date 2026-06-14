@@ -1,16 +1,10 @@
 import React from "react";
 
-const FigmaIcon = (props) => (
+const FigmaIcon = ({ className = "", ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     viewBox="0 0 24 24"
-    fill="currentColor"
-    stroke="oklch(70.8% 0 0)"
-    strokeWidth={2}
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    className={className}
     {...props}
   >
     <path d="M5 5.5A3.5 3.5 0 018.5 2H12v7H8.5A3.5 3.5 0 015 5.5z" />
