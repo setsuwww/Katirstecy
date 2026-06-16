@@ -26,7 +26,7 @@ const ProjectCard = ({ project, onPreview }) => {
           </div>
         </div>
 
-        <h3 className="font-serif text-2xl text-olive-800 leading-tight mb-4 group-hover/card:text-yellow-700 transition-colors">
+        <h3 className="font-serif text-2xl text-olive-600 leading-tight mb-4 group-hover/card:text-yellow-700 transition-colors">
           {project.title}
         </h3>
 
