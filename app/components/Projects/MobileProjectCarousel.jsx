@@ -9,7 +9,7 @@ const MobileProjectCarousel = ({ projects, onPreview }) => {
       {projects.map((project, idx) => (
         <div
           key={idx}
-          className="project-card-wrapper flex-shrink-0 w-[calc(100vw-3rem)] md:w-auto snap-center"
+          className="project-card-wrapper shrink-0 w-[calc(100vw-3rem)] md:w-auto snap-center"
         >
           <ProjectCard project={project} onPreview={onPreview} />
         </div>
