@@ -10,6 +10,7 @@ const AboutExperience = () => {
       <EditorialHeader
         label={experience.section.label}
         title={experience.section.title}
+        gradientTo="yellow"
       />
 
       <div className="space-y-8 lg:space-y-10 ml-4 mr-4 lg:ml-0 lg:mr-0">

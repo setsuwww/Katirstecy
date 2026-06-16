@@ -9,6 +9,7 @@ const AboutEducation = () => {
       <EditorialHeader
         label={education.section.label}
         title={education.section.title}
+        gradientTo="orange"
       />
 
       <div className="relative space-y-6 lg:space-y-12 pl-4 pr-4">

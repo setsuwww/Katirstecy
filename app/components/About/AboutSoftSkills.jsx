@@ -37,6 +37,7 @@ const AboutSoftSkills = () => {
       <EditorialHeader
         label={skills.softSkillsSection.label}
         title={skills.softSkillsSection.title}
+        gradientTo="sky"
       />
 
       <div

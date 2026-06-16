@@ -22,6 +22,7 @@ const AboutHobbies = () => {
           label={hobbies.section.label}
           title={hobbies.section.title}
           className="mb-6 lg:mb-16"
+          gradientTo="green"
         />
 
         {/* 3-Column Split Layout */}
