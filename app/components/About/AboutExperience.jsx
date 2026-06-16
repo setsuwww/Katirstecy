@@ -39,7 +39,7 @@ const AboutExperience = () => {
                 </div>
               </div>
 
-              <p className="text-sm lg:text-md text-olive-500 font-light leading-relaxed text-balance max-w-[300px] lg:max-w-[400px]">
+              <p className="text-sm lg:text-md text-olive-500 font-light leading-relaxed text-balance max-w-75 lg:max-w-100">
                 {item.description}
               </p>
             </div>

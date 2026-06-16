@@ -13,21 +13,21 @@ const AboutEducation = () => {
       />
 
       <div className="relative space-y-6 lg:space-y-12 pl-4 pr-4">
-        <div className="absolute left-[10px] lg:left-[12px] top-0 h-[32rem] lg:h-[38rem] w-[2px] bg-olive-300" />
+        <div className="absolute left-2.5 lg:left-3 top-0 h-128 lg:h-152 w-0.5 bg-olive-300" />
 
         {education.items.map((item, idx) => (
           <div key={idx} className="relative group pl-4">
-            <div className="absolute left-[-12px] lg:left-[-10px] top-[22px] lg:top-[24px] w-[14px] h-[14px] rounded-full bg-white border border-olive-400 shadow-sm z-10 transition-all duration-500 group-hover:scale-150 group-hover:bg-olive-900 group-hover:border-olive-900" />
+            <div className="absolute left-3 lg:left-2.5 top-5.5 lg:top-6 w-3.5 h-3.5 rounded-full bg-white border border-olive-400 shadow-sm z-10 transition-all duration-500 group-hover:scale-150 group-hover:bg-olive-900 group-hover:border-olive-900" />
 
             <PaperStackCard innerClassName="border-l-4 border-orange-200">
               <div className="space-y-4 p-6 lg:p-4">
-                <span className="text-[10px] font-sans tracking-widest text-orange-400 font-semibold">
+                <span className="text-2.5 font-sans tracking-widest text-orange-400 font-semibold">
                   {item.period}
                 </span>
                 <h3 className="font-serif text-lg lg:text-xl text-olive-800 group-hover:text-orange-600 leading-tight tracking-tight group-hover:translate-x-1 transition-transform duration-500">
                   {item.institution}
                 </h3>
-                <p className="text-sm text-olive-500 font-light leading-relaxed max-w-[400px]">
+                <p className="text-sm text-olive-500 font-light leading-relaxed max-w-100">
                   {item.description}
                 </p>
               </div>
