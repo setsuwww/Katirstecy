@@ -25,7 +25,7 @@ const Projects = () => {
       id="projects"
       className="relative bg-[#F2F2EB] py-24 lg:py-48 overflow-hidden border-t border-olive-200/50"
     >
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[500px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-125 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute inset-0 bg-grid opacity-90 pointer-events-none" />
       <div className="absolute inset-0 bg-paper-grain opacity-[0.02] mix-blend-multiply pointer-events-none" />
 
@@ -58,7 +58,7 @@ const Projects = () => {
       <Modal isOpen={!!selectedProject} onClose={handleCloseModal}>
         {selectedProject && (
           <div className="flex flex-col lg:flex-row">
-            <div className="lg:w-1/2 min-h-[350px] lg:h-auto bg-olive-200/10 relative group flex items-center justify-center overflow-hidden">
+            <div className="lg:w-1/2 min-h-87.5 lg:h-auto bg-olive-200/10 relative group flex items-center justify-center overflow-hidden">
               <div className="relative w-full h-full p-6 lg:p-12 flex items-center justify-center z-10">
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image
@@ -72,7 +72,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="absolute inset-0 bg-paper-grain opacity-[0.05] mix-blend-multiply pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-olive-200/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-tr from-olive-200/20 to-transparent pointer-events-none" />
             </div>
 
             <div className="lg:w-1/2 p-8 md:p-12 flex flex-col gap-8">
