@@ -4,7 +4,7 @@ import profile from "../../constants/profile.json";
 const HeroHeader = () => {
   return (
     <>
-      <h1 className="font-serif text-5xl lg:text-8xl leading-[1.05] tracking-[-0.03em] text-olive-700 mb-10 lg:mt-4">
+      <h1 className=" font-serif text-5xl lg:text-8xl leading-[1.15] pb-2 tracking-[-0.03em] bg-clip-text bg-linear-to-r text-transparent from-sky-700 via-olive-700 to-yellow-600 mb-10 lg:mt-4">
         {profile.hero.title}
       </h1>
 

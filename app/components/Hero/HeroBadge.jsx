@@ -6,7 +6,7 @@ const HeroBadge = () => {
   return (
     <div className="flex flex-col items-center gap-8 mb-12 mt-2 lg:mt-0 z-10">
       <div className="relative">
-        <div className="w-20 h-20 rounded-full overflow-hidden border border-black/5 bg-white p-1">
+        <div className="w-20 h-20 rounded-full overflow-hidden bg-white p-1.5">
           <Image
             src={profile.avatar.src}
             alt={profile.avatar.alt}
