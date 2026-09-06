@@ -9,7 +9,7 @@ const HeroHeader = () => {
       </h1>
 
       <div className="max-w-xs lg:max-w-md mx-auto">
-        <p className="text-md md:text-lg text-olive-600 font-sans font-light leading-relaxed tracking-tight">
+        <p className="text-md md:text-lg text-olive-600 font-light leading-relaxed">
           {profile.hero.text}
         </p>
       </div>

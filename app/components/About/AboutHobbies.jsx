@@ -61,7 +61,7 @@ const AboutHobbies = () => {
                     <h3 className="font-serif text-xl text-green-800 tracking-tight transition-all duration-300 group-hover:text-green-900">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-olive-500 font-light leading-relaxed">
+                    <p className="text-sm text-olive-500 leading-relaxed">
                       {item.description}
                     </p>
                   </div>

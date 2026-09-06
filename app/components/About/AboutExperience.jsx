@@ -33,17 +33,17 @@ const AboutExperience = () => {
                     {item.company}
                   </h3>
 
-                  <p className="text-[6px] lg:text-xs uppercase tracking-[0.1em] text-olive-500 font-medium mt-2">
+                  <p className="text-xs uppercase tracking-[0.1em] text-olive-500 font-medium mt-2">
                     {item.title}
                   </p>
 
-                  <p className="text-[4px] lg:text-[10px] uppercase tracking-[0.2em] text-taupe-900 font-medium mt-2">
+                  <p className="text-[10px] uppercase tracking-wide md:tracking-[0.2em] text-taupe-400 font-medium mt-2">
                     {item.period}
                   </p>
                 </div>
               </div>
 
-              <p className="text-sm lg:text-md text-olive-500 font-light leading-relaxed text-balance max-w-75 lg:max-w-100">
+              <p className="text-sm lg:text-md text-olive-500 leading-relaxed text-balance max-w-75 lg:max-w-100">
                 {item.description}
               </p>
             </div>

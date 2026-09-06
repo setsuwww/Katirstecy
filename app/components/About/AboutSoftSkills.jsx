@@ -57,31 +57,31 @@ const AboutSoftSkills = () => {
               <h3 className="font-serif text-2xl lg:text-3xl text-olive-700 tracking-tighter leading-[0.9] text-balance">
                 {currentSkill?.name} .
               </h3>
-              <div className="w-8 h-px bg-olive-200" />
-              <p className="text-md lg:text-lg text-olive-500 font-light leading-relaxed max-w-70">
+              <div className="w-10 h-px bg-taupe-400" />
+              <p className="text-md lg:text-lg text-olive-500 leading-relaxed max-w-70">
                 {currentSkill?.description}
               </p>
             </div>
           </div>
 
           <div className="w-full flex justify-between items-center pt-8 relative z-10">
-            <div className="text-[10px] font-mono tracking-[0.3em] text-olive-500 uppercase">
+            <div className="text-[10px] font-mono tracking-[0.2em] text-sky-800 uppercase">
               SOFTSKILL {(currentPage + 1).toString().padStart(2, "0")}
             </div>
             <div className="flex gap-2">
               <button
                 onClick={() => flipPage("prev")}
                 aria-label="Previous soft skill"
-                className="group/btn p-3 bg-olive-200/50 hover:bg-olive-200 transition-all rounded-full border border-olive-100"
+                className="group/btn p-2 bg-taupe-200/40 hover:bg-olive-200 transition-all rounded-full border border-olive-100 hover:border-olive-300"
               >
-                <ChevronLeft className="w-3 h-3 text-olive-400 group-hover/btn:text-olive-700 transition-colors" />
+                <ChevronLeft className="w-4 h-4 text-olive-400 group-hover/btn:text-olive-700 transition-colors" />
               </button>
               <button
                 onClick={() => flipPage("next")}
                 aria-label="Next soft skill"
-                className="group/btn p-3 bg-olive-200/50 hover:bg-olive-200 transition-all rounded-full border border-olive-100"
+                className="group/btn p-2 bg-taupe-200/40 hover:bg-olive-200 transition-all rounded-full border border-olive-100 hover:border-olive-300"
               >
-                <ChevronRight className="w-3 h-3 text-olive-400 group-hover/btn:text-olive-700 transition-colors" />
+                <ChevronRight className="w-4 h-4 text-olive-400 group-hover/btn:text-olive-700 transition-colors" />
               </button>
             </div>
           </div>

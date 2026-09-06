@@ -13,19 +13,17 @@ const AboutEducation = () => {
       />
 
       <div className="relative space-y-6 lg:space-y-12 pl-4 pr-4">
-        <div className="absolute left-2.5 lg:left-3 top-0 h-128 lg:h-152 w-0.5 bg-olive-300" />
-
         {education.items.map((item, idx) => (
-          <div key={idx} className="relative group pl-4">
+          <div key={idx} className="relative group">
             <PaperStackCard innerClassName="border-l-4 border-orange-200">
-              <div className="space-y-4 p-6 lg:p-4">
-                <span className="text-[0.2px] md:text-xs font-sans tracking-widest text-orange-400 font-base">
+              <div className="space-y-4 p-4">
+                <span className="text-[10px] md:text-xs font-sans tracking-widest text-orange-400 font-base">
                   {item.period}
                 </span>
                 <h3 className="font-serif text-lg lg:text-xl text-olive-800 group-hover:text-orange-600 leading-tight tracking-tight group-hover:translate-x-1 transition-transform duration-500">
                   {item.institution}
                 </h3>
-                <p className="text-sm text-olive-500 font-light leading-relaxed max-w-100">
+                <p className="text-sm text-olive-500 leading-relaxed max-w-100">
                   {item.description}
                 </p>
               </div>

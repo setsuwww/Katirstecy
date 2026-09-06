@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Fondamento";
+    src: url("/fonts/Fondamento-Regular.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --background: #f2f2eb;
     --foreground: #171717;
@@ -18,6 +26,10 @@
         --background: #0a0a0a;
         --foreground: #ededed;
     }
+}
+
+.font-fondamento {
+    font-family: 'Fondamento', sans-serif;
 }
 
 html {

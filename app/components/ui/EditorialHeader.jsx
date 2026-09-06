@@ -27,7 +27,7 @@ const EditorialHeader = ({
       <h2
         className={`
           font-serif
-          text-3xl lg:text-5xl
+          text-4xl lg:text-5xl
           font-light
           leading-tight
           bg-clip-text

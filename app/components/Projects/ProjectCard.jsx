@@ -12,7 +12,7 @@ const ProjectCard = ({ project, onPreview }) => {
         innerClassName="p-8 h-full flex flex-col group/card"
       >
         <div className="flex justify-between items-start mb-8">
-          <span className="font-mono text-[10px] tracking-wider text-green-600">
+          <span className="font-mono text-[10px] tracking-wider text-green-800">
             PROJECT-{project.id}
           </span>
           <div className="flex gap-3">
