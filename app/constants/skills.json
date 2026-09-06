@@ -1,6 +1,6 @@
 {
   "section": {
-    "label": "TECHNOLOGIES",
+    "label": "05 - TECHNOLOGIES",
     "title": "Fullstack Skills",
     "subtitle": "Technologies, frameworks and tools I use to build modern digital products."
   },
@@ -60,7 +60,7 @@
     }
   ],
   "softSkillsSection": {
-    "label": "Internal",
+    "label": "03 - Internal",
     "title": "Soft-skills",
     "helperText": "Scroll to flip"
   },

@@ -1,14 +1,14 @@
 {
   "section": {
-    "label": "Pathways",
+    "label": "02 - Pathways",
     "title": "Experience"
   },
   "items": [
     {
-      "title": "Fullstack Developer",
-      "company": "School Projects",
-      "period": "2023 - 2026",
-      "description": "Designed and developed two complete web applications during vocational school use Cutting edge Technologies like Laravel & Nextjs, covering both frontend and backend development."
+      "title": "Frontend Engineer",
+      "company": "PT Geektech Karya Indonesia",
+      "period": "2026 - NOW",
+      "description": "Responsible for building and maintaining the user interface of web applications using modern frontend technologies such as React, Next.js, Tailwind CSS, and TypeScript."
     },
     {
       "title": "Internship Programmer",

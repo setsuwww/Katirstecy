@@ -1,6 +1,6 @@
 {
   "section": {
-    "label": "PORTFOLIO OF",
+    "label": "06 - PORTFOLIO OF",
     "title": "Project Collections",
     "subtitle": "A collection of some of my best projects, experiments, and learnings, created with cross-tech stack"
   },
@@ -14,7 +14,12 @@
       "id": "01",
       "title": "Virspeed",
       "description": "Information System Management Shift webbase using Nextjs javascript, Shadcn, Zustand, Prisma and Postgresql",
-      "tags": ["Next.js", "Tailwindcss", "Postgresql", "Neon"],
+      "tags": [
+        "Next.js",
+        "Tailwindcss",
+        "Postgresql",
+        "Neon"
+      ],
       "github": "https://github.com",
       "image": "/projects/virspeed.avif"
     },
@@ -22,7 +27,11 @@
       "id": "02",
       "title": "Nexttask",
       "description": "Multi-Todolist App use Nextjs typescript, Shadcn Tailwindcss, Zustand, Prisma and MySQL as Database",
-      "tags": ["Next.js", "Tailwindcss", "MySQL"],
+      "tags": [
+        "Next.js",
+        "Tailwindcss",
+        "MySQL"
+      ],
       "github": "https://github.com",
       "image": "/projects/nexttask.avif"
     },
@@ -30,7 +39,14 @@
       "id": "03",
       "title": "MR:Space2",
       "description": "Laravel Inertia React SPA experience for build SaaS App using Laravel, Inertia, React, Tailwindcss and MySQL",
-      "tags": ["PHP", "Laravel", "Inertia", "React", "Tailwindcss", "MySQL"],
+      "tags": [
+        "PHP",
+        "Laravel",
+        "Inertia",
+        "React",
+        "Tailwindcss",
+        "MySQL"
+      ],
       "github": "https://github.com",
       "image": "/projects/mrspace.avif"
     },
@@ -38,7 +54,13 @@
       "id": "04",
       "title": "Areact",
       "description": "Folder & File management using Vite React for Frontend, + ASP.NET Microsoft with CSharp(C#/CS) as MVC Backend",
-      "tags": ["React", "Vite", "ASP.NET", "Tailwindcss", "C#"],
+      "tags": [
+        "React",
+        "Vite",
+        "ASP.NET",
+        "Tailwindcss",
+        "C#"
+      ],
       "github": "https://github.com",
       "image": "/projects/areact.avif"
     },
@@ -46,7 +68,13 @@
       "id": "05",
       "title": "Sevior",
       "description": "Multi-Tenant Project Management SaaS Web-based use Next.js, Golang, dan PostgreSQL Cloud (Neon)",
-      "tags": ["Next.js", "Tailwindcss", "Golang", "PostgreSQL", "Neon"],
+      "tags": [
+        "Next.js",
+        "Tailwindcss",
+        "Golang",
+        "PostgreSQL",
+        "Neon"
+      ],
       "github": "https://github.com",
       "image": "/projects/sevior.avif"
     },
@@ -54,7 +82,14 @@
       "id": "06",
       "title": "Veutyfull",
       "description": "Destination article management app using MEVN Stack, (Mysql, Express, Vue + Vite + Tailwindcss, Nodejs) with elegance natural ui",
-      "tags": ["Vue.js", "Vite", "Tailwindcss", "Node.js", "Mysql", "Express"],
+      "tags": [
+        "Vue.js",
+        "Vite",
+        "Tailwindcss",
+        "Node.js",
+        "Mysql",
+        "Express"
+      ],
       "github": "https://github.com",
       "image": "/projects/todocraft.avif"
     }

@@ -29,11 +29,11 @@ const AboutExperience = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <h3 className="font-serif text-lg lg:text-2xl text-olive-800 tracking-tight transition-all duration-300 group-hover:text-yellow-800">
+                  <h3 className="font-serif text-lg lg:text-2xl text-olive-800 transition-all duration-300 group-hover:text-yellow-800">
                     {item.company}
                   </h3>
 
-                  <p className="text-[8px] lg:text-xs uppercase tracking-[0.2em] text-olive-500 font-medium mt-1">
+                  <p className="text-[6px] lg:text-xs uppercase tracking-[0.2em] text-olive-500 font-medium mt-1">
                     {item.title}
                   </p>
                 </div>
