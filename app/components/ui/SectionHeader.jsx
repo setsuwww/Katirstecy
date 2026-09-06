@@ -7,19 +7,19 @@ const SectionHeader = ({ label, title, subtitle, className = "" }) => {
     <header className={`text-center mb-16 lg:mb-24 space-y-6 ${className}`}>
       <div className="space-y-3">
         {label && (
-          <span className="text-[10px] uppercase tracking-[0.4em] text-neutral-400 font-semibold block">
+          <span className="text-[10px] uppercase tracking-[0.4em] text-taupe-800 font-semibold block">
             {label}
           </span>
         )}
-        <h2 className="font-serif text-4xl md:text-7xl text-neutral-700 font-light italic tracking-tight">
+        <h2 className="font-serif text-4xl md:text-7xl text-taupe-700 font-light tracking-tight">
           {title}
         </h2>
       </div>
 
-      <div className="w-12 h-[1px] bg-neutral-300 mx-auto" />
+      <div className="w-12 h-[2px] bg-taupe-600 mx-auto" />
 
       {subtitle && (
-        <p className="text-sm md:text-md text-neutral-500 font-light leading-relaxed max-w-[280px] md:max-w-md mx-auto text-balance">
+        <p className="text-sm md:text-md text-taupe-500 font-light leading-relaxed max-w-[280px] md:max-w-md mx-auto text-balance">
           {subtitle}
         </p>
       )}

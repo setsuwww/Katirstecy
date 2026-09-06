@@ -17,8 +17,6 @@ const AboutEducation = () => {
 
         {education.items.map((item, idx) => (
           <div key={idx} className="relative group pl-4">
-            <div className="absolute left-3 lg:left-2.5 top-5.5 lg:top-6 w-3.5 h-3.5 rounded-full bg-white border border-olive-400 shadow-sm z-10 transition-all duration-500 group-hover:scale-150 group-hover:bg-olive-900 group-hover:border-olive-900" />
-
             <PaperStackCard innerClassName="border-l-4 border-orange-200">
               <div className="space-y-4 p-6 lg:p-4">
                 <span className="text-[0.2px] md:text-xs font-sans tracking-widest text-orange-400 font-base">

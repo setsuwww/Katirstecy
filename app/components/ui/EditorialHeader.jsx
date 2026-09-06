@@ -19,7 +19,7 @@ const EditorialHeader = ({
   return (
     <header className={`lg:space-y-2 ${className}`}>
       {label && (
-        <span className="text-[10px] uppercase tracking-[0.3em] text-olive-400 font-medium block">
+        <span className="text-[10px] uppercase tracking-widest text-taupe-500 font-semibold block">
           {label}
         </span>
       )}
@@ -28,7 +28,7 @@ const EditorialHeader = ({
         className={`
           font-serif
           text-3xl lg:text-5xl
-          font-light italic
+          font-light
           leading-tight
           bg-clip-text
           text-transparent
@@ -39,6 +39,8 @@ const EditorialHeader = ({
       >
         {title}
       </h2>
+
+      <div className="mt-4 w-18 h-[1px] bg-taupe-400" />
     </header>
   );
 };
