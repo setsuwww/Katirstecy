@@ -54,7 +54,7 @@ const AboutSoftSkills = () => {
               strokeWidth={1}
             />
             <div className="space-y-8">
-              <h3 className="font-serif text-2xl lg:text-3xl text-olive-700 tracking-tighter leading-[0.9] text-balance">
+              <h3 className="font-serif text-2xl lg:text-3xl text-olive-700 font-fondamento tracking-tighter leading-[0.9] text-balance">
                 {currentSkill?.name} .
               </h3>
               <div className="w-10 h-px bg-taupe-400" />

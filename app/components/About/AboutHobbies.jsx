@@ -58,7 +58,7 @@ const AboutHobbies = () => {
                   innerClassName="border-l-4 border-emerald-200"
                 >
                   <div className="group space-y-4 p-6">
-                    <h3 className="font-serif text-xl text-green-800 tracking-tight transition-all duration-300 group-hover:text-green-900">
+                    <h3 className="font-fondamento text-xl text-green-800 tracking-tight transition-all duration-300 group-hover:text-green-900">
                       {item.title}
                     </h3>
                     <p className="text-sm text-olive-500 leading-relaxed">

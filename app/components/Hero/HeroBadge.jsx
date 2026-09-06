@@ -19,7 +19,7 @@ const HeroBadge = () => {
       </div>
 
       <div>
-        <div className="status-badge font-serif inline-flex items-center gap-3 rounded-full bg-linear-to-r from-green-300/10 via-green-100/30 to-transparent px-4 lg:px-6 py-1.5 lg:py-2.5 text-xs lg:text-sm tracking-wide text-green-700 border border-green-500 shadow-sm shadow-green-100 transition-all duration-500">
+        <div className="status-badge font-fondamento font-semibold inline-flex items-center gap-3 rounded-full bg-linear-to-r from-green-300/10 via-green-100/30 to-transparent px-4 lg:px-6 py-1.5 lg:py-2.5 text-xs lg:text-sm text-green-700 border border-green-500 shadow-sm shadow-green-100 transition-all duration-500">
           {profile.hero.badge}
         </div>
       </div>

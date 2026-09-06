@@ -20,7 +20,7 @@ const AboutEducation = () => {
                 <span className="text-[10px] md:text-xs font-sans tracking-widest text-orange-400 font-base">
                   {item.period}
                 </span>
-                <h3 className="font-serif text-lg lg:text-xl text-olive-800 group-hover:text-orange-600 leading-tight tracking-tight group-hover:translate-x-1 transition-transform duration-500">
+                <h3 className="font-fondamento text-lg lg:text-xl text-olive-600 group-hover:text-orange-600 leading-tight tracking-tight group-hover:translate-x-1 transition-transform duration-500">
                   {item.institution}
                 </h3>
                 <p className="text-sm text-olive-500 leading-relaxed max-w-100">
