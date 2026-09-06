@@ -33,8 +33,12 @@ const AboutExperience = () => {
                     {item.company}
                   </h3>
 
-                  <p className="text-[6px] lg:text-xs uppercase tracking-[0.2em] text-olive-500 font-medium mt-1">
+                  <p className="text-[6px] lg:text-xs uppercase tracking-[0.1em] text-olive-500 font-medium mt-2">
                     {item.title}
+                  </p>
+
+                  <p className="text-[4px] lg:text-[10px] uppercase tracking-[0.2em] text-taupe-900 font-medium mt-2">
+                    {item.period}
                   </p>
                 </div>
               </div>
