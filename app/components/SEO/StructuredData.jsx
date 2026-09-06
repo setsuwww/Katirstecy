@@ -5,8 +5,8 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: profile.name,
-    url: "https://katirstecy.vercel.app",
-    image: `https://katirstecy.vercel.app${profile.avatar.src}`,
+    url: "https://katirstecu.vercel.app",
+    image: `https://katirstecu.vercel.app${profile.avatar.src}`,
     sameAs: profile.socials.map((social) => social.url),
     jobTitle: "Full Stack Developer",
     description: profile.hero.text,
@@ -16,7 +16,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: `${profile.name} Portfolio`,
-    url: "https://katirstecy.vercel.app",
+    url: "https://katirstecu.vercel.app",
   };
 
   return (
