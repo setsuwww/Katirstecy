@@ -21,7 +21,7 @@ const AboutEducation = () => {
 
             <PaperStackCard innerClassName="border-l-4 border-orange-200">
               <div className="space-y-4 p-6 lg:p-4">
-                <span className="text-2.5 font-sans tracking-widest text-orange-400 font-semibold">
+                <span className="text-[0.2px] md:text-xs font-sans tracking-widest text-orange-400 font-base">
                   {item.period}
                 </span>
                 <h3 className="font-serif text-lg lg:text-xl text-olive-800 group-hover:text-orange-600 leading-tight tracking-tight group-hover:translate-x-1 transition-transform duration-500">
