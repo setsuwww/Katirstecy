@@ -17,22 +17,26 @@
       "tags": [
         "Next.js",
         "Tailwindcss",
-        "Postgresql",
-        "Neon"
+        "Prisma",
+        "Neon",
+        "Postgresql"
       ],
-      "github": "https://github.com",
+      "github": "https://github.com/setsuwww/ISSM-Virspeed",
       "image": "/projects/virspeed.avif"
     },
     {
       "id": "02",
-      "title": "Nexttask",
-      "description": "Multi-Todolist App use Nextjs typescript, Shadcn Tailwindcss, Zustand, Prisma and MySQL as Database",
+      "title": "Vuetyfull",
+      "description": "Destination article management app using MEVN Stack, (Mysql, Express, Vue + Vite + Tailwindcss, Nodejs) with elegance natural ui",
       "tags": [
-        "Next.js",
+        "Vue.js",
+        "Vite",
         "Tailwindcss",
+        "Node.js",
+        "Express",
         "MySQL"
       ],
-      "github": "https://github.com",
+      "github": "https://github.com/setsuwww/Vuetyfull",
       "image": "/projects/nexttask.avif"
     },
     {
@@ -47,7 +51,7 @@
         "Tailwindcss",
         "MySQL"
       ],
-      "github": "https://github.com",
+      "github": "https://github.com/setsuwww/MRSpace2",
       "image": "/projects/mrspace.avif"
     },
     {
@@ -59,9 +63,10 @@
         "Vite",
         "ASP.NET",
         "Tailwindcss",
-        "C#"
+        "C#",
+        "PostgreSQL"
       ],
-      "github": "https://github.com",
+      "github": "https://github.com/setsuwww/FNFMAreact",
       "image": "/projects/areact.avif"
     },
     {
@@ -75,22 +80,22 @@
         "PostgreSQL",
         "Neon"
       ],
-      "github": "https://github.com",
+      "github": "https://github.com/setsuwww/Sevior-2",
       "image": "/projects/sevior.avif"
     },
     {
       "id": "06",
-      "title": "Veutyfull",
-      "description": "Destination article management app using MEVN Stack, (Mysql, Express, Vue + Vite + Tailwindcss, Nodejs) with elegance natural ui",
+      "title": "Todocraft",
+      "description": "Task management app using Svelte, Vite + Tailwindcss for Frontend, and Flask + SQLite for Backend",
       "tags": [
-        "Vue.js",
+        "Svelte",
         "Vite",
         "Tailwindcss",
-        "Node.js",
-        "Mysql",
-        "Express"
+        "Python",
+        "Flask",
+        "SQLite"
       ],
-      "github": "https://github.com",
+      "github": "https://github.com/setsuwww/To-do-craft",
       "image": "/projects/todocraft.avif"
     }
   ]

@@ -11,7 +11,7 @@ const SectionHeader = ({ label, title, subtitle, className = "" }) => {
             {label}
           </span>
         )}
-        <h2 className="font-serif text-4xl md:text-7xl text-taupe-700 font-light tracking-tight">
+        <h2 className="font-serif text-4xl md:text-7xl text-taupe-600 font-light tracking-tight">
           {title}
         </h2>
       </div>

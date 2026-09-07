@@ -38,7 +38,7 @@ const ProjectCard = ({ project, onPreview }) => {
           {project.tags.map((tag, i) => (
             <span
               key={i}
-              className="text-[9px] uppercase tracking-widest text-olive-500 px-3 py-1 bg-olive-100 border border-olive-200 rounded-full"
+              className="text-[10px] uppercase tracking-wider text-olive-500 px-3 py-1 bg-olive-100 border border-olive-300 rounded-full"
             >
               {tag}
             </span>

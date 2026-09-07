@@ -88,7 +88,7 @@ ${message}`;
           value={formData.email}
           onChange={handleChange}
           placeholder={settings.contact.form.emailPlaceholder}
-          className="w-full placeholder-olive-400 text-olive-600 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300"
+          className="w-full placeholder-olive-400 text-olive-600 bg-olive-100 border border-olive-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-olive-400 focus:ring-2 focus:ring-lime-600 focus:bg-white transition-all duration-300 font-serif italic"
         />
       </div>
 

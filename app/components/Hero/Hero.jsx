@@ -26,9 +26,9 @@ const Hero = () => {
       </div>
 
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-[16%] top-0 h-full w-px lg:w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_12px,transparent_12px,transparent_24px)]" />
+        <div className="absolute left-[16%] top-0 h-full w-px lg:w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_10px,transparent_10px,transparent_20px)]" />
 
-        <div className="absolute right-[16%] top-0 h-full w-px lg:w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_12px,transparent_12px,transparent_24px)]" />
+        <div className="absolute right-[16%] top-0 h-full w-px lg:w-0.5 bg-[repeating-linear-gradient(to_bottom,rgba(0,0,0,0.2)_0px,rgba(0,0,0,0.08)_10px,transparent_10px,transparent_20px)]" />
       </div>
 
       <GradientsBlob />

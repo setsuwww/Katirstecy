@@ -66,7 +66,7 @@ const Projects = () => {
                     alt={selectedProject.title}
                     width={1000}
                     height={1000}
-                    className="w-full h-auto max-h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-sm transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                    className="w-full h-auto max-h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                     priority
                   />
                 </div>
@@ -109,6 +109,14 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
+
+              <a
+                href={selectedProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit mt-6 bg-olive-600 text-sm text-white px-4 py-2 rounded-sm hover:bg-olive-700 transition-colors">
+                View on Github
+              </a>
             </div>
           </div>
         )}
