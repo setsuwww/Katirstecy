@@ -12,7 +12,7 @@ const AboutEducation = () => {
         gradientTo="orange"
       />
 
-      <div className="relative space-y-6 lg:space-y-12 pl-4 pr-4">
+      <div className="relative space-y-6 lg:space-y-12 pl-4 lg:pl-0 pr-4">
         {education.items.map((item, idx) => (
           <div key={idx} className="relative group">
             <PaperStackCard innerClassName="border-l-4 border-orange-200">

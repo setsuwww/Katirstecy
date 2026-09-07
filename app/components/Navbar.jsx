@@ -83,7 +83,7 @@ export const Navbar = () => {
       <div className="w-full max-w-350 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-2.5 h-2.5 bg-[#E6D500] rotate-45 transition-transform duration-500 group-hover:rotate-135" />
-          <span className="font-serif text-md md:text-2xl text-olive-800 leading-none tracking-tight">
+          <span className="font-fondamento text-md md:text-2xl text-olive-800 leading-none tracking-tight">
             {settings.navigation.brandName}
           </span>
         </Link>
@@ -96,17 +96,15 @@ export const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`relative font-serif text-[1rem] transition-colors duration-300 group ${
-                  isActive
-                    ? "text-olive-800"
-                    : "text-olive-600 hover:text-olive-800"
-                }`}
+                className={`relative font-serif text-[1rem] transition-colors duration-300 group ${isActive
+                  ? "text-olive-800"
+                  : "text-olive-600 hover:text-olive-800"
+                  }`}
               >
                 {link.name}
                 <span
-                  className={`absolute -bottom-1 left-0 h-px bg-olive-800 transition-all duration-300 ease-in-out ${
-                    isActive ? "w-full" : "w-0 group-hover:w-full"
-                  }`}
+                  className={`absolute -bottom-1 left-0 h-px bg-olive-800 transition-all duration-300 ease-in-out ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
                 />
               </Link>
             );
@@ -127,11 +125,10 @@ export const Navbar = () => {
         {/* Mobile Menu Overlay */}
         <div
           id="mobile-menu"
-          className={`fixed inset-0 md:hidden z-9998 transition-all duration-300 ${
-            isOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          }`}
+          className={`fixed inset-0 md:hidden z-9998 transition-all duration-300 ${isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+            }`}
         >
           {/* Dark Overlay */}
           <div
@@ -172,17 +169,15 @@ export const Navbar = () => {
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
-                      className={`group relative font-serif text-4xl transition-all duration-300 ${
-                        isActive
-                          ? "text-olive-800"
-                          : "text-olive-400 hover:text-olive-800"
-                      }`}
+                      className={`group relative font-serif text-4xl transition-all duration-300 ${isActive
+                        ? "text-olive-800"
+                        : "text-olive-400 hover:text-olive-800"
+                        }`}
                     >
                       {link.name}
                       <span
-                        className={`absolute -bottom-2 left-0 h-0.5 bg-olive-800 transition-all duration-300 ${
-                          isActive ? "w-full" : "w-0 group-hover:w-full"
-                        }`}
+                        className={`absolute -bottom-2 left-0 h-0.5 bg-olive-800 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                          }`}
                       />
                     </Link>
                   );

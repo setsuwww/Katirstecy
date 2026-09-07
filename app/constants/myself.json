@@ -1,0 +1,24 @@
+{
+    "label": "00 - WHO AM I?",
+    "title": "Little things about me",
+    "intro": "I'm a Software Engineer who enjoys turning ideas into meaningful digital experiences.",
+    "description": "I am interested in how technology, design, and development processes converge to create functional and meaningful digital products. I am experienced in end-to-end application development from requirements analysis and system architecture design to building web applications as a Full-Stack Developer. On the design front, I enjoy translating user and business needs into intuitive interfaces using UI/UX principles. I have a keen interest in Systems Analysis & Design, specifically in creating systems that are structured, scalable, and maintainable.",
+    "interests": [
+        {
+            "title": "Systems Analysis & Design",
+            "description": "Analyzing and designing complex systems that are structured, scalable, and maintainable."
+        },
+        {
+            "title": "Full-Stack Development",
+            "description": "Building end-to-end web applications from requirements analysis to deployment."
+        },
+        {
+            "title": "UI/UX Design",
+            "description": "Translating user and business needs into intuitive interfaces."
+        },
+        {
+            "title": "Development Operations",
+            "description": "Version control, deployment, and application environment management."
+        }
+    ]
+}
