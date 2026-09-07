@@ -16,7 +16,7 @@ const AboutMyself = () => {
 
                     <div className="w-24 h-[2px] bg-taupe-400" />
 
-                    <p className="max-w-3xl pt-2 font-serif text-2xl lg:text-3xl font-light leading-relaxed text-olive-800">
+                    <p className="max-w-md lg:max-w-lg pt-2 font-serif text-2xl lg:text-3xl font-light leading-relaxed text-olive-800">
                         {myself.intro}
                     </p>
 

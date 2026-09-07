@@ -1,10 +1,10 @@
 import React from "react";
 
 const gradientMap = {
-  orange: "to-orange-500",
-  yellow: "to-yellow-500",
-  sky: "to-sky-500",
-  green: "to-emerald-500",
+  orange: "to-orange-700",
+  yellow: "to-yellow-700",
+  sky: "to-sky-700",
+  green: "to-emerald-700",
   olive: "to-olive-700",
 };
 
@@ -40,7 +40,7 @@ const EditorialHeader = ({
         {title}
       </h2>
 
-      <div className="mt-4 w-18 h-[1px] bg-taupe-400" />
+      <div className="mt-4 w-8 h-[1px] bg-taupe-400" />
     </header>
   );
 };

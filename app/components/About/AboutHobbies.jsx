@@ -51,7 +51,7 @@ const AboutHobbies = () => {
 
           {/* Column Right: Hobby Cards (2x2 Grid) */}
           <div className="lg:w-[60%] w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 h-full">
+            <div className="grid grid-cols-2 gap-6 lg:gap-8 h-full">
               {hobbies.items.map((item, idx) => (
                 <PaperStackCard
                   key={idx}
