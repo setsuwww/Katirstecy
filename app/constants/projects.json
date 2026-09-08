@@ -16,8 +16,8 @@
       "description": "Information System Management Shift webbase using Nextjs javascript, Shadcn, Zustand, Prisma and Postgresql",
       "tags": [
         "Next.js",
-        "Tailwindcss",
         "Prisma",
+        "Tailwindcss",
         "Neon",
         "Postgresql"
       ],
@@ -29,8 +29,8 @@
       "title": "Vuetyfull",
       "description": "Destination article management app using MEVN Stack, (Mysql, Express, Vue + Vite + Tailwindcss, Nodejs) with elegance natural ui",
       "tags": [
-        "Vue.js",
         "Vite",
+        "Vue.js",
         "Tailwindcss",
         "Node.js",
         "Express",
@@ -44,7 +44,6 @@
       "title": "MR:Space2",
       "description": "Laravel Inertia React SPA experience for build SaaS App using Laravel, Inertia, React, Tailwindcss and MySQL",
       "tags": [
-        "PHP",
         "Laravel",
         "Inertia",
         "React",
@@ -59,12 +58,12 @@
       "title": "Areact",
       "description": "Folder & File management using Vite React for Frontend, + ASP.NET Microsoft with CSharp(C#/CS) as MVC Backend",
       "tags": [
-        "React",
-        "Vite",
         "ASP.NET",
-        "Tailwindcss",
         "C#",
-        "PostgreSQL"
+        "Vite",
+        "React",
+        "Tailwindcss",
+        "Postgresql"
       ],
       "github": "https://github.com/setsuwww/FNFMAreact",
       "image": "/projects/areact.avif"
@@ -76,9 +75,10 @@
       "tags": [
         "Next.js",
         "Tailwindcss",
+        "Gin",
         "Golang",
-        "PostgreSQL",
-        "Neon"
+        "Neon",
+        "Postgresql"
       ],
       "github": "https://github.com/setsuwww/Sevior-2",
       "image": "/projects/sevior.avif"
@@ -88,11 +88,11 @@
       "title": "Todocraft",
       "description": "Task management app using Svelte, Vite + Tailwindcss for Frontend, and Flask + SQLite for Backend",
       "tags": [
-        "Svelte",
         "Vite",
+        "Svelte",
         "Tailwindcss",
-        "Python",
         "Flask",
+        "Python",
         "SQLite"
       ],
       "github": "https://github.com/setsuwww/To-do-craft",

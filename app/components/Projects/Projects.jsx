@@ -99,11 +99,11 @@ const Projects = () => {
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-olive-400 block mb-4">
                   {projectsData.modal.techStackLabel}
                 </span>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {selectedProject.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-white border border-olive-200 rounded-full text-[10px] text-olive-500 uppercase tracking-widest"
+                      className="px-3 py-1 bg-white border border-olive-300 rounded-sm text-[10px] text-olive-500 uppercase tracking-widest shadow-xs hover:shadow-none cursor-pointer transition-shadow"
                     >
                       {tag}
                     </span>
