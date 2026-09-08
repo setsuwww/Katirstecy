@@ -6,7 +6,7 @@ const AboutMyself = () => {
         <section className="py-10 lg:py-20">
             <div className="max-w-6xl">
                 <div className="space-y-6">
-                    <span className="text-[10px] uppercase tracking-wider text-taupe-500 font-semibold">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-taupe-500 font-semibold">
                         {myself.label}
                     </span>
 

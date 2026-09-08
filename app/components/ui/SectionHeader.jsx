@@ -7,7 +7,7 @@ const SectionHeader = ({ label, title, subtitle, className = "" }) => {
     <header className={`text-center mb-16 lg:mb-24 space-y-6 ${className}`}>
       <div className="space-y-3">
         {label && (
-          <span className="text-[10px] uppercase tracking-[0.4em] text-taupe-800 font-semibold block">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-taupe-800 font-semibold block">
             {label}
           </span>
         )}

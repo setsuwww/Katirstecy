@@ -19,7 +19,7 @@ const EditorialHeader = ({
   return (
     <header className={`lg:space-y-2 ${className}`}>
       {label && (
-        <span className="text-[10px] uppercase tracking-wide text-taupe-500 font-semibold block">
+        <span className="text-[10px] font-mono uppercase tracking-widest text-taupe-500 font-semibold block">
           {label}
         </span>
       )}
