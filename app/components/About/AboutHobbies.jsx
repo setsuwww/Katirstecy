@@ -11,7 +11,7 @@ const AboutHobbies = () => {
   return (
     <section
       id="hobbies"
-      className="relative py-24 px-6 bg-[#F2F2EB] overflow-hidden"
+      className="relative py-24 px-2 lg:px-12 bg-[#F2F2EB] overflow-hidden"
     >
       <div className="relative max-w-8xl mx-auto">
 
