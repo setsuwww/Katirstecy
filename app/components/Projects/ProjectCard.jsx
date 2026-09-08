@@ -106,37 +106,33 @@ const ProjectCard = ({ project, onPreview, isActive = false }) => {
           {project.tags.map((tag) => {
             const color = TAG_COLORS[tag];
 
-            const baseStyles = cn(
-              color?.bg ?? "bg-neutral-100",
-              color?.border ?? "border-neutral-300",
-              color?.text ?? "text-neutral-500"
-            );
-
-            const hoverStyles = cn(
-              color?.hoverBg ?? "group-hover/card:bg-neutral-200",
-              color?.hoverBorder ?? "group-hover/card:border-neutral-200",
-              color?.hoverText ?? "group-hover/card:text-neutral-700"
-            );
-
-            const activeStyles = cn(
-              color?.activeBg ?? color?.bg ?? "bg-neutral-100",
-              color?.activeBorder ?? color?.border ?? "border-neutral-300",
-              color?.activeText ?? color?.text ?? "text-neutral-500"
-            );
+            const mobileStyles = isActive
+              ? cn(
+                color?.activeBg ?? color?.bg ?? "bg-neutral-100",
+                color?.activeBorder ?? color?.border ?? "border-neutral-300",
+                color?.activeText ?? color?.text ?? "text-neutral-500"
+              ) : cn(
+                color?.bg ?? "bg-neutral-100",
+                color?.border ?? "border-neutral-300",
+                color?.text ?? "text-neutral-500"
+              );
 
             return (
               <span
                 key={tag}
                 className={cn(
-                  "text-[10px] uppercase tracking-wider px-3 py-1 rounded-sm border",
-                  "transition-[background-color,border-color,color] duration-300",
+                  "text-[10px] uppercase tracking-wider px-3 py-1 rounded-sm border transition-[background-color,border-color,color] duration-300",
 
                   // Mobile
-                  isActive ? activeStyles : baseStyles,
+                  mobileStyles,
 
-                  // Desktop
-                  "md:" + baseStyles,
-                  hoverStyles
+                  // Desktop default
+                  "md:bg-neutral-100 md:border-neutral-200 md:text-neutral-500",
+
+                  // Desktop hover
+                  color?.hoverBg ?? "md:group-hover/card:bg-neutral-200",
+                  color?.hoverBorder ?? "md:group-hover/card:border-neutral-200",
+                  color?.hoverText ?? "md:group-hover/card:text-neutral-700"
                 )}
               >
                 {tag}
@@ -144,6 +140,7 @@ const ProjectCard = ({ project, onPreview, isActive = false }) => {
             );
           })}
         </div>
+
       </PaperStackCard>
     </div>
   );

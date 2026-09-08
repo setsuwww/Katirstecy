@@ -6,8 +6,8 @@ export const TAG_COLORS = {
         hoverBg: "group-hover/card:bg-gray-100",
         hoverBorder: "group-hover/card:border-gray-200",
         hoverText: "group-hover/card:text-gray-700",
-        activeBg: "bg-black/10",
-        activeBorder: "border-black/30",
+        activeBg: "bg-black/5",
+        activeBorder: "border-black/20",
         activeText: "text-black",
     },
 

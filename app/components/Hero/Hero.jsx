@@ -14,7 +14,7 @@ const Hero = () => {
       className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden bg-white"
     >
       {/* Paper Texture Overlay */}
-      <div className="absolute inset-0 pointer-events-none z-0">
+      <div className="absolute inset-0 pointer-events-none z-0 pt-10 lg:pt-0">
         <Image
           src="/pgt.avif"
           alt="Paper Texture"
