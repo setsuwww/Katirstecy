@@ -258,11 +258,11 @@ const SkillChip = React.memo(({ name }) => {
       className={`flex items-center gap-1 lg:gap-4 bg-white px-3 py-2 lg:px-4 lg:py-3.5 rounded-md border border-olive-200 ${styles.border} shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-all duration-300 ease-in-out mx-2 shrink-0 group cursor-default`}
     >
       <div
-        className={`w-6 h-6 text-olive-400 group-hover:scale-105 lg:group-hover:scale-115 transition-all duration-300 ease-in-out flex items-center justify-center ${styles.icon}`}
+        className={`w-6 h-6 text-olive-400 group-hover:scale-105 lg:group-hover:scale-115 transition-transform duration-300 ease-in-out flex items-center justify-center ${styles.icon}`}
       >
         {Icon ? (
           <Icon
-            className={`w-5 h-5 lg:w-full lg:h-full transition-all duration-300 ease-in-out ${styles.icon}`}
+            className={`w-5 h-5 lg:w-full lg:h-full transition-transform duration-300 ease-in-out ${styles.icon}`}
           />
         ) : (
           <div className="w-2.5 h-2.5 rounded-full bg-olive-300" />

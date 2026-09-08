@@ -122,39 +122,33 @@ const AboutSoftSkills = () => {
         onWheel={handleWheel}
       >
         <PaperStackCard
-          className="w-full overflow-hidden"
+          className="w-full"
           innerClassName="p-6 lg:p-12 flex flex-col justify-between items-start text-left border-l-4 border-blue-200"
         >
-          {/* =========================
-              CONTENT
-          ========================== */}
           <div
             ref={contentRef}
             className="w-full relative z-10"
           >
             <Quote
-              className="w-10 h-10 lg:w-12 lg:h-12 text-blue-300 mb-8"
+              className="w-10 h-10 lg:w-12 lg:h-12 text-blue-300 mb-8 transition-transform duration-500 group-hover:scale-115"
               strokeWidth={1}
             />
 
             <div className="space-y-8">
-              <h3 className="font-serif text-2xl lg:text-3xl text-olive-700 font-fondamento tracking-tighter leading-[0.9] text-balance">
+              <h3 className="font-serif text-2xl lg:text-3xl text-olive-700 font-fondamento tracking-tighter leading-[0.9] text-balance transition-transform duration-500 group-hover:scale-95">
                 {currentSkill.name}.
               </h3>
 
-              <div className="w-10 h-px bg-taupe-400" />
+              <div className="w-10 h-px bg-taupe-400 transition-[width] duration-500 group-hover:w-18" />
 
-              <p className="text-md lg:text-lg text-olive-500 leading-relaxed max-w-70">
+              <p className="text-md lg:text-lg text-olive-500 leading-relaxed max-w-70 transition-[transform] duration-500 group-hover:scale-95">
                 {currentSkill.description}
               </p>
             </div>
           </div>
 
-          {/* =========================
-              FOOTER
-          ========================== */}
           <div className="w-full flex justify-between items-center pt-8 relative z-10">
-            <div className="text-[10px] font-mono tracking-[0.2em] text-sky-800 uppercase">
+            <div className="text-[10px] font-mono tracking-[0.2em] text-sky-800 uppercase transition-transform duration-500 group-hover:scale-95">
               SOFTSKILL{" "}
               {(currentPage + 1).toString().padStart(2, "0")}
             </div>
@@ -164,7 +158,7 @@ const AboutSoftSkills = () => {
               <button
                 onClick={() => flipPage("prev")}
                 aria-label="Previous soft skill"
-                className="group/btn p-2 bg-taupe-200/40 hover:bg-olive-200 transition-all rounded-full border border-olive-100 hover:border-olive-300"
+                className="group/btn p-2 bg-taupe-200/40 group-hover:bg-taupe-200/60 hover:bg-olive-200 hover:scale-105 focus:scale-90 transition-transform rounded-full border border-olive-100 hover:border-olive-300"
               >
                 <ChevronLeft className="w-4 h-4 text-olive-400 group-hover/btn:text-olive-700 transition-colors" />
               </button>
@@ -173,7 +167,7 @@ const AboutSoftSkills = () => {
               <button
                 onClick={() => flipPage("next")}
                 aria-label="Next soft skill"
-                className="group/btn p-2 bg-taupe-200/40 hover:bg-olive-200 transition-all rounded-full border border-olive-100 hover:border-olive-300"
+                className="group/btn p-2 bg-taupe-200/40 group-hover:bg-taupe-200/60 hover:bg-olive-200 hover:scale-105 focus:scale-90 transition-transform rounded-full border border-olive-100 hover:border-olive-300"
               >
                 <ChevronRight className="w-4 h-4 text-olive-400 group-hover/btn:text-olive-700 transition-colors" />
               </button>

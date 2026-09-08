@@ -1,23 +1,20 @@
 import React from "react";
-import Image from "next/image";
+
 import hobbies from "../../constants/hobbies.json";
-import PaperStackCard from "../PaperStackCard";
+
 import EditorialHeader from "../ui/EditorialHeader";
 
-const AboutHobbies = () => {
-  const galleryImages = [
-    "/hobbies/hobi1.avif",
-    "/hobbies/hobi2.avif",
-    "/hobbies/hobi3.avif",
-    "/hobbies/hobi4.avif",
-  ];
+import HobbyImage from "../partials/HobbyImage";
+import HobbyCard from "../partials/HobbyCard";
 
+const AboutHobbies = () => {
   return (
     <section
       id="hobbies"
       className="relative py-24 px-6 bg-[#F2F2EB] overflow-hidden"
     >
       <div className="relative max-w-8xl mx-auto">
+
         <EditorialHeader
           label={hobbies.section.label}
           title={hobbies.section.title}
@@ -25,55 +22,18 @@ const AboutHobbies = () => {
           gradientTo="green"
         />
 
-        {/* 3-Column Split Layout */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
-          <div className="lg:w-[35%] w-full">
-            <div className="grid grid-cols-2 gap-4 h-full">
-              {galleryImages.map((src, idx) => (
-                <div
-                  key={idx}
-                  className="relative aspect-square rounded-md overflow-hidden bg-olive-100/50 shadow-sm border border-olive-200/50 grayscale-0 hover:grayscale-100 hover:scale-90 transition-all"
-                >
-                  <Image
-                    src={src}
-                    alt={`Hobby activity ${idx + 1}`}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 20vw"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Column Middle: Separator */}
+          <HobbyImage hobbies={hobbies} />
+
           <div className="hidden lg:flex w-px bg-olive-200/50" />
 
-          {/* Column Right: Hobby Cards (2x2 Grid) */}
-          <div className="lg:w-[60%] w-full">
-            <div className="grid grid-cols-2 gap-6 lg:gap-8 h-full">
-              {hobbies.items.map((item, idx) => (
-                <PaperStackCard
-                  key={idx}
-                  innerClassName="border-l-4 border-emerald-200"
-                >
-                  <div className="group space-y-2lg:space-y-4 p-6">
-                    <h3 className="font-fondamento text-xl text-green-800 tracking-tight transition-all duration-300 group-hover:text-green-900">
-                      {item.title}
-                    </h3>
+          <HobbyCard hobbies={hobbies} />
 
-                    <p className="hidden lg:block text-sm text-olive-500 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </PaperStackCard>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default AboutHobbies;
+export default React.memo(AboutHobbies);

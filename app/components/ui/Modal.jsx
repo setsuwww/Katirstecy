@@ -35,7 +35,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         aria-hidden="true"
       />
 
-      <div className="modal-content relative w-full max-w-4xl bg-[#F2F2EB] rounded-sm shadow-2xl overflow-hidden overflow-y-auto max-h-[90vh] transition-all duration-300 transform scale-100 opacity-100">
+      <div className="modal-content relative w-full max-w-4xl bg-[#F2F2EB] rounded-sm shadow-2xl overflow-hidden overflow-y-auto max-h-[90vh] transition-opacity duration-300 transform scale-100 opacity-100">
         <button
           onClick={onClose}
           aria-label="Close modal"

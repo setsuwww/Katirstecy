@@ -102,10 +102,7 @@ export const Navbar = () => {
                   }`}
               >
                 {link.name}
-                <span
-                  className={`absolute -bottom-1 left-0 h-px bg-olive-800 transition-all duration-300 ease-in-out ${isActive ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
-                />
+                <span className={`absolute -bottom-1 left-0 h-px bg-olive-800 transition-[width] duration-300 ease-in-out ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
               </Link>
             );
           })}
@@ -125,7 +122,7 @@ export const Navbar = () => {
         {/* Mobile Menu Overlay */}
         <div
           id="mobile-menu"
-          className={`fixed inset-0 md:hidden z-9998 transition-all duration-300 ${isOpen
+          className={`fixed inset-0 md:hidden z-9998 transition-opacity duration-300 ${isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
             }`}
@@ -169,16 +166,13 @@ export const Navbar = () => {
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
-                      className={`group relative font-serif text-4xl transition-all duration-300 ${isActive
+                      className={`group relative font-serif text-4xl transition-colors duration-300 ${isActive
                         ? "text-olive-800"
                         : "text-olive-400 hover:text-olive-800"
                         }`}
                     >
                       {link.name}
-                      <span
-                        className={`absolute -bottom-2 left-0 h-0.5 bg-olive-800 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
-                          }`}
-                      />
+                      <span className={`absolute -bottom-2 left-0 h-0.5 bg-olive-800 transition-[width] duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
                     </Link>
                   );
                 })}

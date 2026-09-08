@@ -6,18 +6,22 @@
   "items": [
     {
       "title": "Reading",
+      "image": "/hobbies/hobi3.avif",
       "description": "I really enjoy reading, especially reading someone's inspiring experience, reading documentation and theory of music and drawing, I also like reading several books about science, astrology and biology"
     },
     {
       "title": "Writing",
+      "image": "/hobbies/hobi1.avif",
       "description": "I really enjoy writing, I think writing is an effective way to express emotions, ideas and thoughts in my brain spontaneously in the initial stages and one day the writing can be read again as a memory."
     },
     {
       "title": "Drawing",
+      "image": "/hobbies/hobi4.avif",
       "description": "I also like to draw. Apart from being a typical person who pays attention to aesthetics, I also really like to pay attention to art, drawing can also make my imagination more creative and inovative"
     },
     {
       "title": "Music",
+      "image": "/hobbies/hobi2.avif",
       "description": "I spend almost all my free time playing guitar, studying notes, octaves, harmony, alternate-picking techniques, sweep-picking, and memorizing patterns through the pentatonic scale"
     }
   ]

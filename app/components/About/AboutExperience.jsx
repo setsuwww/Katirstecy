@@ -21,15 +21,15 @@ const AboutExperience = () => {
           >
             <div className="group space-y-6 p-5 rounded-sm">
               <div className="flex items-center gap-4">
-                <div className="transition-all duration-300 hidden lg:block p-2.5 bg-yellow-50 rounded-xl border border-yellow-100 shrink-0">
+                <div className="transition-transform duration-300 hidden lg:block p-2.5 bg-yellow-50 rounded-xl border border-yellow-100 shrink-0">
                   <FolderClosed
-                    className="group-hover:rotate-20 group-hover:scale-115 transition-rotate duration-200 w-5 h-5 text-yellow-600"
+                    className="group-hover:scale-115 w-5 h-5 text-yellow-600 transition-rotate duration-200"
                     strokeWidth={2}
                   />
                 </div>
 
                 <div className="flex flex-col">
-                  <h3 className="font-fondamento text-lg lg:text-xl text-olive-800 transition-all duration-300 group-hover:text-yellow-800">
+                  <h3 className="font-fondamento text-lg lg:text-xl text-olive-800 group-hover:text-yellow-800 transition-colors duration-300">
                     {item.company}
                   </h3>
 
