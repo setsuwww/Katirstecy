@@ -115,7 +115,7 @@ const Projects = () => {
                 href={selectedProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-fit mt-4 group flex items-center gap-2 bg-linear-to-b from-olive-700 to-olive-600 text-white ring ring-olive-700 border-t border-olive-400 hover:from-olive-600 hover:to-olive-500 tracking-wide text-xs px-2 py-1 lg:px-3 lg:py-1.5 rounded-md shadow-lg hover:shadow-yellow-800/20 transition-colors">
+                className="w-fit mt-4 group flex items-center gap-2 bg-linear-to-b from-olive-700 to-olive-600 text-white ring ring-olive-700 border-t border-olive-400 hover:from-olive-600 hover:to-olive-500 tracking-wide text-xs px-3 py-2 lg:px-3 lg:py-1.5 rounded-md shadow-lg hover:shadow-yellow-800/20 transition-colors">
                 <FaGithub />
                 View on Github
               </a>

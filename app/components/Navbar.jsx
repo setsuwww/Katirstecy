@@ -171,7 +171,7 @@ export const Navbar = () => {
                         : "text-olive-400 hover:text-olive-800"
                         }`}
                     >
-                      {link.name}
+                      {link.name} .
                       <span className={`absolute -bottom-2 left-0 h-0.5 bg-olive-800 transition-[width] duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
                     </Link>
                   );
