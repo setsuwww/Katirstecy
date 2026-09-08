@@ -61,7 +61,6 @@ const MobileProjectCarousel = ({ projects, onPreview }) => {
       });
     };
 
-    // Initial calculation
     updateActiveCard();
 
     container.addEventListener("scroll", handleScroll, {
@@ -78,7 +77,8 @@ const MobileProjectCarousel = ({ projects, onPreview }) => {
         cancelAnimationFrame(rafRef.current);
       }
     };
-  }, [updateActiveCard, projects]);
+  }, [updateActiveCard]);
+
 
   return (
     <div

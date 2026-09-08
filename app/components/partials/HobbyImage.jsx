@@ -1,12 +1,19 @@
+"use client"
+
 import React from "react";
 import Image from "next/image";
-import { BookOpen, PenLine, Pencil, Music2 } from "lucide-react";
+import {
+    BookOpenIcon,
+    PencilSimpleLineIcon,
+    PaletteIcon,
+    MusicNoteIcon,
+} from "@phosphor-icons/react";
 
 const hobbyIcons = {
-    Reading: BookOpen,
-    Writing: PenLine,
-    Drawing: Pencil,
-    Music: Music2,
+    Reading: BookOpenIcon,
+    Writing: PencilSimpleLineIcon,
+    Drawing: PaletteIcon,
+    Music: MusicNoteIcon,
 };
 
 const HobbyImage = ({ hobbies }) => {
@@ -27,16 +34,17 @@ const HobbyImage = ({ hobbies }) => {
                                 alt={item.title}
                                 fill
                                 sizes="(max-width: 1024px) 50vw, 20vw"
-                                className="object-cover scale-100 grayscale-0 blur-0 transition-[transform,filter] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-90 group-hover:grayscale group-hover:blur-[2px]"
+                                className="object-cover scale-100 grayscale-0 blur-0 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-90 group-hover:grayscale group-hover:blur-[2px]"
                             />
 
                             {/* OVERLAY */}
-                            <div className="absolute inset-0 flex items-center justify-center bg-olive-950/0 transition-colors duration-500 ease-out group-hover:bg-olive-950/45">
-                                <div className="flex flex-col items-center justify-center gap-3 text-white opacity-0 translate-y-3 transition-[opacity,transform] duration-500 ease-out group-hover:opacity-100 group-hover:translate-y-0">
+                            <div className="absolute inset-0 flex items-center justify-center bg-olive-950/0 transition-all duration-500 ease-out group-hover:bg-olive-950/70">
+                                <div className="flex flex-col items-center justify-center gap-3 text-white opacity-0 translate-y-3 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:translate-y-0">
                                     {Icon && (
                                         <Icon
-                                            className="w-7 h-7 lg:w-8 lg:h-8"
-                                            strokeWidth={1.5}
+                                            size={32}
+                                            color="#ffffff"
+                                            weight="duotone"
                                         />
                                     )}
 
@@ -44,7 +52,7 @@ const HobbyImage = ({ hobbies }) => {
                                         {item.title}
                                     </span>
 
-                                    <span className="w-8 h-px bg-white/70" />
+                                    <span className="w-12 h-px bg-white/70" />
                                 </div>
                             </div>
                         </div>
