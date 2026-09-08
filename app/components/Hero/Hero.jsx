@@ -11,10 +11,10 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden bg-white"
+      className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden bg-white pt-20 lg:pt-0"
     >
       {/* Paper Texture Overlay */}
-      <div className="absolute inset-0 pointer-events-none z-0 pt-10 lg:pt-0">
+      <div className="absolute inset-0 pointer-events-none z-0">
         <Image
           src="/pgt.avif"
           alt="Paper Texture"

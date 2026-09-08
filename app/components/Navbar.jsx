@@ -84,7 +84,7 @@ export const Navbar = () => {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-2.5 h-2.5 bg-[#E6D500] rotate-45 transition-transform duration-500 group-hover:rotate-135" />
           <span className="font-fondamento text-md md:text-2xl text-olive-800 leading-none tracking-tight">
-            {settings.navigation.brandName}
+            {settings.navigation.brandName} .
           </span>
         </Link>
 
