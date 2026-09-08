@@ -1,6 +1,14 @@
 "use client";
 
-import React, { useState, useMemo, useCallback } from "react";
+import React, {
+  useState,
+  useMemo,
+  useCallback,
+  useRef,
+  useLayoutEffect,
+} from "react";
+import gsap from "gsap";
+
 import skills from "../../constants/skills.json";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import PaperStackCard from "../PaperStackCard";
@@ -10,27 +18,96 @@ const AboutSoftSkills = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const softSkills = useMemo(() => skills?.softSkills || [], []);
+
   const currentSkill = softSkills[currentPage];
+
+  const contentRef = useRef(null);
+  const isAnimating = useRef(false);
+
+  /*
+   * Initial animation
+   * Hanya berjalan di client setelah hydration.
+   */
+  useLayoutEffect(() => {
+    if (!contentRef.current) return;
+
+    gsap.fromTo(
+      contentRef.current,
+      {
+        opacity: 0,
+        x: 25,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.45,
+        ease: "power3.out",
+      }
+    );
+  }, [currentPage]);
 
   const flipPage = useCallback(
     (direction) => {
+      if (isAnimating.current || softSkills.length <= 1) return;
+
+      const content = contentRef.current;
+
+      if (!content) return;
+
+      isAnimating.current = true;
+
       const isNext = direction === "next";
-      const nextIdx = isNext
-        ? (currentPage + 1) % softSkills.length
-        : (currentPage - 1 + softSkills.length) % softSkills.length;
-      setCurrentPage(nextIdx);
+
+      /*
+       * Tentukan arah keluar.
+       *
+       * NEXT → keluar ke kiri
+       * PREV → keluar ke kanan
+       */
+      const exitX = isNext ? -50 : 50;
+
+      gsap.to(content, {
+        x: exitX,
+        opacity: 0,
+        duration: 0.22,
+        ease: "power2.in",
+        onComplete: () => {
+          /*
+           * Ganti data setelah content lama
+           * selesai keluar.
+           */
+          setCurrentPage((prev) =>
+            isNext
+              ? (prev + 1) % softSkills.length
+              : (prev - 1 + softSkills.length) % softSkills.length
+          );
+
+          /*
+           * Reset lock.
+           * useLayoutEffect akan menjalankan
+           * animasi masuk setelah state berubah.
+           */
+          isAnimating.current = false;
+        },
+      });
     },
-    [currentPage, softSkills.length],
+    [softSkills.length]
   );
 
   const handleWheel = useCallback(
     (e) => {
       if (Math.abs(e.deltaY) < 30) return;
-      if (e.deltaY > 0) flipPage("next");
-      else flipPage("prev");
+
+      if (e.deltaY > 0) {
+        flipPage("next");
+      } else {
+        flipPage("prev");
+      }
     },
-    [flipPage],
+    [flipPage]
   );
+
+  if (!currentSkill) return null;
 
   return (
     <div className="lg:col-span-4 space-y-10 lg:space-y-16 p-2 lg:p-0">
@@ -45,30 +122,45 @@ const AboutSoftSkills = () => {
         onWheel={handleWheel}
       >
         <PaperStackCard
-          className="w-full"
+          className="w-full overflow-hidden"
           innerClassName="p-6 lg:p-12 flex flex-col justify-between items-start text-left border-l-4 border-blue-200"
         >
-          <div className="w-full relative z-10">
+          {/* =========================
+              CONTENT
+          ========================== */}
+          <div
+            ref={contentRef}
+            className="w-full relative z-10"
+          >
             <Quote
               className="w-10 h-10 lg:w-12 lg:h-12 text-blue-300 mb-8"
               strokeWidth={1}
             />
+
             <div className="space-y-8">
               <h3 className="font-serif text-2xl lg:text-3xl text-olive-700 font-fondamento tracking-tighter leading-[0.9] text-balance">
-                {currentSkill?.name} .
+                {currentSkill.name}.
               </h3>
+
               <div className="w-10 h-px bg-taupe-400" />
+
               <p className="text-md lg:text-lg text-olive-500 leading-relaxed max-w-70">
-                {currentSkill?.description}
+                {currentSkill.description}
               </p>
             </div>
           </div>
 
+          {/* =========================
+              FOOTER
+          ========================== */}
           <div className="w-full flex justify-between items-center pt-8 relative z-10">
             <div className="text-[10px] font-mono tracking-[0.2em] text-sky-800 uppercase">
-              SOFTSKILL {(currentPage + 1).toString().padStart(2, "0")}
+              SOFTSKILL{" "}
+              {(currentPage + 1).toString().padStart(2, "0")}
             </div>
+
             <div className="flex gap-2">
+              {/* PREVIOUS */}
               <button
                 onClick={() => flipPage("prev")}
                 aria-label="Previous soft skill"
@@ -76,6 +168,8 @@ const AboutSoftSkills = () => {
               >
                 <ChevronLeft className="w-4 h-4 text-olive-400 group-hover/btn:text-olive-700 transition-colors" />
               </button>
+
+              {/* NEXT */}
               <button
                 onClick={() => flipPage("next")}
                 aria-label="Next soft skill"

@@ -6,6 +6,7 @@ import Modal from "../ui/Modal";
 import projectsData from "../../constants/projects.json";
 import MobileProjectCarousel from "./MobileProjectCarousel";
 import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -114,7 +115,8 @@ const Projects = () => {
                 href={selectedProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-fit mt-6 bg-olive-600 text-sm text-white px-4 py-2 rounded-sm hover:bg-olive-700 transition-colors">
+                className="w-fit mt-4 group flex items-center gap-2 bg-linear-to-b from-olive-700 to-olive-600 text-white ring ring-olive-700 border-t border-olive-400 hover:from-olive-600 hover:to-olive-500 tracking-wide text-xs px-2 py-1 lg:px-3 lg:py-1.5 rounded-md shadow-lg hover:shadow-yellow-800/20 transition-colors">
+                <FaGithub />
                 View on Github
               </a>
             </div>
