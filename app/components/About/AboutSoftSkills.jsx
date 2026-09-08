@@ -141,7 +141,7 @@ const AboutSoftSkills = () => {
 
               <div className="w-10 h-px bg-taupe-400 transition-[width] duration-500 group-hover:w-18" />
 
-              <p className="text-md lg:text-lg text-olive-500 leading-relaxed max-w-70 transition-[transform] duration-500 group-hover:scale-95">
+              <p className="text-md lg:text-lg text-olive-500 leading-relaxed max-w-70 transition-transform duration-500 group-hover:scale-95">
                 {currentSkill.description}
               </p>
             </div>

@@ -44,20 +44,24 @@ const ProjectCard = ({ project, onPreview, isActive = false }) => {
             <button
               type="button"
               onClick={() => onPreview(project)}
-              aria-label={`Preview ${project.title} `}
-              className="transition-transform duration-300 group-hover/card:scale-110 hover:scale-120"
+              aria-label={`Preview ${project.title}`}
+              className="group flex items-center gap-x-1 cursor-pointer"
             >
               <ExternalLink
                 className={cn(
-                  "w-4 h-4 transition-colors duration-300",
+                  "w-4 h-4 shrink-0 transition-[color,transform] duration-300 ease-out",
 
                   // Mobile
                   isActive ? "text-green-800" : "text-olive-300",
 
                   // Desktop
-                  "md:text-olive-300 md:group-hover/card:text-green-800"
+                  "md:text-olive-300 md:group-hover:text-green-700"
                 )}
               />
+
+              <span className="max-w-0 overflow-hidden whitespace-nowrap translate-x-2 text-[10px] font-mono transition-[max-width,opacity,transform] duration-300 ease-out group-hover:max-w-20 group-hover:opacity-100 group-hover:translate-x-0 md:group-hover:text-green-800">
+                PREVIEW
+              </span>
             </button>
           </div>
         </div>

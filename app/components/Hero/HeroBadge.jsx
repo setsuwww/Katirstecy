@@ -1,10 +1,43 @@
-import React from "react";
+"use client";
+
+import React, { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 import Image from "next/image";
 import profile from "../../constants/profile.json";
 
 const HeroBadge = () => {
+  const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        containerRef.current,
+        {
+          scale: 0.7,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 1,
+          ease: "back.out(1.4)",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="flex flex-col items-center gap-8 mb-12 mt-2 lg:mt-0 z-10">
+    <div
+      ref={containerRef}
+      className="flex flex-col items-center gap-8 mb-12 mt-2 lg:mt-0 z-10"
+    >
       <div className="relative">
         <div className="w-20 h-20 rounded-full overflow-hidden bg-white p-1.5">
           <Image
