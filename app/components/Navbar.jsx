@@ -144,9 +144,6 @@ export const Navbar = () => {
             ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Paper Texture */}
-            <div className="absolute inset-0 bg-paper-grain opacity-[0.04] mix-blend-multiply pointer-events-none" />
-
             {/* Decorative Lines */}
             <div className="absolute left-6 top-0 h-full w-px bg-neutral-300/50" />
             <div className="absolute right-6 top-0 h-full w-px bg-neutral-300/50" />

@@ -61,9 +61,7 @@ const Projects = () => {
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-125 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="absolute inset-0 bg-grid opacity-90 pointer-events-none" />
-
-      <div className="absolute inset-0 bg-paper-grain opacity-[0.02] mix-blend-multiply pointer-events-none" />
+      <div className="absolute inset-0 bg-grid pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6">
         <SectionHeader
@@ -112,9 +110,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="absolute inset-0 bg-paper-grain opacity-[0.05] mix-blend-multiply pointer-events-none" />
-
-              <div className="absolute inset-0 bg-linear-to-tr from-olive-200/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-olive-600 to-transparent pointer-events-none" />
             </div>
 
             {/* Project Details */}
