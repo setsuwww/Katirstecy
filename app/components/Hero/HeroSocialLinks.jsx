@@ -86,10 +86,11 @@ const HeroSocialLinks = ({
 
   const sizeClasses = {
     sm: {
-      icon: "h-3.5 w-3.5",
-      text: "text-xs",
-      gap: "gap-2",
+      icon: "h-4 w-4 md:h-[18px] md:w-[18px]",
+      text: "hidden",
+      gap: "gap-0",
     },
+
     md: {
       icon: "h-4 w-4 md:h-[18px] md:w-[18px]",
       text: "text-xs lg:text-sm",
@@ -104,7 +105,14 @@ const HeroSocialLinks = ({
   return (
     <div
       ref={containerRef}
-      className={`mt-10 flex flex-wrap ${currentJustify} gap-6 lg:gap-8`}
+      className={`
+        mt-10
+        flex
+        flex-wrap
+        ${currentJustify}
+        gap-6
+        lg:gap-8
+      `}
     >
       {profile.socials.map((social, index) => {
         const Icon = getSocialIcon(social.name);
@@ -119,16 +127,42 @@ const HeroSocialLinks = ({
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group flex cursor-pointer items-center ${currentSize.gap} transition-transform duration-300`}
+            aria-label={social.name}
+            className={`
+              group
+              flex
+              cursor-pointer
+              items-center
+              ${currentSize.gap}
+              transition-transform
+              duration-300
+              hover:-translate-y-0.5
+            `}
           >
             {Icon && (
               <Icon
-                className={`${currentSize.icon} text-olive-400 transition-transform duration-300 group-hover:scale-110 ${hoverClass}`}
+                className={`
+                  ${currentSize.icon}
+                  text-olive-400
+                  transition-all
+                  duration-300
+                  group-hover:scale-110
+                  ${hoverClass}
+                `}
               />
             )}
 
             <span
-              className={`${currentSize.text} font-sans uppercase tracking-widest text-olive-500 transition-colors duration-300 ${hoverClass}`}
+              className={`
+                ${currentSize.text}
+                font-sans
+                uppercase
+                tracking-widest
+                text-olive-500
+                transition-colors
+                duration-300
+                ${hoverClass}
+              `}
             >
               {social.name}
             </span>
