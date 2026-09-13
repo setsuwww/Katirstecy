@@ -3,11 +3,18 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaWhatsapp, FaGithub, FaInstagram } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaGithub,
+  FaInstagram,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import profile from "../../constants/profile.json";
 
-const HeroSocialLinks = () => {
+const HeroSocialLinks = ({
+  size = "md",
+  justify = "center",
+}) => {
   const containerRef = useRef(null);
   const linksRef = useRef([]);
 
@@ -71,29 +78,57 @@ const HeroSocialLinks = () => {
     }
   };
 
+  const justifyClasses = {
+    left: "justify-start",
+    center: "justify-center",
+    right: "justify-end",
+  };
+
+  const sizeClasses = {
+    sm: {
+      icon: "h-3.5 w-3.5",
+      text: "text-xs",
+      gap: "gap-2",
+    },
+    md: {
+      icon: "h-4 w-4 md:h-[18px] md:w-[18px]",
+      text: "text-xs lg:text-sm",
+      gap: "gap-2",
+    },
+  };
+
+  const currentSize = sizeClasses[size] || sizeClasses.md;
+  const currentJustify =
+    justifyClasses[justify] || justifyClasses.center;
+
   return (
     <div
       ref={containerRef}
-      className="mt-10 flex flex-wrap justify-center gap-6 lg:gap-8"
+      className={`mt-10 flex flex-wrap ${currentJustify} gap-6 lg:gap-8`}
     >
       {profile.socials.map((social, index) => {
         const Icon = getSocialIcon(social.name);
         const hoverClass = getHoverColor(social.name);
 
         return (
-          <a key={social.name} ref={(node) => { linksRef.current[index] = node }} href={social.url}
+          <a
+            key={social.name}
+            ref={(node) => {
+              linksRef.current[index] = node;
+            }}
+            href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 group cursor-pointer transition-transform duration-300"
+            className={`group flex cursor-pointer items-center ${currentSize.gap} transition-transform duration-300`}
           >
             {Icon && (
               <Icon
-                className={`w-3.5 h-3.5 md:w-[18px] md:h-[18px] text-olive-400 group-hover:scale-110 transition-transform duration-300 ${hoverClass}`}
+                className={`${currentSize.icon} text-olive-400 transition-transform duration-300 group-hover:scale-110 ${hoverClass}`}
               />
             )}
 
             <span
-              className={`text-xs lg:text-sm font-sans tracking-widest text-olive-500 uppercase transition-transform duration-300 ${hoverClass}`}
+              className={`${currentSize.text} font-sans uppercase tracking-widest text-olive-500 transition-colors duration-300 ${hoverClass}`}
             >
               {social.name}
             </span>
