@@ -107,7 +107,7 @@ const SectionHeader = ({ label, title, subtitle, className = "" }) => {
         {label && (
           <span
             ref={labelRef}
-            className="text-[10px] font-mono uppercase tracking-widest text-taupe-800 font-semibold block"
+            className="text-[10px] font-mono uppercase tracking-widest text-yellow-600 font-base block"
           >
             {label}
           </span>
@@ -129,7 +129,7 @@ const SectionHeader = ({ label, title, subtitle, className = "" }) => {
       {subtitle && (
         <p
           ref={subtitleRef}
-          className="text-sm md:text-md text-taupe-500 font-light leading-relaxed max-w-[280px] md:max-w-md mx-auto text-balance"
+          className="text-sm md:text-md text-taupe-500 font-semibold leading-relaxed max-w-[280px] md:max-w-md mx-auto text-balance"
         >
           {subtitle}
         </p>
