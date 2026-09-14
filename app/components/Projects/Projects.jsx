@@ -61,7 +61,7 @@ const Projects = () => {
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-125 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="absolute inset-0 bg-grid pointer-events-none" />
+      <div className="absolute z-0 inset-0 bg-grid pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6">
         <SectionHeader

@@ -13,7 +13,8 @@
         "Python",
         "Java",
         "Golang",
-        "Dart"
+        "Dart",
+        "C#/CSharp"
       ],
       "direction": "right"
     },
@@ -28,6 +29,8 @@
         "Laravel",
         "Inertia.js",
         "TailwindCSS",
+        "Shadcn/ui",
+        "Bootstrap",
         "Express.js",
         "Node.js"
       ],
@@ -49,7 +52,10 @@
       "items": [
         "Git",
         "GitHub",
+        "GitLab",
         "Linux",
+        "Jest",
+        "Cypress",
         "Docker",
         "Postman",
         "Figma",
