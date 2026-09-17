@@ -1,0 +1,89 @@
+[
+    {
+        "number": "01",
+        "title": "Discovery",
+        "label": "UNDERSTAND",
+        "description": "Every project starts with understanding the problem. I define requirements, user flows, project scope, and technical constraints before writing a single line of code.",
+        "icon": "Search",
+        "glow": "rgb(255, 32, 86, 0.18)",
+        "border" : "border-rose-300" ,
+        "tags": [
+            "Requirements",
+            "User Flow",
+            "Analysis"
+        ]
+    },
+    {
+        "number": "02",
+        "title": "UI / UX Design",
+        "label": "DESIGN",
+        "description": "Ideas are translated into intuitive digital experiences through information architecture, wireframes, visual systems, and interactive prototypes.",
+        "icon": "PenTool",
+        "glow": "rgb(255, 105, 0, 0.18)",
+        "border" : "border-orange-300" ,
+        "tags": [
+            "Wireframe",
+            "UI/UX Design",
+            "System Design",
+            "Prototype"
+        ]
+    },
+    {
+        "number": "03",
+        "title": "Architecture",
+        "label": "PLAN",
+        "description": "The right technology is selected based on the product requirements. I design the application architecture, database structure, API contracts, and system flow.",
+        "icon": "Boxes",
+        "glow": "rgb(124, 207, 0, 0.18)",
+        "border" : "border-green-300" ,
+        "tags": [
+            "Tech Stack",
+            "Database",
+            "API"
+        ]
+    },
+    {
+        "number": "04",
+        "title": "Development",
+        "label": "BUILD",
+        "description": "Frontend, backend, authentication, database, integrations, and business logic are built into a modular and maintainable system.",
+        "icon": "Code2",
+        "glow": "rgb(0, 187, 167, 0.18)",
+        "border" : "border-teal-300" ,
+        "tags": [
+            "Frontend",
+            "Backend",
+            "Integration"
+        ]
+    },
+    {
+        "number": "05",
+        "title": "Testing",
+        "label": "REFINE",
+        "description": "The application is tested, optimized, and hardened. Performance, accessibility, security, API behavior, and edge cases are continuously checked.",
+        "icon": "ShieldCheck",
+        "glow": "rgb(0, 166, 244, 0.18)",
+        "border" : "border-blue-300" ,
+        "tags": [
+            "Lint",
+            "Testing",
+            "Performance",
+            "Security"
+        ]
+    },
+    {
+        "number": "06",
+        "title": "Deployment",
+        "label": "SHIP",
+        "description": "The finished application moves from local development to production through containerization, CI/CD, server configuration, HTTPS, and monitoring.",
+        "icon": "Rocket",
+        "glow": "rgb(142, 81, 255, 0.18)",
+        "border" : "border-indigo-300" ,
+        "tags": [
+            "Build",
+            "Docker",
+            "CI/CD",
+            "Production"
+        ]
+    }
+]

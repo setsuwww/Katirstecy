@@ -7,6 +7,9 @@ const About = dynamic(() => import("./components/About/About"), {
 const Skills = dynamic(() => import("./components/Skills/Skills"), {
   loading: () => <div className="h-96 bg-[#F2F2EB]" />,
 });
+const Services = dynamic(() => import("./components/Services/Services"), {
+  loading: () => <div className="h-screen bg-[#F2F2EB]" />,
+});
 const Projects = dynamic(() => import("./components/Projects/Projects"), {
   loading: () => <div className="h-screen bg-[#F2F2EB]" />,
 });
@@ -20,6 +23,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      <Services />
       <Projects />
       <Contact />
     </main>
