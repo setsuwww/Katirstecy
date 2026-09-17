@@ -67,3 +67,29 @@ body {
         scrollbar-width: none;
     }
 }
+
+@keyframes serviceArrowDown {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(4px);
+        opacity: 1;
+    }
+}
+
+@keyframes serviceArrowUp {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(-4px);
+        opacity: 1;
+    }
+}

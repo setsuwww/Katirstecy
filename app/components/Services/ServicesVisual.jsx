@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import {
-    Search,
+    FilePenLine,
     PenTool,
     Boxes,
     Code2,
@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 const ICONS = {
-    Search,
+    FilePenLine,
     PenTool,
     Boxes,
     Code2,
@@ -112,20 +112,17 @@ export default function ServicesVisual({
                 >
                     <div className={`rounded-2xl border ${service.border} bg-white p-6 backdrop-blur-xl sm:p-8`}>
                         <div className="flex items-center justify-between">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-black/10">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-olive-50 border border-olive-300">
                                 <Icon
+                                    className="text-olive-600"
                                     size={20}
-                                    strokeWidth={1.5}
+                                    strokeWidth={2}
                                 />
                             </div>
-
-                            <span className="font-mono text-xs text-neutral-400">
-                                / {service.number}
-                            </span>
                         </div>
 
-                        <div className="mt-12">
-                            <div className="mb-2 text-[10px] uppercase tracking-[0.25em] text-neutral-400">
+                        <div className="mt-8 lg:mt-10">
+                            <div className="mb-2 text-[10px] uppercase tracking-[0.15em] text-neutral-400">
                                 Current stage
                             </div>
 
@@ -159,8 +156,8 @@ export default function ServicesVisual({
                 </div>
 
                 {/* Number */}
-                <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full border border-black/10 bg-[#f4f4ef]">
+                <div className="absolute left-5 lg:left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div className="flex h-14 w-14 lg:h-20 lg:w-20 items-center justify-center rounded-full border border-black/10 bg-[#f4f4ef]">
                         <span className="font-mono text-xs">
                             {service.number}
                         </span>
@@ -168,7 +165,7 @@ export default function ServicesVisual({
                 </div>
 
                 {/* Label */}
-                <div className="absolute bottom-8 right-0 translate-x-1/4">
+                <div className="hidden lg:flex absolute bottom-8 right-0 translate-x-1/4">
                     <div className="border border-olive-300 bg-white p-4 rounded-sm">
                         <div className="text-[10px] uppercase tracking-[0.25em] text-neutral-400">
                             Building

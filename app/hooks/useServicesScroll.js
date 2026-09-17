@@ -13,6 +13,9 @@ export function useServicesScroll(stageCount) {
     const visualRef = useRef(null);
 
     const [activeIndex, setActiveIndex] = useState(0);
+    const [scrollDirection, setScrollDirection] = useState("down");
+
+    const previousProgress = useRef(0);
 
     useEffect(() => {
         const section = sectionRef.current;
@@ -28,18 +31,13 @@ export function useServicesScroll(stageCount) {
             const serviceTrigger = ScrollTrigger.create({
                 trigger: section,
 
-                // Services mulai ketika section mencapai navbar
                 start: "top top",
-
-                // Section height = 360vh
-                // Jadi pin berjalan sepanjang section.
                 end: "bottom bottom",
 
                 pin: track,
 
-                // Sedikit smoothing.
-                // Jangan terlalu besar karena bikin stage terasa telat.
-                scrub: 0.35,
+                // Smooth tapi tetap responsif
+                scrub: 0.3,
 
                 anticipatePin: 1,
 
@@ -47,6 +45,24 @@ export function useServicesScroll(stageCount) {
 
                 onUpdate: (self) => {
                     const progress = self.progress;
+
+                    // --------------------------------
+                    // Scroll direction
+                    // --------------------------------
+
+                    if (progress > previousProgress.current) {
+                        setScrollDirection("down");
+                    } else if (
+                        progress < previousProgress.current
+                    ) {
+                        setScrollDirection("up");
+                    }
+
+                    previousProgress.current = progress;
+
+                    // --------------------------------
+                    // Active stage
+                    // --------------------------------
 
                     const rawIndex =
                         progress * (stageCount - 1);
@@ -74,7 +90,7 @@ export function useServicesScroll(stageCount) {
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 0.65,
+                    duration: 0.6,
                     ease: "power3.out",
 
                     scrollTrigger: {
@@ -97,7 +113,7 @@ export function useServicesScroll(stageCount) {
                     opacity: 1,
                     scale: 1,
                     y: 0,
-                    duration: 0.75,
+                    duration: 0.7,
                     ease: "power3.out",
 
                     scrollTrigger: {
@@ -124,5 +140,6 @@ export function useServicesScroll(stageCount) {
         contentRef,
         visualRef,
         activeIndex,
+        scrollDirection,
     };
 }

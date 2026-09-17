@@ -4,9 +4,9 @@
         "title": "Discovery",
         "label": "UNDERSTAND",
         "description": "Every project starts with understanding the problem. I define requirements, user flows, project scope, and technical constraints before writing a single line of code.",
-        "icon": "Search",
+        "icon": "FilePenLine",
         "glow": "rgb(255, 32, 86, 0.18)",
-        "border" : "border-rose-300" ,
+        "border" : "border-rose-300",
         "tags": [
             "Requirements",
             "User Flow",
