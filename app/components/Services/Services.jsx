@@ -24,13 +24,13 @@ export default function Services() {
             ref={sectionRef}
             id="services"
             className="relative scroll-mt-20 bg-[#f4f4ef] text-neutral-950"
-            style={{height: `clamp(${SERVICES.length * 55}vh,${SERVICES.length * 60}vh,${SERVICES.length * 70}vh
+            style={{height: `clamp(${SERVICES.length * 65}vh,${SERVICES.length * 60}vh,${SERVICES.length * 70}vh
         )`,
             }}
         >
             <div
                 ref={trackRef}
-                className="relative flex h-screen w-full items-center overflow-hidden"
+                className=" relative flex min-h-screen w-full items-start overflow-hidden py-24 lg:h-screen lg:items-center lg:py-0"
             >
                 {/* Background */}
                 <div className="pointer-events-none absolute inset-0">

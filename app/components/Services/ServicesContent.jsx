@@ -58,7 +58,7 @@ export default function ServicesContent({ service }) {
 
             <div
                 ref={stageRef}
-                className="mt-12"
+                className="mt-6 lg:mt-12"
             >
                 <ServiceStage service={service} />
             </div>

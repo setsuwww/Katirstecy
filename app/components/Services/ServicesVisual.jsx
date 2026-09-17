@@ -80,7 +80,7 @@ export default function ServicesVisual({
     const Icon = ICONS[service.icon];
 
     return (
-        <div className="relative flex items-center justify-center">
+        <div className="relative flex items-center justify-center pb-40 lg:pb-0">
             <div className="relative aspect-square w-full max-w-[560px]">
                 {/* Outer frame */}
                 <div className="absolute inset-0 rounded-[2rem] border border-black/5" />
@@ -92,8 +92,7 @@ export default function ServicesVisual({
                 <div
                     className="absolute inset-5 rounded-[1.5rem] opacity-50"
                     style={{
-                        backgroundImage:
-                            "linear-gradient(rgba(0,0,0,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.06) 1px, transparent 1px)",
+                        backgroundImage: "linear-gradient(rgba(0,0,0,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.06) 1px, transparent 1px)",
                         backgroundSize: "40px 40px",
                     }}
                 />
