@@ -79,14 +79,16 @@ export default function ServicesVisual({
 
     const Icon = ICONS[service.icon];
 
+    const progress = ((activeIndex + 1) / total) * 100;
+
     return (
         <div className="relative flex items-center justify-center">
             <div className="relative mx-auto aspect-square w-[78vw] max-w-[560px]">
                 {/* Outer frame */}
-                <div className="absolute inset-0 rounded-[2rem] border border-black/5" />
+                <div className="absolute inset-0 rounded-sm border border-black/5" />
 
                 {/* Inner frame */}
-                <div className="absolute inset-4 rounded-[1.2rem] border border-black/10" />
+                <div className="absolute inset-4 rounded-sm border border-black/10" />
 
                 {/* Grid */}
                 <div
@@ -109,9 +111,9 @@ export default function ServicesVisual({
                     ref={cardRef}
                     className="absolute left-1/2 top-1/2 w-[65%] -translate-x-1/2 -translate-y-1/2"
                 >
-                    <div className={`rounded-2xl border ${service.border} bg-white p-6 backdrop-blur-xl sm:p-8`}>
+                    <div className={`rounded-sm border ${service.border} bg-white p-6 backdrop-blur-xl sm:p-8`}>
                         <div className="flex items-center justify-between">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-olive-50/50 border border-olive-300/50">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-olive-50/50 border border-olive-300/70">
                                 <Icon
                                     className="text-olive-600"
                                     size={20}
@@ -135,10 +137,8 @@ export default function ServicesVisual({
                                 <div
                                     className="h-full bg-olive-600 rounded-px transition-all duration-700"
                                     style={{
-                                        width: `${((activeIndex + 1) /
-                                                total) *
-                                            100
-                                            }%`,
+                                        width: `${progress}%`,
+                                        opacity: progress / 100,
                                     }}
                                 />
                             </div>

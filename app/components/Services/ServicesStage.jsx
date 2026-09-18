@@ -2,12 +2,12 @@ export default function ServiceStage({ service }) {
     return (
         <div>
             <div className="mb-4 flex items-center gap-4">
-                <span className="text-[10px] font-medium uppercase text-olive-50 bg-olive-800 px-2 py-1.5 rounded-sm">
+                <span className="text-[10px] font-mono font-medium uppercase text-olive-50 bg-olive-800 px-2 py-1.5 rounded-sm">
                     {service.label}
                 </span>
             </div>
 
-            <h2 className="text-xl text-olive-600 font-medium tracking-tight sm:text-4xl">
+            <h2 className="text-xl font-fondamento text-olive-600 font-medium tracking-tight sm:text-4xl">
                 {service.title}
             </h2>
 

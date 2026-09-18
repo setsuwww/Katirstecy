@@ -31,11 +31,6 @@ export default function Services() {
             <div ref={trackRef}
                 className="relative flex h-dvh w-full items-center overflow-visible"
             >
-                {/* Background */}
-                <div className="pointer-events-none absolute inset-0">
-                    <div className="absolute left-1/2 top-1/2 hidden h-px w-full -translate-x-1/2 bg-linear-to-r from-olive-50 via-olive-100 to-olive-500 lg:flex" />
-                </div>
-
                 {/* Main */}
                 <div className="relative mx-auto grid w-full max-w-[1500px] grid-cols-1 items-center gap-6 px-6 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-16">
                     <div
