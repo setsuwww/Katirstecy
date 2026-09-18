@@ -54,7 +54,7 @@ export default function ServiceProgress({
                                         ${
                                             isActive
                                                 ? "text-black font-semibold"
-                                                : "text-neutral-300"
+                                                : "text-olive-300"
                                         }
                                     `}
                                 >

@@ -46,11 +46,12 @@
         "number": "04",
         "title": "Development",
         "label": "BUILD",
-        "description": "Frontend, backend, authentication, database, integrations, and business logic are built into a modular and maintainable system.",
+        "description": "Frontend, Backend, authentication, database, API Integrations, and business logic are built into a modular, scalable, and maintainable system.",
         "icon": "Code2",
         "glow": "rgb(0, 187, 167, 0.18)",
         "border" : "border-teal-300" ,
         "tags": [
+            "Structure",
             "Frontend",
             "Backend",
             "Integration"

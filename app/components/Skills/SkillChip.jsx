@@ -158,13 +158,13 @@ const colorStyles = {
   },
 
   neutral: {
-    icon: "group-hover:text-neutral-700",
-    text: "group-hover:text-neutral-900",
-    border: "hover:border-neutral-700",
+    icon: "group-hover:text-olive-700",
+    text: "group-hover:text-olive-900",
+    border: "hover:border-olive-700",
   },
 
   purple: {
-    icon: "[&_path]:fill-neutral-200 [&_path]:stroke-neutral-400 group-hover:[&_path]:fill-purple-200 group-hover:[&_path]:stroke-purple-700",
+    icon: "[&_path]:fill-olive-200 [&_path]:stroke-olive-400 group-hover:[&_path]:fill-purple-200 group-hover:[&_path]:stroke-purple-700",
     text: "group-hover:text-purple-700",
     border: "hover:border-purple-500",
   },

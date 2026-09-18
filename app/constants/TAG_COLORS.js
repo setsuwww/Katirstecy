@@ -1,8 +1,8 @@
 export const TAG_COLORS = {
     "Next.js": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-gray-100",
         hoverBorder: "group-hover/card:border-gray-200",
         hoverText: "group-hover/card:text-gray-700",
@@ -12,9 +12,9 @@ export const TAG_COLORS = {
     },
 
     "Tailwindcss": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-cyan-50",
         hoverBorder: "group-hover/card:border-cyan-200",
         hoverText: "group-hover/card:text-cyan-700",
@@ -24,9 +24,9 @@ export const TAG_COLORS = {
     },
 
     "Prisma": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-emerald-50",
         hoverBorder: "group-hover/card:border-emerald-200",
         hoverText: "group-hover/card:text-emerald-700",
@@ -36,9 +36,9 @@ export const TAG_COLORS = {
     },
 
     "Neon": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-teal-50",
         hoverBorder: "group-hover/card:border-teal-200",
         hoverText: "group-hover/card:text-teal-700",
@@ -48,9 +48,9 @@ export const TAG_COLORS = {
     },
 
     "Postgresql": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-blue-50",
         hoverBorder: "group-hover/card:border-blue-200",
         hoverText: "group-hover/card:text-blue-700",
@@ -60,9 +60,9 @@ export const TAG_COLORS = {
     },
 
     "Vue.js": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-green-50",
         hoverBorder: "group-hover/card:border-green-200",
         hoverText: "group-hover/card:text-green-700",
@@ -72,9 +72,9 @@ export const TAG_COLORS = {
     },
 
     "Vite": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-purple-50",
         hoverBorder: "group-hover/card:border-purple-200",
         hoverText: "group-hover/card:text-purple-700",
@@ -84,9 +84,9 @@ export const TAG_COLORS = {
     },
 
     "Node.js": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-lime-50",
         hoverBorder: "group-hover/card:border-lime-200",
         hoverText: "group-hover/card:text-lime-700",
@@ -96,9 +96,9 @@ export const TAG_COLORS = {
     },
 
     "Express": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-yellow-50",
         hoverBorder: "group-hover/card:border-yellow-300",
         hoverText: "group-hover/card:text-yellow-700",
@@ -108,9 +108,9 @@ export const TAG_COLORS = {
     },
 
     "MySQL": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-orange-50",
         hoverBorder: "group-hover/card:border-orange-200",
         hoverText: "group-hover/card:text-orange-700",
@@ -120,9 +120,9 @@ export const TAG_COLORS = {
     },
 
     "PHP": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-purple-50",
         hoverBorder: "group-hover/card:border-purple-200",
         hoverText: "group-hover/card:text-purple-700",
@@ -132,9 +132,9 @@ export const TAG_COLORS = {
     },
 
     "Laravel": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-red-50",
         hoverBorder: "group-hover/card:border-red-200",
         hoverText: "group-hover/card:text-red-700",
@@ -144,9 +144,9 @@ export const TAG_COLORS = {
     },
 
     "Inertia": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-violet-50",
         hoverBorder: "group-hover/card:border-violet-200",
         hoverText: "group-hover/card:text-violet-700",
@@ -156,9 +156,9 @@ export const TAG_COLORS = {
     },
 
     "React": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-sky-50",
         hoverBorder: "group-hover/card:border-sky-200",
         hoverText: "group-hover/card:text-sky-700",
@@ -168,9 +168,9 @@ export const TAG_COLORS = {
     },
 
     "ASP.NET": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-purple-50",
         hoverBorder: "group-hover/card:border-purple-200",
         hoverText: "group-hover/card:text-purple-700",
@@ -180,9 +180,9 @@ export const TAG_COLORS = {
     },
 
     "C#": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-blue-50",
         hoverBorder: "group-hover/card:border-blue-200",
         hoverText: "group-hover/card:text-blue-700",
@@ -192,9 +192,9 @@ export const TAG_COLORS = {
     },
 
     "Gin": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-blue-50",
         hoverBorder: "group-hover/card:border-blue-200",
         hoverText: "group-hover/card:text-blue-700",
@@ -204,9 +204,9 @@ export const TAG_COLORS = {
     },
 
     "Golang": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-sky-50",
         hoverBorder: "group-hover/card:border-sky-200",
         hoverText: "group-hover/card:text-sky-700",
@@ -216,9 +216,9 @@ export const TAG_COLORS = {
     },
 
     "Svelte": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-orange-50",
         hoverBorder: "group-hover/card:border-orange-200",
         hoverText: "group-hover/card:text-orange-700",
@@ -228,9 +228,9 @@ export const TAG_COLORS = {
     },
 
     "Python": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-yellow-50",
         hoverBorder: "group-hover/card:border-yellow-200",
         hoverText: "group-hover/card:text-yellow-700",
@@ -240,9 +240,9 @@ export const TAG_COLORS = {
     },
 
     "Flask": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-lime-50",
         hoverBorder: "group-hover/card:border-lime-200",
         hoverText: "group-hover/card:text-lime-700",
@@ -252,9 +252,9 @@ export const TAG_COLORS = {
     },
 
     "SQLite": {
-        bg: "bg-neutral-100",
-        border: "border-neutral-200",
-        text: "text-neutral-500",
+        bg: "bg-olive-100",
+        border: "border-olive-200",
+        text: "text-olive-500",
         hoverBg: "group-hover/card:bg-blue-50",
         hoverBorder: "group-hover/card:border-blue-200",
         hoverText: "group-hover/card:text-blue-700",

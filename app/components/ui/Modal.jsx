@@ -41,7 +41,7 @@ const Modal = ({ isOpen, onClose, children }) => {
           aria-label="Close modal"
           className="absolute top-4 right-4 z-10 p-2 bg-white/50 hover:bg-white rounded-full transition-colors"
         >
-          <X className="w-5 h-5 text-neutral-800" />
+          <X className="w-5 h-5 text-olive-800" />
         </button>
 
         <div className="relative">{children}</div>

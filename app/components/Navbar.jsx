@@ -137,7 +137,7 @@ export const Navbar = () => {
           <div
             ref={menuRef}
             className={`absolute right-0 top-0 h-screen w-full bg-[#F7F6F2]
-            border-l border-neutral-300
+            border-l border-olive-300
             shadow-[-20px_0_60px_rgba(0,0,0,0.15)]
             transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)]
             overflow-hidden
@@ -145,8 +145,8 @@ export const Navbar = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Decorative Lines */}
-            <div className="absolute left-6 top-0 h-full w-px bg-neutral-300/50" />
-            <div className="absolute right-6 top-0 h-full w-px bg-neutral-300/50" />
+            <div className="absolute left-6 top-0 h-full w-px bg-olive-300/50" />
+            <div className="absolute right-6 top-0 h-full w-px bg-olive-300/50" />
 
             {/* Content */}
             <div className="relative z-10 flex flex-col h-full px-10 pt-24 pb-10">
@@ -176,7 +176,7 @@ export const Navbar = () => {
               </div>
 
               {/* Footer */}
-              <div className="mt-auto pt-12 border-t border-neutral-300">
+              <div className="mt-auto pt-12 border-t border-olive-300">
                 <p className="text-xs tracking-wider uppercase text-olive-400">
                   Portfolio Katirstecu
                 </p>

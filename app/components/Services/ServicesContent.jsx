@@ -50,12 +50,6 @@ export default function ServicesContent({ service }) {
                 </span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-base leading-7 text-olive-500 sm:text-lg">
-                I build digital products through a structured process —
-                from understanding the problem to deploying a scalable
-                production system.
-            </p>
-
             <div
                 ref={stageRef}
                 className="mt-6 lg:mt-12"

@@ -80,17 +80,17 @@ export default function ServicesVisual({
     const Icon = ICONS[service.icon];
 
     return (
-        <div className="relative flex items-center justify-center pb-40 lg:pb-0">
-            <div className="relative aspect-square w-full max-w-[560px]">
+        <div className="relative flex items-center justify-center">
+            <div className="relative mx-auto aspect-square w-[78vw] max-w-[560px]">
                 {/* Outer frame */}
                 <div className="absolute inset-0 rounded-[2rem] border border-black/5" />
 
                 {/* Inner frame */}
-                <div className="absolute inset-5 rounded-[1.5rem] border border-black/10" />
+                <div className="absolute inset-4 rounded-[1.2rem] border border-black/10" />
 
                 {/* Grid */}
                 <div
-                    className="absolute inset-5 rounded-[1.5rem] opacity-50"
+                    className="absolute inset-4 rounded-[1.5rem] opacity-50"
                     style={{
                         backgroundImage: "linear-gradient(rgba(0,0,0,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.06) 1px, transparent 1px)",
                         backgroundSize: "40px 40px",
@@ -111,7 +111,7 @@ export default function ServicesVisual({
                 >
                     <div className={`rounded-2xl border ${service.border} bg-white p-6 backdrop-blur-xl sm:p-8`}>
                         <div className="flex items-center justify-between">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-olive-50 border border-olive-300">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-olive-50/50 border border-olive-300/50">
                                 <Icon
                                     className="text-olive-600"
                                     size={20}
@@ -121,7 +121,7 @@ export default function ServicesVisual({
                         </div>
 
                         <div className="mt-8 lg:mt-10">
-                            <div className="mb-2 text-[10px] uppercase tracking-[0.15em] text-neutral-400">
+                            <div className="mb-2 text-[10px] uppercase tracking-[0.15em] text-olive-400">
                                 Current stage
                             </div>
 
@@ -143,7 +143,7 @@ export default function ServicesVisual({
                                 />
                             </div>
 
-                            <div className="flex justify-between text-[10px] uppercase tracking-wider text-neutral-400">
+                            <div className="flex justify-between text-[10px] uppercase tracking-wider text-olive-400">
                                 <span>Process</span>
 
                                 <span>
@@ -166,7 +166,7 @@ export default function ServicesVisual({
                 {/* Label */}
                 <div className="hidden lg:flex absolute bottom-8 right-0 translate-x-1/4">
                     <div className="border border-olive-300 bg-white p-4 rounded-sm">
-                        <div className="text-[10px] uppercase tracking-[0.25em] text-neutral-400">
+                        <div className="text-[10px] uppercase tracking-[0.25em] text-olive-400">
                             Building
                         </div>
 

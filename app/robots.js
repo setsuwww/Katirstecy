@@ -5,6 +5,6 @@ export default function robots() {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://katirstecu.vercel.app/sitemap.xml",
+    sitemap: "https://katier.vercel.app/sitemap.xml",
   };
 }

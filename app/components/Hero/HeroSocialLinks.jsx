@@ -68,7 +68,7 @@ const HeroSocialLinks = ({
       case "WhatsApp":
         return "group-hover:text-green-600";
       case "GitHub":
-        return "group-hover:text-neutral-900";
+        return "group-hover:text-olive-900";
       case "Instagram":
         return "group-hover:text-pink-500";
       case "Email":

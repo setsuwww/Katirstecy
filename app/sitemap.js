@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://katirstecu.vercel.app"; // Assuming this is the production URL, or I should use a generic one if unknown.
+  const baseUrl = "https://katier.vercel.app"; // Assuming this is the production URL, or I should use a generic one if unknown.
 
   return [
     {

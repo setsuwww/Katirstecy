@@ -108,13 +108,13 @@ const ProjectCard = ({ project, onPreview, isActive = false }) => {
 
             const mobileStyles = isActive
               ? cn(
-                color?.activeBg ?? color?.bg ?? "bg-neutral-100",
-                color?.activeBorder ?? color?.border ?? "border-neutral-300",
-                color?.activeText ?? color?.text ?? "text-neutral-500"
+                color?.activeBg ?? color?.bg ?? "bg-olive-100",
+                color?.activeBorder ?? color?.border ?? "border-olive-300",
+                color?.activeText ?? color?.text ?? "text-olive-500"
               ) : cn(
-                color?.bg ?? "bg-neutral-100",
-                color?.border ?? "border-neutral-300",
-                color?.text ?? "text-neutral-500"
+                color?.bg ?? "bg-olive-100",
+                color?.border ?? "border-olive-300",
+                color?.text ?? "text-olive-500"
               );
 
             return (
@@ -127,12 +127,12 @@ const ProjectCard = ({ project, onPreview, isActive = false }) => {
                   mobileStyles,
 
                   // Desktop default
-                  "md:bg-neutral-100 md:border-neutral-200 md:text-neutral-500",
+                  "md:bg-olive-100 md:border-olive-200 md:text-olive-500",
 
                   // Desktop hover
-                  color?.hoverBg ?? "md:group-hover/card:bg-neutral-200",
-                  color?.hoverBorder ?? "md:group-hover/card:border-neutral-200",
-                  color?.hoverText ?? "md:group-hover/card:text-neutral-700"
+                  color?.hoverBg ?? "md:group-hover/card:bg-olive-200",
+                  color?.hoverBorder ?? "md:group-hover/card:border-olive-200",
+                  color?.hoverText ?? "md:group-hover/card:text-olive-700"
                 )}
               >
                 {tag}

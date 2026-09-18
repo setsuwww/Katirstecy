@@ -36,7 +36,11 @@ export function useServicesScroll(stageCount) {
 
                 pin: track,
 
-                // Smooth tapi tetap responsif
+                // Section sendiri sudah menentukan
+                // panjang scroll, jadi tidak perlu
+                // menambahkan spacing ekstra.
+                pinSpacing: false,
+
                 scrub: 0.3,
 
                 anticipatePin: 1,
@@ -46,10 +50,7 @@ export function useServicesScroll(stageCount) {
                 onUpdate: (self) => {
                     const progress = self.progress;
 
-                    // --------------------------------
                     // Scroll direction
-                    // --------------------------------
-
                     if (progress > previousProgress.current) {
                         setScrollDirection("down");
                     } else if (
@@ -60,10 +61,7 @@ export function useServicesScroll(stageCount) {
 
                     previousProgress.current = progress;
 
-                    // --------------------------------
                     // Active stage
-                    // --------------------------------
-
                     const rawIndex =
                         progress * (stageCount - 1);
 
@@ -129,7 +127,46 @@ export function useServicesScroll(stageCount) {
             };
         }, section);
 
+        // Mobile browser viewport:
+        // address bar / orientation bisa mengubah
+        // ukuran viewport secara dinamis.
+        const handleResize = () => {
+            ScrollTrigger.refresh();
+        };
+
+        let resizeTimeout;
+
+        const handleResizeDebounced = () => {
+            clearTimeout(resizeTimeout);
+
+            resizeTimeout = setTimeout(() => {
+                ScrollTrigger.refresh();
+            }, 150);
+        };
+
+        window.addEventListener(
+            "resize",
+            handleResizeDebounced
+        );
+
+        window.addEventListener(
+            "orientationchange",
+            handleResize
+        );
+
         return () => {
+            clearTimeout(resizeTimeout);
+
+            window.removeEventListener(
+                "resize",
+                handleResizeDebounced
+            );
+
+            window.removeEventListener(
+                "orientationchange",
+                handleResize
+            );
+
             ctx.revert();
         };
     }, [stageCount]);
