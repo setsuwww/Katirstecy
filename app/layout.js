@@ -5,6 +5,8 @@ import { Footer } from "./components/Footer";
 import settings from "./constants/settings.json";
 import StructuredData from "./components/SEO/StructuredData";
 
+import Providers from "./providers";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -101,14 +103,18 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased scroll-smooth`}
+      suppressHydrationWarning
     >
       <head>
         <StructuredData />
       </head>
+
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
-        <Footer />
+        <Providers>
+          <Navbar />
+            {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
