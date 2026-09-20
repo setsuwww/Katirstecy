@@ -11,7 +11,6 @@ export function GradientsBlob() {
           blur-lg
           bg-radial
           from-sky-400/30 via-sky-100/10 to-transparent
-          dark:from-cyan-400/20 dark:via-cyan-300/5 dark:to-transparent
           rounded-[50%_40%_60%_30%]
           animate-pulse duration-500 ease-in-out
           opacity-100 z-0
@@ -28,7 +27,6 @@ export function GradientsBlob() {
           blur-lg
           bg-radial
           from-yellow-400/30 via-yellow-100/10 to-transparent
-          dark:from-amber-300/20 dark:via-yellow-200/5 dark:to-transparent
           rounded-[50%_40%_60%_30%]
           animate-pulse duration-500 ease-in-out
           opacity-100 z-0
@@ -45,7 +43,6 @@ export function GradientsBlob() {
           blur-lg
           bg-radial
           from-green-400/30 via-green-100/10 to-transparent
-          dark:from-lime-400/20 dark:via-green-300/5 dark:to-transparent
           rounded-[50%_40%_60%_30%]
           animate-pulse duration-500 ease-in-out
           opacity-100 z-0
@@ -62,7 +59,6 @@ export function GradientsBlob() {
           blur-lg
           bg-radial
           from-orange-400/30 via-orange-100/10 to-transparent
-          dark:from-orange-400/20 dark:via-amber-300/5 dark:to-transparent
           rounded-[50%_40%_60%_30%]
           animate-pulse duration-500 ease-in-out
           opacity-100 z-0

@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import settings from "../constants/settings.json";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
 
 export const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -80,11 +79,11 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="top-0 fixed w-full h-15 lg:h-20 bg-olive-50/30 dark:bg-olive-700/50 backdrop-blur-md border-b-2 border-dashed border-olive-300 dark:border-olive-700 flex items-center justify-center px-6 md:px-12 z-50">
+    <nav className="top-0 fixed w-full h-15 lg:h-20 bg-olive-50/30 backdrop-blur-md border-b-2 border-dashed border-olive-300 flex items-center justify-center px-6 md:px-12 z-50">
       <div className="w-full max-w-350 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-2.5 h-2.5 bg-[#E6D500] rotate-45 transition-transform duration-500 group-hover:rotate-135" />
-          <span className="font-fondamento text-md md:text-2xl text-olive-800 dark:text-olive-200 leading-none tracking-tight">
+          <span className="font-fondamento text-md md:text-2xl text-olive-800 leading-none tracking-tight">
             {settings.navigation.brandName} .
           </span>
         </Link>
@@ -98,18 +97,16 @@ export const Navbar = () => {
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
                 className={`relative font-serif text-[1rem] transition-colors duration-300 group ${isActive
-                  ? "text-olive-800 dark:text-olive-200"
-                  : "text-olive-600 dark:text-olive-300 hover:text-olive-800 dark:hover:text-olive-200"
+                  ? "text-olive-800"
+                  : "text-olive-600 hover:text-olive-800"
                   }`}
               >
                 {link.name}
-                <span className={`absolute -bottom-1 left-0 h-px bg-olive-800 dark:bg-olive-200 transition-[width] duration-300 ease-in-out ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
+                <span className={`absolute -bottom-1 left-0 h-px bg-olive-800 transition-[width] duration-300 ease-in-out ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
               </Link>
             );
           })}
         </div>
-
-        <ThemeToggle />
 
         {/* Mobile Menu Toggle */}
         <button

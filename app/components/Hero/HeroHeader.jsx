@@ -66,7 +66,7 @@ const HeroHeader = () => {
     <div ref={containerRef}>
       <h1
         ref={titleRef}
-        className="font-serif text-7xl lg:text-8xl leading-[1.15] pb-2 tracking-[-0.03em] bg-clip-text bg-linear-to-r text-transparent from-sky-700 via-olive-700 to-yellow-600 dark:from-sky-300 dark:via-olive-300 dark:to-yellow-300 mb-10 cursor-default"
+        className="font-serif text-7xl lg:text-8xl leading-[1.15] pb-2 tracking-[-0.03em] bg-clip-text bg-linear-to-r text-transparent from-sky-700 via-olive-700 to-yellow-600 mb-10 cursor-default"
       >
         {profile.hero.title}
       </h1>
@@ -74,7 +74,7 @@ const HeroHeader = () => {
       <div className="max-w-xs lg:max-w-md mx-auto">
         <p
           ref={textRef}
-          className="text-md lg:text-lg text-olive-600 hover:text-olive-800 font-light leading-relaxed dark:text-olive-300 dark:hover:text-olive-100"
+          className="text-md lg:text-lg text-olive-600 hover:text-olive-800 font-light leading-relaxed"
         >
           {profile.hero.text}
         </p>

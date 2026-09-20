@@ -45,7 +45,7 @@ const HeroBadge = () => {
             alt={profile.avatar.alt}
             width={100}
             height={100}
-            className="object-cover rounded-full w-full h-full border-2 border-white transition-all hover:ring-offset-4 ring-4 hover:ring-blue-300 ring-blue-500 dark:ring-blue-600 dark:hover:ring-blue-400 dark:white-5"
+            className="object-cover rounded-full w-full h-full border-2 border-white transition-all hover:ring-offset-4 ring-4 hover:ring-blue-300 ring-blue-500"
             priority
           />
         </div>
