@@ -257,7 +257,7 @@ const SkillChip = React.memo(({ name }) => {
       </div>
 
       <span
-        className={`text-sm lg:text-md font-sans tracking-tight text-olive-500 transition-colors font-medium ${styles.text}`}
+        className={`text-sm lg:text-md tracking-tight text-olive-500 transition-colors font-medium ${styles.text}`}
       >
         {name}
       </span>

@@ -24,14 +24,6 @@ const AboutMyself = () => {
 
             if (!container || !title || !intro) return;
 
-            /*
-             * Initial state
-             *
-             * Konten disembunyikan dulu.
-             * Nanti ScrollTrigger yang akan
-             * menjalankan reveal ketika section
-             * masuk viewport.
-             */
             gsap.set([title, intro], {
                 opacity: 0,
                 x: -40,
@@ -81,42 +73,6 @@ const AboutMyself = () => {
         return () => ctx.revert();
     }, []);
 
-    /*
-     * Intro bounce saat hover.
-     *
-     * Hanya sekali:
-     * naik → turun → settle.
-     */
-    const handleIntroEnter = () => {
-        const intro = introRef.current;
-
-        if (!intro) return;
-
-        gsap.killTweensOf(intro);
-
-        gsap.timeline()
-            .to(intro, {
-                y: -4,
-                duration: 0.2,
-                ease: "power2.out",
-            })
-            .to(intro, {
-                y: 3,
-                duration: 0.12,
-                ease: "power2.in",
-            })
-            .to(intro, {
-                y: -2,
-                duration: 0.1,
-                ease: "power2.out",
-            })
-            .to(intro, {
-                y: 0,
-                duration: 0.16,
-                ease: "bounce.out",
-            });
-    };
-
     return (
         <section
             ref={containerRef}
@@ -126,25 +82,24 @@ const AboutMyself = () => {
                 <div className="space-y-6">
 
                     {/* LABEL */}
-                    <span className="inline-block text-[10px] font-mono uppercase tracking-[0.25em] text-taupe-500 font-semibold transition-[letter-spacing] duration-500 group-hover:tracking-[0.2em]">
+                    <span className="inline-block text-[10px] font-mono uppercase tracking-wider text-taupe-500 font-semibold transition-[letter-spacing] duration-500">
                         {myself.label}
                     </span>
 
                     {/* TITLE */}
                     <h2 ref={titleRef}
-                        className="mt-2 lg:mt-4 font-serif text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.25] tracking-tight transition-transform duration-500 ease-out group-hover:-translate-x-2 bg-clip-text text-transparent bg-gradient-to-r from-olive-700 to-olive-500"
+                        className="mt-2 lg:mt-4 font-boska text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.25] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-olive-700 to-olive-500"
                     >
                         {myself.title}
                     </h2>
 
                     {/* DIVIDER */}
-                    <div className="w-24 h-[2px] bg-taupe-400 transition-[width] duration-300 group-hover:w-12" />
+                    <div className="w-24 h-[2px] bg-taupe-400 transition-[width] duration-300" />
 
                     {/* INTRO */}
                     <p
                         ref={introRef}
-                        onMouseEnter={handleIntroEnter}
-                        className="max-w-md lg:max-w-lg pt-2 font-serif text-2xl lg:text-3xl font-light leading-relaxed text-olive-800 cursor-default"
+                        className="max-w-md lg:max-w-lg pt-2 text-2xl lg:text-3xl font-bespoke font-light leading-relaxed text-yellow-800 cursor-default"
                     >
                         {myself.intro}
                     </p>

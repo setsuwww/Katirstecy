@@ -9,11 +9,7 @@ import { GradientsBlob } from "../partials/Gradients-blob";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden bg-white pt-20 lg:pt-0"
-    >
-      {/* Paper Texture Overlay */}
+    <section id="home" className="relative flex min-h-svh flex-col items-center justify-center overflow-hidden bg-white px-6 pt-24 pb-10 text-center lg:min-h-screen lg:pt-30">
       <div className="absolute inset-0 pointer-events-none z-0">
         <Image
           src="/pgt.avif"

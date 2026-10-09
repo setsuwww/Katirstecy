@@ -96,7 +96,7 @@ export const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`relative font-serif text-[1rem] transition-colors duration-300 group ${isActive
+                className={`relative font-bespoke text-[1rem] transition-colors duration-300 group ${isActive
                   ? "text-olive-800"
                   : "text-olive-600 hover:text-olive-800"
                   }`}

@@ -2,14 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@font-face {
-    font-family: "Fondamento";
-    src: url("/fonts/Fondamento-Regular.ttf") format("truetype");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
-
 :root {
     --background: #f2f2eb;
     --foreground: #171717;
@@ -20,16 +12,54 @@
     --foreground: #ededed;
 }
 
+@font-face {
+    font-family: "Fondamento";
+    src: url("/fonts/Fondamento-Regular.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Boska";
+    src: url("/fonts/Boska-Variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Bespoke";
+    src: url("/fonts/BespokeStencil-Variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-Variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
     --font-serif: var(--font-playfair);
 }
 
 .font-fondamento {
     font-family: "Fondamento", sans-serif;
+}
+
+.font-boska {
+    font-family: "Boska", sans-serif;
+}
+
+.font-bespoke {
+    font-family: "Bespoke", sans-serif;
 }
 
 html {
@@ -39,7 +69,7 @@ html {
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+    font-family: 'Satoshi', Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
@@ -68,28 +98,30 @@ body {
     }
 }
 
-@keyframes serviceArrowDown {
-    0%,
-    100% {
-        transform: translateY(0);
-        opacity: 0.4;
-    }
+@keyframes heroOrbitRotate {
+  from {
+    transform: rotate(0deg);
+  }
 
-    50% {
-        transform: translateY(4px);
-        opacity: 1;
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes serviceArrowUp {
-    0%,
-    100% {
-        transform: translateY(0);
-        opacity: 0.4;
-    }
+@keyframes heroOrbitCounterRotate {
+  from {
+    transform: rotate(0deg);
+  }
 
-    50% {
-        transform: translateY(-4px);
-        opacity: 1;
-    }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.hero-orbit {
+  animation: heroOrbitRotate var(--orbit-duration, 20s) linear infinite;
+}
+
+.hero-orbit-counter {
+  animation: heroOrbitCounterRotate var(--orbit-duration, 20s) linear infinite;
 }

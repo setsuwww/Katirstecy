@@ -39,7 +39,7 @@ const HeroBadge = () => {
       className="flex flex-col items-center gap-8 mb-12 mt-2 lg:mt-0 z-10"
     >
       <div className="relative">
-        <div className="w-20 h-20 rounded-full overflow-hidden bg-white p-1.5">
+        <div className="mt-0 lg:mt-20 w-20 h-20 rounded-full overflow-hidden bg-white p-1.5">
           <Image
             src={profile.avatar.src}
             alt={profile.avatar.alt}
