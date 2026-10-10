@@ -42,7 +42,7 @@ export default function ServicesContent({ service }) {
                 </span>
             </div>
 
-            <h1 className="max-w-2xl font-serif text-taupe-600 text-5xl font-light leading-[0.95] tracking-[-0.05em] lg:text-7xl">
+            <h1 className="max-w-2xl font-boska text-taupe-600 text-5xl font-semibold leading-[0.95] tracking-tight lg:text-7xl">
                 From idea
                 <br />
                 <span className="bg-gradient-to-r from-taupe-800 to-taupe-600 bg-clip-text text-transparent">

@@ -127,7 +127,7 @@ export default function ServicesVisual({
                                 Current stage
                             </div>
 
-                            <div className="font-fondamento text-2xl text-olive-600 font-medium tracking-tight">
+                            <div className="font-boska text-2xl text-olive-600 font-semibold">
                                 {service.title}
                             </div>
                         </div>
@@ -135,7 +135,7 @@ export default function ServicesVisual({
                         <div className="mt-8 space-y-2">
                             <div className="h-1.5 w-full overflow-hidden rounded-px bg-olive-100">
                                 <div
-                                    className="h-full bg-olive-600 rounded-px transition-all duration-700"
+                                    className="h-full bg-olive-600 rounded-[2px] transition-all duration-700"
                                     style={{
                                         width: `${progress}%`,
                                         opacity: progress / 100,

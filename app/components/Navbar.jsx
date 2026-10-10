@@ -110,7 +110,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-olive-700 p-1.5 bg-olive-300 hover:bg-olive-200 transition-colors rounded-full z-9999"
+          className={`md:hidden text-olive-700 p-1.5  ${isOpen ?  "bg-red-300 " : "bg-olive-300 "} transition-colors rounded-full z-9999`}
           onClick={toggleMenu}
           aria-label={isOpen ? "Close Mobile Menu" : "Open Mobile Menu"}
           aria-expanded={isOpen}

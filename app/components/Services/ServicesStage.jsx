@@ -7,7 +7,7 @@ export default function ServiceStage({ service }) {
                 </span>
             </div>
 
-            <h2 className="text-xl font-fondamento text-olive-600 font-medium tracking-tight sm:text-4xl">
+            <h2 className="text-xl text-olive-600 font-medium tracking-tight sm:text-2xl">
                 {service.title}
             </h2>
 
