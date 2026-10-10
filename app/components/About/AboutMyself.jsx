@@ -49,11 +49,6 @@ const AboutMyself = () => {
                 },
             });
 
-            /*
-             * INTRO REVEAL
-             *
-             * Sedikit delay supaya mengikuti title.
-             */
             gsap.to(intro, {
                 x: 0,
                 opacity: 1,
@@ -87,9 +82,7 @@ const AboutMyself = () => {
                     </span>
 
                     {/* TITLE */}
-                    <h2 ref={titleRef}
-                        className="mt-2 lg:mt-4 font-boska text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.25] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-olive-700 to-olive-500"
-                    >
+                    <h2 ref={titleRef} className="mt-2 lg:mt-4 font-boska text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.25] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-olive-700 to-olive-500">
                         {myself.title}
                     </h2>
 
@@ -97,10 +90,7 @@ const AboutMyself = () => {
                     <div className="w-24 h-[2px] bg-taupe-400 transition-[width] duration-300" />
 
                     {/* INTRO */}
-                    <p
-                        ref={introRef}
-                        className="max-w-md lg:max-w-lg pt-2 text-2xl lg:text-3xl font-bespoke font-light leading-relaxed text-yellow-800 cursor-default"
-                    >
+                    <p ref={introRef} className="max-w-md lg:max-w-lg pt-2 text-2xl lg:text-3xl font-bespoke font-normal leading-relaxed text-yellow-800 cursor-default">
                         {myself.intro}
                     </p>
 

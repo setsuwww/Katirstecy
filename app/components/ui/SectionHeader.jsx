@@ -115,7 +115,7 @@ const SectionHeader = ({ label, title, subtitle, className = "" }) => {
 
         <h2
           ref={titleRef}
-          className="font-serif text-4xl md:text-7xl text-taupe-600 font-light tracking-tight"
+          className="font-boska text-4xl md:text-7xl text-taupe-600 font-semibold tracking-tight"
         >
           {title}
         </h2>

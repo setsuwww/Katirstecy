@@ -109,7 +109,7 @@ const EditorialHeader = ({
 
       <h2
         ref={titleRef}
-        className={`font-boska text-4xl lg:text-5xl font-normal leading-tight group-hover:pl-2 transition-all duration-500 ease-out bg-clip-text text-transparent bg-gradient-to-r from-olive-700 ${gradientClass}`}
+        className={`font-boska text-4xl lg:text-5xl font-medium leading-tight group-hover:pl-2 transition-all duration-500 ease-out bg-clip-text text-transparent bg-gradient-to-r from-olive-700 ${gradientClass}`}
       >
         {title}
       </h2>
